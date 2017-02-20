@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# updatemem v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# 
+# Start of session at: Fri Feb 10 16:22:36 2017
+# Process ID: 12956
+# Current directory: C:/Users/jaziz/Desktop/NexysVideo-master/NexysVideo-master/Projects/hdmi/proj
+# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2016.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/Users/jaziz/Desktop/NexysVideo-master/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper_hw_platform_1/hdmi_wrapper.mmi -data C:/Xilinx/SDK/2016.2/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc hdmi_i/microblaze_0 -bit C:/Users/jaziz/Desktop/NexysVideo-master/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper_hw_platform_1/hdmi_wrapper.bit -out C:/Users/jaziz/Desktop/NexysVideo-master/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper_hw_platform_1/download.bit -force
+# Log file: C:/Users/jaziz/Desktop/NexysVideo-master/NexysVideo-master/Projects/hdmi/proj/updatemem.log
+# Journal file: C:/Users/jaziz/Desktop/NexysVideo-master/NexysVideo-master/Projects/hdmi/proj\updatemem.jou
+#-----------------------------------------------------------
+source C:/Xilinx/SDK/2016.2/scripts/updatemem/main.tcl -notrace
+Loading bitfile C:/Users/jaziz/Desktop/NexysVideo-master/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper_hw_platform_1/hdmi_wrapper.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream C:/Users/jaziz/Desktop/NexysVideo-master/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper_hw_platform_1/download.bit...
+update_mem: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 522.355 ; gain = 471.941
+INFO: [Common 17-206] Exiting updatemem at Fri Feb 10 16:23:01 2017...
