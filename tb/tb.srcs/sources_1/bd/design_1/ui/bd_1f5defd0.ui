@@ -1,0 +1,22 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.12  2016-01-29 bk=1.3547 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port m00_axi_aclk -pg 1 -y 50 -defaultsOSRD
+preplace port m00_axi_init_axi_txn -pg 1 -y 90 -defaultsOSRD
+preplace port m00_axi_error -pg 1 -y 90 -defaultsOSRD
+preplace port m00_axi_aresetn -pg 1 -y 70 -defaultsOSRD
+preplace port m00_axi_txn_done -pg 1 -y 70 -defaultsOSRD
+preplace port M00_AXI -pg 1 -y 50 -defaultsOSRD
+preplace inst IP_Core_0 -pg 1 -lvl 1 -y 70 -defaultsOSRD
+preplace netloc m00_axi_aresetn_1 1 0 1 N
+preplace netloc IP_Core_0_M00_AXI 1 1 1 N
+preplace netloc m00_axi_aclk_1 1 0 1 N
+preplace netloc IP_Core_0_m00_axi_txn_done 1 1 1 N
+preplace netloc IP_Core_0_m00_axi_error 1 1 1 N
+preplace netloc m00_axi_init_axi_txn_1 1 0 1 N
+levelinfo -pg 1 -10 160 330 -top 0 -bot 140
+",
+}
+{
+   da_mb_cnt: "2",
+}
