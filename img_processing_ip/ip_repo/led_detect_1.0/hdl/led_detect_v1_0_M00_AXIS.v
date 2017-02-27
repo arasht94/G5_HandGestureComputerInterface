@@ -4,18 +4,23 @@
 	module led_detect_v1_0_M00_AXIS #
 	(
 		// Users to add parameters here
-
+    parameter integer FRAME_WIDTH = 1280,
+    parameter integer FRAME_HEIGHT = 720,
+    parameter integer FIFO_WIDTH = 1280,
+    parameter integer FIFO_BITS = 11,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
 		// Width of S_AXIS address bus. The slave accepts the read and write addresses of width C_M_AXIS_TDATA_WIDTH.
-		parameter integer C_M_AXIS_TDATA_WIDTH	= 32,
+		parameter integer AXIS_TDATA_WIDTH	= 24
 		// Start count is the numeber of clock cycles the master will wait before initiating/issuing any transaction.
-		parameter integer C_M_START_COUNT	= 32
+		//parameter integer C_M_START_COUNT	= 32
 	)
 	(
 		// Users to add ports here
-
+    input wire [AXIS_TDATA_WIDTH-1:0] out_data_stream,
+    output reg [FIFO_BITS-1:0] read_pointer,
+    input wire stream_from_fifo,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -26,9 +31,9 @@
 		// Master Stream Ports. TVALID indicates that the master is driving a valid transfer, A transfer takes place when both TVALID and TREADY are asserted. 
 		output wire  M_AXIS_TVALID,
 		// TDATA is the primary payload that is used to provide the data that is passing across the interface from the master.
-		output wire [C_M_AXIS_TDATA_WIDTH-1 : 0] M_AXIS_TDATA,
+		output wire [AXIS_TDATA_WIDTH-1 : 0] M_AXIS_TDATA,
 		// TSTRB is the byte qualifier that indicates whether the content of the associated byte of TDATA is processed as a data byte or a position byte.
-		output wire [(C_M_AXIS_TDATA_WIDTH/8)-1 : 0] M_AXIS_TSTRB,
+		output wire [(AXIS_TDATA_WIDTH/8)-1 : 0] M_AXIS_TSTRB,
 		// TLAST indicates the boundary of a packet.
 		output wire  M_AXIS_TLAST,
 		// TREADY indicates that the slave can accept a transfer in the current cycle.
@@ -36,7 +41,7 @@
 	);
 	//Total number of output data.
 	// Total number of output data                                                 
-	localparam NUMBER_OF_OUTPUT_WORDS = 8;                                               
+	//localparam NUMBER_OF_OUTPUT_WORDS = 8;                                               
 	                                                                                     
 	// function called clogb2 that returns an integer which has the                      
 	// value of the ceiling of the log base 2.                                           
@@ -48,10 +53,10 @@
 	endfunction                                                                          
 	                                                                                     
 	// WAIT_COUNT_BITS is the width of the wait counter.                                 
-	localparam integer WAIT_COUNT_BITS = clogb2(C_M_START_COUNT-1);                      
+	//localparam integer WAIT_COUNT_BITS = clogb2(C_M_START_COUNT-1);                      
 	                                                                                     
 	// bit_num gives the minimum number of bits needed to address 'depth' size of FIFO.  
-	localparam bit_num  = clogb2(NUMBER_OF_OUTPUT_WORDS);                                
+	//localparam bit_num  = clogb2(NUMBER_OF_OUTPUT_WORDS);                                
 	                                                                                     
 	// Define the states of state machine                                                
 	// The control state machine oversees the writing of input streaming data to the FIFO,
@@ -66,11 +71,11 @@
 	// State variable                                                                    
 	reg [1:0] mst_exec_state;                                                            
 	// Example design FIFO read pointer                                                  
-	reg [bit_num-1:0] read_pointer;                                                      
+	//reg [bit_num-1:0] read_pointer;                                                      
 
 	// AXI Stream internal signals
 	//wait counter. The master waits for the user defined number of clock cycles before initiating a transfer.
-	reg [WAIT_COUNT_BITS-1 : 0] 	count;
+	//reg [WAIT_COUNT_BITS-1 : 0] 	count;
 	//streaming data valid
 	wire  	axis_tvalid;
 	//streaming data valid delayed by one clock cycle
@@ -80,7 +85,7 @@
 	//Last of the streaming data delayed by one clock cycle
 	reg  	axis_tlast_delay;
 	//FIFO implementation signals
-	reg [C_M_AXIS_TDATA_WIDTH-1 : 0] 	stream_data_out;
+	reg [AXIS_TDATA_WIDTH-1 : 0] 	stream_data_out;
 	wire  	tx_en;
 	//The master has issued all the streaming data stored in FIFO
 	reg  	tx_done;
@@ -91,7 +96,7 @@
 	assign M_AXIS_TVALID	= axis_tvalid_delay;
 	assign M_AXIS_TDATA	= stream_data_out;
 	assign M_AXIS_TLAST	= axis_tlast_delay;
-	assign M_AXIS_TSTRB	= {(C_M_AXIS_TDATA_WIDTH/8){1'b1}};
+	assign M_AXIS_TSTRB	= {(AXIS_TDATA_WIDTH/8){1'b1}};
 
 
 	// Control state machine implementation                             
@@ -101,7 +106,7 @@
 	  // Synchronous reset (active low)                                       
 	    begin                                                                 
 	      mst_exec_state <= IDLE;                                             
-	      count    <= 0;                                                      
+	      //count    <= 0;                                                      
 	    end                                                                   
 	  else                                                                    
 	    case (mst_exec_state)                                                 
@@ -122,13 +127,14 @@
 	        // The slave starts accepting tdata when                          
 	        // there tvalid is asserted to mark the                           
 	        // presence of valid streaming data                               
-	        if ( count == C_M_START_COUNT - 1 )                               
+	        //if ( count == C_M_START_COUNT - 1 )
+	        if (stream_from_fifo)                               
 	          begin                                                           
 	            mst_exec_state  <= SEND_STREAM;                               
 	          end                                                             
 	        else                                                              
 	          begin                                                           
-	            count <= count + 1;                                           
+	            //count <= count + 1;                                           
 	            mst_exec_state  <= INIT_COUNTER;                              
 	          end                                                             
 	                                                                          
@@ -151,12 +157,12 @@
 	//tvalid generation
 	//axis_tvalid is asserted when the control state machine's state is SEND_STREAM and
 	//number of output streaming data is less than the NUMBER_OF_OUTPUT_WORDS.
-	assign axis_tvalid = ((mst_exec_state == SEND_STREAM) && (read_pointer < NUMBER_OF_OUTPUT_WORDS));
+	assign axis_tvalid = ((mst_exec_state == SEND_STREAM) && (read_pointer < FIFO_WIDTH));
 	                                                                                               
 	// AXI tlast generation                                                                        
 	// axis_tlast is asserted number of output streaming data is NUMBER_OF_OUTPUT_WORDS-1          
 	// (0 to NUMBER_OF_OUTPUT_WORDS-1)                                                             
-	assign axis_tlast = (read_pointer == NUMBER_OF_OUTPUT_WORDS-1);                                
+	assign axis_tlast = (read_pointer == FIFO_WIDTH-1);                                
 	                                                                                               
 	                                                                                               
 	// Delay the axis_tvalid and axis_tlast signal by one clock cycle                              
@@ -186,7 +192,7 @@
 	      tx_done <= 1'b0;                                                           
 	    end                                                                          
 	  else                                                                           
-	    if (read_pointer <= NUMBER_OF_OUTPUT_WORDS-1)                                
+	    if (read_pointer <= FIFO_WIDTH-1)                                
 	      begin                                                                      
 	        if (tx_en)                                                               
 	          // read pointer is incremented after every read from the FIFO          
@@ -196,11 +202,12 @@
 	            tx_done <= 1'b0;                                                     
 	          end                                                                    
 	      end                                                                        
-	    else if (read_pointer == NUMBER_OF_OUTPUT_WORDS)                             
+	    else if (read_pointer == FIFO_WIDTH)                             
 	      begin                                                                      
 	        // tx_done is asserted when NUMBER_OF_OUTPUT_WORDS numbers of streaming data
 	        // has been out.                                                         
-	        tx_done <= 1'b1;                                                         
+	        tx_done <= 1'b1;
+	        read_pointer <= 0;                                                         
 	      end                                                                        
 	end                                                                              
 
@@ -214,11 +221,11 @@
 	    begin                                            
 	      if(!M_AXIS_ARESETN)                            
 	        begin                                        
-	          stream_data_out <= 1;                      
+	          stream_data_out <= 24'hffffff; //white for debugging                      
 	        end                                          
 	      else if (tx_en)// && M_AXIS_TSTRB[byte_index]  
 	        begin                                        
-	          stream_data_out <= read_pointer + 32'b1;   
+	          stream_data_out <= out_data_stream;   
 	        end                                          
 	    end                                              
 

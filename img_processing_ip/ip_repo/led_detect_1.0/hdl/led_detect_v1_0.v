@@ -4,7 +4,12 @@
 	module led_detect_v1_0 #
 	(
 		// Users to add parameters here
-
+        parameter integer FRAME_WIDTH = 1280,
+        parameter integer FRAME_HEIGHT = 720,
+        parameter integer AXIS_TDATA_WIDTH = 24,
+        
+        parameter integer FIFO_WIDTH = 1280,
+        parameter integer FIFO_BITS = 11,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -14,11 +19,11 @@
 		parameter integer C_S00_AXI_ADDR_WIDTH	= 5,
 
 		// Parameters of Axi Master Bus Interface M00_AXIS
-		parameter integer C_M00_AXIS_TDATA_WIDTH	= 32,
-		parameter integer C_M00_AXIS_START_COUNT	= 32,
+		//parameter integer C_M00_AXIS_TDATA_WIDTH	= 32,
+		parameter integer C_M00_AXIS_START_COUNT	= 32
 
 		// Parameters of Axi Slave Bus Interface S00_AXIS
-		parameter integer C_S00_AXIS_TDATA_WIDTH	= 32
+		//parameter integer C_S00_AXIS_TDATA_WIDTH	= 32
 	)
 	(
 		// Users to add ports here
@@ -54,8 +59,8 @@
 		input wire  m00_axis_aclk,
 		input wire  m00_axis_aresetn,
 		output wire  m00_axis_tvalid,
-		output wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] m00_axis_tdata,
-		output wire [(C_M00_AXIS_TDATA_WIDTH/8)-1 : 0] m00_axis_tstrb,
+		output wire [AXIS_TDATA_WIDTH-1 : 0] m00_axis_tdata,
+		output wire [(AXIS_TDATA_WIDTH/8)-1 : 0] m00_axis_tstrb,
 		output wire  m00_axis_tlast,
 		input wire  m00_axis_tready,
 
@@ -63,16 +68,42 @@
 		input wire  s00_axis_aclk,
 		input wire  s00_axis_aresetn,
 		output wire  s00_axis_tready,
-		input wire [C_S00_AXIS_TDATA_WIDTH-1 : 0] s00_axis_tdata,
-		input wire [(C_S00_AXIS_TDATA_WIDTH/8)-1 : 0] s00_axis_tstrb,
+		input wire [AXIS_TDATA_WIDTH-1 : 0] s00_axis_tdata,
+		input wire [(AXIS_TDATA_WIDTH/8)-1 : 0] s00_axis_tstrb,
 		input wire  s00_axis_tlast,
 		input wire  s00_axis_tvalid
 	);
+	
+	wire [31:0] ledr_xy;
+	wire [31:0] ledg_xy;
+	
+	wire [AXIS_TDATA_WIDTH-1:0] in_data_stream;
+	wire [FIFO_BITS-1:0] write_pointer;
+	wire [FIFO_BITS-1:0] read_pointer;
+	
+	wire [AXIS_TDATA_WIDTH-1:0] out_data_stream;
+	
+	wire fifo_wren;
+	wire stream_from_fifo;
+	
+	
 // Instantiation of Axi Bus Interface S00_AXI
 	led_detect_v1_0_S00_AXI # ( 
+	  .AXIS_TDATA_WIDTH(AXIS_TDATA_WIDTH),
+	  .FIFO_WIDTH(FIFO_WIDTH),
+	  .FIFO_BITS(FIFO_BITS),
+	  
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) led_detect_v1_0_S00_AXI_inst (
+		.ledr_xy(ledr_xy),
+		.ledg_xy(ledg_xy),
+		.in_data_stream(in_data_stream),
+		.out_data_stream(out_data_stream),
+		.in_fifo_wren(fifo_wren),
+		.write_pointer(write_pointer),
+		.read_pointer(read_pointer),
+		
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),
@@ -98,9 +129,18 @@
 
 // Instantiation of Axi Bus Interface M00_AXIS
 	led_detect_v1_0_M00_AXIS # ( 
-		.C_M_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH),
-		.C_M_START_COUNT(C_M00_AXIS_START_COUNT)
+	  .FRAME_WIDTH(FRAME_WIDTH),
+    .FRAME_HEIGHT(FRAME_HEIGHT),
+    .FIFO_WIDTH(FIFO_WIDTH),
+    .FIFO_BITS(FIFO_BITS),
+	
+		.AXIS_TDATA_WIDTH(AXIS_TDATA_WIDTH)
+		//.C_M_START_COUNT(C_M00_AXIS_START_COUNT)
 	) led_detect_v1_0_M00_AXIS_inst (
+	  .out_data_stream(out_data_stream),
+	  .read_pointer(read_pointer),
+	  .stream_from_fifo(stream_from_fifo),
+	
 		.M_AXIS_ACLK(m00_axis_aclk),
 		.M_AXIS_ARESETN(m00_axis_aresetn),
 		.M_AXIS_TVALID(m00_axis_tvalid),
@@ -112,8 +152,18 @@
 
 // Instantiation of Axi Bus Interface S00_AXIS
 	led_detect_v1_0_S00_AXIS # ( 
-		.C_S_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH)
+	  .FRAME_WIDTH(FRAME_WIDTH),
+	  .FRAME_HEIGHT(FRAME_HEIGHT),
+	  .FIFO_WIDTH(FIFO_WIDTH),
+	  .FIFO_BITS(FIFO_BITS),
+	
+		.AXIS_TDATA_WIDTH(AXIS_TDATA_WIDTH)
 	) led_detect_v1_0_S00_AXIS_inst (
+	  .in_data_stream(in_data_stream),
+	  .write_pointer(write_pointer),
+	  .fifo_wren(fifo_wren),
+	  .stream_from_fifo(stream_from_fifo),
+	 
 		.S_AXIS_ACLK(s00_axis_aclk),
 		.S_AXIS_ARESETN(s00_axis_aresetn),
 		.S_AXIS_TREADY(s00_axis_tready),
