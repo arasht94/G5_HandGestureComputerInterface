@@ -4,7 +4,9 @@
 	module led_detect_v1_0_S00_AXI #
 	(
 		// Users to add parameters here
-
+    parameter integer AXIS_TDATA_WIDTH = 24,
+    parameter integer FIFO_WIDTH = 1280,
+    parameter integer FIFO_BITS = 11,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -15,7 +17,14 @@
 	)
 	(
 		// Users to add ports here
-
+    input wire [31:0] ledr_xy,
+    input wire [31:0] ledg_xy,
+    
+    input wire [AXIS_TDATA_WIDTH-1:0] in_data_stream,
+    output wire [AXIS_TDATA_WIDTH-1:0] out_data_stream,
+    input wire in_fifo_wren,
+    input [FIFO_BITS-1:0] write_pointer,
+    input [FIFO_BITS-1:0] read_pointer,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -412,7 +421,78 @@
 	end    
 
 	// Add user logic here
-
+	
+	// Set up registers to store locations of leds
+    always @ (posedge S_AXI_ACLK)
+    begin
+      if (S_AXI_ARESETN == 1'b0 || slv_reg0[0] == 1'b0) //if reset or ip not enabled 
+        begin
+          slv_reg1 <= 0; //reset ledr_xy
+          slv_reg2 <= 1; //reset ledg_xy
+        end 
+      else 
+        begin
+          slv_reg1 <= ledr_xy;
+          slv_reg2 <= ledg_xy;
+        end
+    end
+    
+    wire red = in_data_stream[23:16] > ((in_data_stream[15:8] + in_data_stream[7:0]) >> 1);
+    wire green = in_data_stream[15:8] > ((in_data_stream[23:16] + in_data_stream[7:0]) >> 1);
+    
+  // Stream input data into fifo
+  // fifo impl
+    reg [AXIS_TDATA_WIDTH-1:0] in_fifo [0:FIFO_WIDTH-1];
+    reg stream_from_fifo;
+    
+    always @ (posedge S_AXI_ACLK)
+    begin 
+      if (in_fifo_wren) begin
+        if (red) begin
+          in_fifo[write_pointer] <= 24'hff0000; //pure red
+        end
+        else if (green) begin
+          in_fifo[write_pointer] <= 24'h00ff00; //pure green
+        end
+        else begin
+          in_fifo[write_pointer] <= 24'h000000; //black
+        end
+      end
+    end
+    
+    reg [1:0] fifo_state;
+    parameter [1:0]   WRITE = 2'b00,
+                      STREAM = 2'b01;
+                      
+                      
+    always @ (posedge S_AXI_ACLK)
+    begin
+      if (!S_AXI_ARESETN) begin
+        fifo_state <= WRITE;
+        stream_from_fifo <= 0;
+      end else begin
+        case (fifo_state)
+          WRITE:
+            if (write_pointer == FIFO_WIDTH-1) begin
+              fifo_state <= STREAM;
+              stream_from_fifo <= 1; //done writing
+            end else begin
+              fifo_state <= WRITE;
+              stream_from_fifo <= 0; //still writing
+            end
+          STREAM:
+            if (read_pointer == FIFO_WIDTH-1) begin
+              fifo_state <= WRITE;
+              stream_from_fifo <= 0; //done streaming 
+            end else begin
+              fifo_state <= STREAM;
+              stream_from_fifo <= 1;
+            end
+        endcase
+      end
+    end
+                
+    assign out_data_stream = in_fifo[read_pointer];
 	// User logic ends
 
 	endmodule

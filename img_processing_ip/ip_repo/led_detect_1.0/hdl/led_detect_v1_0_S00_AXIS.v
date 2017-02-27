@@ -4,16 +4,22 @@
 	module led_detect_v1_0_S00_AXIS #
 	(
 		// Users to add parameters here
-
+    parameter integer FRAME_WIDTH = 1280,
+    parameter integer FRAME_HEIGHT = 720,
+    parameter integer FIFO_WIDTH = 1280,
+    parameter integer FIFO_BITS = 11,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
 		// AXI4Stream sink: Data Width
-		parameter integer C_S_AXIS_TDATA_WIDTH	= 32
+		parameter integer AXIS_TDATA_WIDTH	= 24
 	)
 	(
 		// Users to add ports here
-
+		output wire [AXIS_TDATA_WIDTH-1:0] in_data_stream,
+    output reg [FIFO_BITS-1:0] write_pointer,
+    output wire fifo_wren,
+    input wire stream_from_fifo,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -24,9 +30,9 @@
 		// Ready to accept data in
 		output wire  S_AXIS_TREADY,
 		// Data in
-		input wire [C_S_AXIS_TDATA_WIDTH-1 : 0] S_AXIS_TDATA,
+		input wire [AXIS_TDATA_WIDTH-1 : 0] S_AXIS_TDATA,
 		// Byte qualifier
-		input wire [(C_S_AXIS_TDATA_WIDTH/8)-1 : 0] S_AXIS_TSTRB,
+		input wire [(AXIS_TDATA_WIDTH/8)-1 : 0] S_AXIS_TSTRB,
 		// Indicates boundary of last packet
 		input wire  S_AXIS_TLAST,
 		// Data is in valid
@@ -40,11 +46,15 @@
 	      bit_depth = bit_depth >> 1;
 	  end
 	endfunction
+	
+	// pipe input tdata stream back out
+	assign in_data_stream[AXIS_TDATA_WIDTH-1:0] = S_AXIS_TDATA[AXIS_TDATA_WIDTH-1:0];
 
 	// Total number of input data.
-	localparam NUMBER_OF_INPUT_WORDS  = 8;
+	//localparam NUMBER_OF_INPUT_WORDS  = 8;
 	// bit_num gives the minimum number of bits needed to address 'NUMBER_OF_INPUT_WORDS' size of FIFO.
-	localparam bit_num  = clogb2(NUMBER_OF_INPUT_WORDS-1);
+	//localparam bit_num  = clogb2(NUMBER_OF_INPUT_WORDS-1);
+	
 	// Define the states of state machine
 	// The control state machine oversees the writing of input streaming data to the FIFO,
 	// and outputs the streaming data from the FIFO
@@ -52,19 +62,19 @@
 
 	                WRITE_FIFO  = 1'b1; // In this state FIFO is written with the
 	                                    // input stream data S_AXIS_TDATA 
-	wire  	axis_tready;
+  wire axis_tready;
 	// State variable
 	reg mst_exec_state;  
 	// FIFO implementation signals
 	genvar byte_index;     
 	// FIFO write enable
-	wire fifo_wren;
+	//wire fifo_wren;
 	// FIFO full flag
 	reg fifo_full_flag;
 	// FIFO write pointer
-	reg [bit_num-1:0] write_pointer;
+	//reg [fifo_bits-1:0] write_pointer;
 	// sink has accepted all the streaming data and stored in FIFO
-	  reg writes_done;
+  reg writes_done;
 	// I/O Connections assignments
 
 	assign S_AXIS_TREADY	= axis_tready;
@@ -82,7 +92,7 @@
 	        // The sink starts accepting tdata when 
 	        // there tvalid is asserted to mark the
 	        // presence of valid streaming data 
-	          if (S_AXIS_TVALID)
+	          if (S_AXIS_TVALID && !stream_from_fifo)
 	            begin
 	              mst_exec_state <= WRITE_FIFO;
 	            end
@@ -110,7 +120,7 @@
 	// 
 	// The example design sink is always ready to accept the S_AXIS_TDATA  until
 	// the FIFO is not filled with NUMBER_OF_INPUT_WORDS number of input words.
-	assign axis_tready = ((mst_exec_state == WRITE_FIFO) && (write_pointer <= NUMBER_OF_INPUT_WORDS-1));
+	assign axis_tready = ((mst_exec_state == WRITE_FIFO) && (write_pointer <= FIFO_WIDTH-1));
 
 	always@(posedge S_AXIS_ACLK)
 	begin
@@ -120,7 +130,7 @@
 	      writes_done <= 1'b0;
 	    end  
 	  else
-	    if (write_pointer <= NUMBER_OF_INPUT_WORDS-1)
+	    if (write_pointer <= FIFO_WIDTH-1)
 	      begin
 	        if (fifo_wren)
 	          begin
@@ -129,11 +139,12 @@
 	            write_pointer <= write_pointer + 1;
 	            writes_done <= 1'b0;
 	          end
-	          if ((write_pointer == NUMBER_OF_INPUT_WORDS-1)|| S_AXIS_TLAST)
+	          if ((write_pointer == FIFO_WIDTH-1)|| S_AXIS_TLAST)
 	            begin
 	              // reads_done is asserted when NUMBER_OF_INPUT_WORDS numbers of streaming data 
 	              // has been written to the FIFO which is also marked by S_AXIS_TLAST(kept for optional usage).
 	              writes_done <= 1'b1;
+	              write_pointer <= 0;
 	            end
 	      end  
 	end
@@ -141,6 +152,7 @@
 	// FIFO write enable generation
 	assign fifo_wren = S_AXIS_TVALID && axis_tready;
 
+/*
 	// FIFO Implementation
 	generate 
 	  for(byte_index=0; byte_index<= (C_S_AXIS_TDATA_WIDTH/8-1); byte_index=byte_index+1)
@@ -159,7 +171,7 @@
 	    end  
 	  end		
 	endgenerate
-
+*/
 	// Add user logic here
 
 	// User logic ends

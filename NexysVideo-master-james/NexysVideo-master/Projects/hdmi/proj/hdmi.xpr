@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="C:/Users/armin/Documents/Armins_Work/4thYear/ECE532/project/feb15/NexysVideo-master-james/NexysVideo-master/Projects/hdmi/proj/hdmi.xpr">
+<Project Version="7" Minor="14" Path="C:/ece532/NexysVideo-master-james/NexysVideo-master/Projects/hdmi/proj/hdmi.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="60cc6ffeebca4f0a807e4111be23ecb5"/>
