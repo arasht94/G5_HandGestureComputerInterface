@@ -1,0 +1,827 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Feb 27 21:14:26 2017
+# Process ID: 22833
+# Current directory: /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3
+# Command line: vivado tb_3.xpr
+# Log file: /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/vivado.log
+# Journal file: /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project tb_3.xpr
+INFO: [Project 1-313] Project file moved from 'W:/ECE532/project/ece532/tb_3' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/nfs/ug/homes-3/d/dezfoul2/ece532/img_processing_ip/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad1/Xilinx/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 5855.391 ; gain = 112.266 ; free physical = 5403 ; free virtual = 39464
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ip/tb_3_led_detect_0_1/sim/tb_3_led_detect_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /cad1/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_1
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg
+WARNING: Simulation object /tb/M00_AXIS_tdata_tb was not found in the design.
+WARNING: Simulation object /tb/M00_AXIS_tlast_tb was not found in the design.
+WARNING: Simulation object /tb/M00_AXIS_tready_tb was not found in the design.
+WARNING: Simulation object /tb/M00_AXIS_tstrb_tb was not found in the design.
+WARNING: Simulation object /tb/M00_AXIS_tvalid_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXIS_tdata_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXIS_tlast_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXIS_tready_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXIS_tstrb_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXIS_tvalid_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_araddr_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_arprot_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_arready_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_arvalid_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_awaddr_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_awprot_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_awready_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_awvalid_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_bready_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_bresp_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_bvalid_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_rdata_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_rready_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_rresp_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_rvalid_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_wdata_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_wready_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_wstrb_tb was not found in the design.
+WARNING: Simulation object /tb/S00_AXI_wvalid_tb was not found in the design.
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 5917.156 ; gain = 59.766 ; free physical = 5255 ; free virtual = 39445
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+run all
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'run' was cancelled
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+save_wave_config {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ip/tb_3_led_detect_0_1/sim/tb_3_led_detect_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /cad1/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-93] S_AXIS_TDATA is not declared under prefix led_detect_v1_0_S00_AXI_inst [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:72]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
+INFO: [USF-XSim-99] Step results log file:'/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ip/tb_3_led_detect_0_1/sim/tb_3_led_detect_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /cad1/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_1
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 6096.488 ; gain = 0.000 ; free physical = 4958 ; free virtual = 39203
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 6096.488 ; gain = 0.000 ; free physical = 4958 ; free virtual = 39203
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ip/tb_3_led_detect_0_1/sim/tb_3_led_detect_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /cad1/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_1
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 6096.488 ; gain = 0.000 ; free physical = 4955 ; free virtual = 39201
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 6096.488 ; gain = 0.000 ; free physical = 4955 ; free virtual = 39201
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ip/tb_3_led_detect_0_1/sim/tb_3_led_detect_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /cad1/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_1
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 6096.488 ; gain = 0.000 ; free physical = 4949 ; free virtual = 39198
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ip/tb_3_led_detect_0_1/sim/tb_3_led_detect_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /cad1/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_1
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 6096.488 ; gain = 0.000 ; free physical = 4945 ; free virtual = 39194
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+open_bd_design {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/tb_3.bd}
+Adding cell -- user:user:led_detect:1.0 - led_detect_0
+Successfully read diagram <tb_3> from BD file </nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/tb_3.bd>
+startgroup
+create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S00_AXIS
+set_property -dict [list CONFIG.TDATA_NUM_BYTES [get_property CONFIG.TDATA_NUM_BYTES [get_bd_intf_pins led_detect_0/S00_AXIS]] CONFIG.HAS_TSTRB [get_property CONFIG.HAS_TSTRB [get_bd_intf_pins led_detect_0/S00_AXIS]] CONFIG.HAS_TLAST [get_property CONFIG.HAS_TLAST [get_bd_intf_pins led_detect_0/S00_AXIS]]] [get_bd_intf_ports S00_AXIS]
+connect_bd_intf_net [get_bd_intf_pins led_detect_0/S00_AXIS] [get_bd_intf_ports S00_AXIS]
+endgroup
+startgroup
+create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S00_AXI
+set_property -dict [list CONFIG.PROTOCOL [get_property CONFIG.PROTOCOL [get_bd_intf_pins led_detect_0/S00_AXI]] CONFIG.ADDR_WIDTH [get_property CONFIG.ADDR_WIDTH [get_bd_intf_pins led_detect_0/S00_AXI]] CONFIG.HAS_BURST [get_property CONFIG.HAS_BURST [get_bd_intf_pins led_detect_0/S00_AXI]] CONFIG.HAS_LOCK [get_property CONFIG.HAS_LOCK [get_bd_intf_pins led_detect_0/S00_AXI]] CONFIG.HAS_CACHE [get_property CONFIG.HAS_CACHE [get_bd_intf_pins led_detect_0/S00_AXI]] CONFIG.HAS_QOS [get_property CONFIG.HAS_QOS [get_bd_intf_pins led_detect_0/S00_AXI]] CONFIG.HAS_REGION [get_property CONFIG.HAS_REGION [get_bd_intf_pins led_detect_0/S00_AXI]] CONFIG.SUPPORTS_NARROW_BURST [get_property CONFIG.SUPPORTS_NARROW_BURST [get_bd_intf_pins led_detect_0/S00_AXI]] CONFIG.MAX_BURST_LENGTH [get_property CONFIG.MAX_BURST_LENGTH [get_bd_intf_pins led_detect_0/S00_AXI]]] [get_bd_intf_ports S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins led_detect_0/S00_AXI] [get_bd_intf_ports S00_AXI]
+endgroup
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M00_AXIS
+connect_bd_intf_net [get_bd_intf_pins led_detect_0/M00_AXIS] [get_bd_intf_ports M00_AXIS]
+endgroup
+save_bd_design
+Wrote  : </nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/tb_3.bd> 
+save_wave_config {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+generate_target Simulation [get_files /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/tb_3.bd]
+CRITICAL WARNING: [BD 41-1356] Address block </led_detect_0/S00_AXI/S00_AXI_reg> is not mapped into </S00_AXI>. Please use Address Editor to either map or exclude it.
+Verilog Output written to : /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v
+Verilog Output written to : /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3_wrapper.v
+Wrote  : </nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/tb_3.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block led_detect_0 .
+Exporting to file /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hw_handoff/tb_3.hwh
+Generated Block Design Tcl file /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hw_handoff/tb_3_bd.tcl
+Generated Hardware Definition File /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.hwdef
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/tb_3.bd] -no_script -force -quiet
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ip/tb_3_led_detect_0_1/sim/tb_3_led_detect_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /cad1/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 24 for port M00_AXIS_tdata [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:115]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port M00_AXIS_tstrb [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:118]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 24 for port S00_AXIS_tdata [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:120]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port S00_AXIS_tstrb [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:123]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port S00_AXI_araddr [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:125]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port S00_AXI_arprot [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:126]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port S00_AXI_awaddr [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:129]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port S00_AXI_awprot [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:130]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 2 for port S00_AXI_bresp [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:134]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port S00_AXI_rdata [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:136]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 2 for port S00_AXI_rresp [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:138]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port S00_AXI_wdata [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:140]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 4 for port S00_AXI_wstrb [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:142]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_1
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ip/tb_3_led_detect_0_1/sim/tb_3_led_detect_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2458] undeclared symbol S00_AXIS_tdata_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:74]
+INFO: [VRFC 10-2458] undeclared symbol M00_AXIS_tdata_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:117]
+INFO: [VRFC 10-2458] undeclared symbol M00_AXIS_tlast_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:118]
+INFO: [VRFC 10-2458] undeclared symbol M00_AXIS_tready_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:119]
+INFO: [VRFC 10-2458] undeclared symbol M00_AXIS_tstrb_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:120]
+INFO: [VRFC 10-2458] undeclared symbol M00_AXIS_tvalid_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:121]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXIS_tlast_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:123]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXIS_tready_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:124]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXIS_tstrb_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:125]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXIS_tvalid_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:126]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_araddr_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:127]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_arprot_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:128]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_arready_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:129]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_arvalid_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:130]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_awaddr_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:131]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_awprot_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:132]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_awready_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:133]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_awvalid_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:134]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_bready_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:135]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_bresp_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:136]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_bvalid_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:137]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_rdata_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:138]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_rready_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:139]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_rresp_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:140]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_rvalid_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:141]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_wdata_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:142]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_wready_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:143]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_wstrb_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:144]
+INFO: [VRFC 10-2458] undeclared symbol S00_AXI_wvalid_tb, assumed default net type wire [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:145]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /cad1/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 24 for port M00_AXIS_tdata [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:117]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port M00_AXIS_tstrb [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:120]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 24 for port S00_AXIS_tdata [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:122]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port S00_AXIS_tstrb [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:125]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port S00_AXI_araddr [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:127]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port S00_AXI_arprot [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:128]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port S00_AXI_awaddr [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:131]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port S00_AXI_awprot [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:132]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 2 for port S00_AXI_bresp [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:136]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port S00_AXI_rdata [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:138]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 2 for port S00_AXI_rresp [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:140]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port S00_AXI_wdata [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:142]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 4 for port S00_AXI_wstrb [/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v:144]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_1
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 6214.840 ; gain = 0.000 ; free physical = 4825 ; free virtual = 39087
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ip/tb_3_led_detect_0_1/sim/tb_3_led_detect_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /cad1/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_1
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+xvlog -m64 --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sources_1/bd/tb_3/ip/tb_3_led_detect_0_1/sim/tb_3_led_detect_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /cad1/Xilinx/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_1
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config /nfs/ug/homes-3/d/dezfoul2/ece532/tb_3/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns

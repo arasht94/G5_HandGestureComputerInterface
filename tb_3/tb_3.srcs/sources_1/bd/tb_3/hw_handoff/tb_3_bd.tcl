@@ -154,6 +154,45 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
+  set M00_AXIS [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M00_AXIS ]
+  set S00_AXI [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S00_AXI ]
+  set_property -dict [ list \
+CONFIG.ADDR_WIDTH {5} \
+CONFIG.ARUSER_WIDTH {0} \
+CONFIG.AWUSER_WIDTH {0} \
+CONFIG.BUSER_WIDTH {0} \
+CONFIG.DATA_WIDTH {32} \
+CONFIG.HAS_BRESP {1} \
+CONFIG.HAS_BURST {0} \
+CONFIG.HAS_CACHE {0} \
+CONFIG.HAS_LOCK {0} \
+CONFIG.HAS_PROT {1} \
+CONFIG.HAS_QOS {0} \
+CONFIG.HAS_REGION {0} \
+CONFIG.HAS_RRESP {1} \
+CONFIG.HAS_WSTRB {1} \
+CONFIG.ID_WIDTH {0} \
+CONFIG.MAX_BURST_LENGTH {1} \
+CONFIG.NUM_READ_OUTSTANDING {1} \
+CONFIG.NUM_WRITE_OUTSTANDING {1} \
+CONFIG.PROTOCOL {AXI4LITE} \
+CONFIG.READ_WRITE_MODE {READ_WRITE} \
+CONFIG.RUSER_WIDTH {0} \
+CONFIG.SUPPORTS_NARROW_BURST {0} \
+CONFIG.WUSER_WIDTH {0} \
+ ] $S00_AXI
+  set S00_AXIS [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S00_AXIS ]
+  set_property -dict [ list \
+CONFIG.HAS_TKEEP {0} \
+CONFIG.HAS_TLAST {1} \
+CONFIG.HAS_TREADY {1} \
+CONFIG.HAS_TSTRB {1} \
+CONFIG.LAYERED_METADATA {undef} \
+CONFIG.TDATA_NUM_BYTES {3} \
+CONFIG.TDEST_WIDTH {0} \
+CONFIG.TID_WIDTH {0} \
+CONFIG.TUSER_WIDTH {0} \
+ ] $S00_AXIS
 
   # Create ports
   set m00_axis_aclk [ create_bd_port -dir I -type clk m00_axis_aclk ]
@@ -161,6 +200,11 @@ proc create_root_design { parentCell } {
 
   # Create instance: led_detect_0, and set properties
   set led_detect_0 [ create_bd_cell -type ip -vlnv user:user:led_detect:1.0 led_detect_0 ]
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net S00_AXIS_1 [get_bd_intf_ports S00_AXIS] [get_bd_intf_pins led_detect_0/S00_AXIS]
+  connect_bd_intf_net -intf_net S00_AXI_1 [get_bd_intf_ports S00_AXI] [get_bd_intf_pins led_detect_0/S00_AXI]
+  connect_bd_intf_net -intf_net led_detect_0_M00_AXIS [get_bd_intf_ports M00_AXIS] [get_bd_intf_pins led_detect_0/M00_AXIS]
 
   # Create port connections
   connect_bd_net -net m00_axis_aclk_1 [get_bd_ports m00_axis_aclk] [get_bd_pins led_detect_0/m00_axis_aclk] [get_bd_pins led_detect_0/s00_axi_aclk] [get_bd_pins led_detect_0/s00_axis_aclk]
@@ -179,11 +223,11 @@ preplace port M00_AXIS -pg 1 -y 100 -defaultsOSRD
 preplace port m00_axis_aclk -pg 1 -y 70 -defaultsOSRD
 preplace inst led_detect_0 -pg 1 -lvl 1 -y 100 -defaultsOSRD
 preplace netloc S00_AXIS_1 1 0 1 N
-preplace netloc m00_axis_aclk_1 1 0 1 -80
+preplace netloc m00_axis_aclk_1 1 0 1 -100
 preplace netloc led_detect_0_M00_AXIS 1 1 1 N
 preplace netloc S00_AXI_1 1 0 1 N
-preplace netloc m00_axis_aresetn_1 1 0 1 -90
-levelinfo -pg 1 -110 50 190 -top -10 -bot 220
+preplace netloc m00_axis_aresetn_1 1 0 1 -110
+levelinfo -pg 1 -130 30 180 -top -20 -bot 220
 ",
 }
 

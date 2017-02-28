@@ -25,35 +25,37 @@
 module tb();
    
     /* Wires for DUT */
-    /*wire M00_AXIS_tdata_tb;
+    wire [23:0]M00_AXIS_tdata_tb;
     wire M00_AXIS_tlast_tb;
     wire M00_AXIS_tready_tb;
-    wire M00_AXIS_tstrb_tb;
+    wire [2:0]M00_AXIS_tstrb_tb;
     wire M00_AXIS_tvalid_tb;
-    wire S00_AXIS_tdata_tb;
+    wire [23:0]S00_AXIS_tdata_tb;
     wire S00_AXIS_tlast_tb;
     wire S00_AXIS_tready_tb;
-    wire S00_AXIS_tstrb_tb;
+    wire [2:0]S00_AXIS_tstrb_tb;
     wire S00_AXIS_tvalid_tb;
-    wire S00_AXI_araddr_tb;
-    wire S00_AXI_arprot_tb;
+    wire [4:0]S00_AXI_araddr_tb;
+    wire [2:0]S00_AXI_arprot_tb;
     wire S00_AXI_arready_tb;
     wire S00_AXI_arvalid_tb;
-    wire S00_AXI_awaddr_tb;
-    wire S00_AXI_awprot_tb;
+    wire [4:0]S00_AXI_awaddr_tb;
+    wire [2:0]S00_AXI_awprot_tb;
     wire S00_AXI_awready_tb;
     wire S00_AXI_awvalid_tb;
     wire S00_AXI_bready_tb;
-    wire S00_AXI_bresp_tb;
+    wire [1:0]S00_AXI_bresp_tb;
     wire S00_AXI_bvalid_tb;
-    wire S00_AXI_rdata_tb;
+    wire [31:0]S00_AXI_rdata_tb;
     wire S00_AXI_rready_tb;
-    wire S00_AXI_rresp_tb;
+    wire [1:0]S00_AXI_rresp_tb;
     wire S00_AXI_rvalid_tb;
-    wire S00_AXI_wdata_tb;
+    wire [31:0]S00_AXI_wdata_tb;
     wire S00_AXI_wready_tb;
-    wire S00_AXI_wstrb_tb;
-    wire S00_AXI_wvalid_tb;*/
+    wire [3:0]S00_AXI_wstrb_tb;
+    wire S00_AXI_wvalid_tb;
+    wire m00_axis_aclk_tb;
+    wire m00_axis_aresetn_tb;
     
     /* Regs for testbench use */
     reg [23:0] test_vector [0:0]; 
@@ -69,7 +71,7 @@ module tb();
     /* Assign tb regs to block signals */
     assign `S_AXI.write_pointer = in_write_pointer; 
     //assign `S_AXI.in_fifo_wren = in_fifo_wren;
-    assign `S_AXI.in_data_stream = in_data_stream;
+    assign S00_AXIS_tdata_tb = in_data_stream;
     assign `M_AXI.stream_from_fifo = stream_from_fifo; 
     assign `M_AXI.M_AXIS_TREADY = M_AXIS_TREADY; 
     
@@ -86,7 +88,7 @@ module tb();
     	#100
     	reset = 1;
         force `S_AXI.in_fifo_wren=1; 
-        
+
         #500    	
         M_AXIS_TREADY <= 1;
         stream_from_fifo <= 1;
@@ -112,7 +114,7 @@ module tb();
     
     /* Instantiate DUT */
     tb_3 ip_dut (
-        /*.M00_AXIS_tdata(M00_AXIS_tdata_tb),
+        .M00_AXIS_tdata(M00_AXIS_tdata_tb),
         .M00_AXIS_tlast(M00_AXIS_tlast_tb),
         .M00_AXIS_tready(M00_AXIS_tready_tb),
         .M00_AXIS_tstrb(M00_AXIS_tstrb_tb),
@@ -140,7 +142,7 @@ module tb();
         .S00_AXI_wdata(S00_AXI_wdata_tb),
         .S00_AXI_wready(S00_AXI_wready_tb),
         .S00_AXI_wstrb(S00_AXI_wstrb_tb),
-        .S00_AXI_wvalid(S00_AXI_wvalid_tb),*/
+        .S00_AXI_wvalid(S00_AXI_wvalid_tb),
         .m00_axis_aclk(clock),
         .m00_axis_aresetn(reset)
     );
