@@ -444,10 +444,12 @@
   // fifo impl
     reg [AXIS_TDATA_WIDTH-1:0] in_fifo [0:FIFO_WIDTH-1];
     reg stream_from_fifo;
-    
+    //TEMP:
+    reg detected; 
     always @ (posedge S_AXI_ACLK)
     begin 
       if (in_fifo_wren) begin
+        detected <= 1; 
         if (red) begin
           in_fifo[write_pointer] <= 24'hff0000; //pure red
         end
