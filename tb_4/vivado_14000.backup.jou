@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Mar 03 01:38:58 2017
+# Process ID: 14000
+# Current directory: c:/Xilinx/ece532/tb_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11912 tb_3.xpr
+# Log file: c:/Xilinx/ece532/tb_4/vivado.log
+# Journal file: c:/Xilinx/ece532/tb_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project tb_3.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config c:/Xilinx/ece532/tb_4/tb_behav.wcfg
+source tb.tcl
+restart
+run 10 us
+run 10 us
+run 10 us
+restart
+run 10 us
+save_wave_config {c:/Xilinx/ece532/tb_4/tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config c:/Xilinx/ece532/tb_4/tb_behav.wcfg
+source tb.tcl
+restart
+run 10 us
+restart
+run 20 ms

@@ -1,0 +1,239 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+Process ID: 14052
+
+Current time: 	3/2/17 11:38:12 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+Version: 10.0
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 2
+Default font: family=Tahoma,name=Tahoma,style=plain,size=13
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.2/tps/win64/jre
+
+User name: 	Arash
+User home directory: C:/Users/Arash
+User working directory: C:/Xilinx/ece532/tb_4
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI Base root directory: C:/Xilinx/Vivado
+RDI Data directory: C:/Xilinx/Vivado/2016.2/data
+RDI Bin directory: C:/Xilinx/Vivado/2016.2/bin
+
+Vivado preferences path: C:/Users/Arash/AppData/Roaming/Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: C:/Users/Arash/AppData/Roaming/Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	229 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 436 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 33 MB (+32249kb) [00:00:03]
+// [Engine Memory]: 410 MB (+278841kb) [00:00:03]
+// Opening Vivado Project: tb_3.xpr. Version: Vivado v2016.2 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project tb_3.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 42 MB (+7386kb) [00:00:08]
+// [Engine Memory]: 454 MB (+23796kb) [00:00:08]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 71 MB (+28054kb) [00:00:08]
+// [Engine Memory]: 489 MB (+12846kb) [00:00:08]
+// [Engine Memory]: 524 MB (+11480kb) [00:00:09]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 524 MB. GUI used memory: 33 MB. Current time: 3/2/17 11:38:19 PM EST
+// Tcl Message: open_project tb_3.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/ece532/img_processing_ip/ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: tb_3; location: c:/Xilinx/ece532/tb_4; part: xc7a200tsbg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 817.859 ; gain = 129.191 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 122 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 6); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.v)]", 8, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.v)]", 8, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// [Engine Memory]: 558 MB (+7723kb) [00:02:21]
+// HMemoryUtils.trashcanNow. Engine heap size: 572 MB. GUI used memory: 35 MB. Current time: 3/2/17 11:40:29 PM EST
+// Elapsed time: 21 seconds
+selectCodeEditor("tb.v", 371, 161); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "tb.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "tb.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "tb.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 238, 230); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "tb.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 36 seconds
+selectCodeEditor("tb.v", 297, 350); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "tb.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "tb.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "tb.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 267, 297); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 171, 297); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 171, 297, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("tb.v", 171, 297); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 173, 282); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 41 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("tb.v", 286, 264); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 150, 294); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 38 seconds
+selectCodeEditor("tb.v", 226, 397); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 160, 374); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 224, 398); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 223, 381); // bH:N (JPanel:JComponent, cv:JFrame)
+// [GUI Memory]: 75 MB (+1097kb) [00:07:23]
+// Elapsed time: 159 seconds
+selectCodeEditor("tb.v", 113, 186); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 43 seconds
+typeControlKey((HResource) null, "tb.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 134, 338); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 134, 338, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("tb.v", 195, 331); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 195, 331, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("tb.v", 94, 266); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 94, 266, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("tb.v", 94, 266); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 94, 266, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("tb.v", 94, 266); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 89 seconds
+typeControlKey((HResource) null, "tb.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 181, 312); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("tb.v", 321, 304); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 82 MB (+2840kb) [00:10:46]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // x:Y (w:G, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// f:bL (cv:JFrame):  Run Simulation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav' 
+// Tcl Message: Vivado Simulator 2016.2 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log  Using 2 slave threads. Starting static elaboration Completed static elaboration Starting simulation data flow analysis Completed simulation data flow analysis 
+// Tcl Message: Time Resolution for simulation is 1ps Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA... Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W... Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W... Compiling module xil_defaultlib.led_detect_v1_0 Compiling module xil_defaultlib.tb_3_led_detect_0_0 Compiling module xil_defaultlib.tb_3 Compiling module xil_defaultlib.tb Compiling module xil_defaultlib.glbl Built simulation snapshot tb_behav 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message:  ****** Webtalk v2016.2 (64-bit)   **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016   **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.  source c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace INFO: [Common 17-206] Exiting Webtalk at Thu Mar 02 23:49:04 2017... 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {c:/Xilinx/ece532/tb_4/tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2016.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// [Engine Memory]: 601 MB (+16444kb) [00:11:02]
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: open_wave_config c:/Xilinx/ece532/tb_4/tb_behav.wcfg 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// [Engine Memory]: 648 MB (+17505kb) [00:11:03]
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: source tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 10000000ns 
+// HMemoryUtils.trashcanNow. Engine heap size: 674 MB. GUI used memory: 43 MB. Current time: 3/2/17 11:49:10 PM EST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// [Engine Memory]: 703 MB (+24146kb) [00:11:06]
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 703 MB. GUI used memory: 42 MB. Current time: 3/2/17 11:49:13 PM EST
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 704 MB. GUI used memory: 52 MB. Current time: 3/2/17 11:49:18 PM EST
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1003.180 ; gain = 82.578 xsim: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1003.180 ; gain = 134.598 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 10000000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1003.180 ; gain = 134.598 
+// 'e' command handler elapsed time: 24 seconds
+// Elapsed time: 24 seconds
+dismissDialog("Run Simulation"); // f:bL (cv:JFrame)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb.v", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// Elapsed time: 68 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_behav.wcfg", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // y:JideButton (CommandBar:DockableBar, cv:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM

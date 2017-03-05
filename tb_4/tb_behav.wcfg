@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="30000000000001fs"></ZoomEndTime>
+      <Cursor1Time time="1372549020000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="41" />
+   <wvobject fp_name="/tb/test_vector" type="array">
+      <obj_property name="ElementShortName">test_vector[0:921617][23:0]</obj_property>
+      <obj_property name="ObjectShortName">test_vector[0:921617][23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/output_vector" type="array">
+      <obj_property name="ElementShortName">output_vector[0:921617][23:0]</obj_property>
+      <obj_property name="ObjectShortName">output_vector[0:921617][23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/in_fifo_wren" type="logic">
+      <obj_property name="ElementShortName">in_fifo_wren</obj_property>
+      <obj_property name="ObjectShortName">in_fifo_wren</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/in_data_stream" type="array">
+      <obj_property name="ElementShortName">in_data_stream[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in_data_stream[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/red" type="logic">
+      <obj_property name="ElementShortName">red</obj_property>
+      <obj_property name="ObjectShortName">red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/in_fifo" type="array">
+      <obj_property name="ElementShortName">in_fifo[0:1279][23:0]</obj_property>
+      <obj_property name="ObjectShortName">in_fifo[0:1279][23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/s00_axis_tdata" type="array">
+      <obj_property name="ElementShortName">s00_axis_tdata[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_axis_tdata[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/in_data_stream" type="array">
+      <obj_property name="ElementShortName">in_data_stream[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in_data_stream[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXIS_inst/in_data_stream" type="array">
+      <obj_property name="ElementShortName">in_data_stream[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in_data_stream[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXIS_inst/S_AXIS_TDATA" type="array">
+      <obj_property name="ElementShortName">S_AXIS_TDATA[23:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TDATA[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/in_fifo_wren" type="logic">
+      <obj_property name="ElementShortName">in_fifo_wren</obj_property>
+      <obj_property name="ObjectShortName">in_fifo_wren</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXIS_inst/S_AXIS_TVALID" type="logic">
+      <obj_property name="ElementShortName">S_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXIS_inst/write_pointer" type="array">
+      <obj_property name="ElementShortName">write_pointer[10:0]</obj_property>
+      <obj_property name="ObjectShortName">write_pointer[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_M00_AXIS_inst/M_AXIS_TDATA" type="array">
+      <obj_property name="ElementShortName">M_AXIS_TDATA[23:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TDATA[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_M00_AXIS_inst/M_AXIS_TREADY" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_M00_AXIS_inst/read_pointer" type="array">
+      <obj_property name="ElementShortName">read_pointer[10:0]</obj_property>
+      <obj_property name="ObjectShortName">read_pointer[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_M00_AXIS_inst/stream_data_out" type="array">
+      <obj_property name="ElementShortName">stream_data_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">stream_data_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_M00_AXIS_inst/out_data_stream" type="array">
+      <obj_property name="ElementShortName">out_data_stream[23:0]</obj_property>
+      <obj_property name="ObjectShortName">out_data_stream[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_M00_AXIS_inst/M_AXIS_ARESETN" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_ARESETN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_M00_AXIS_inst/tx_en" type="logic">
+      <obj_property name="ElementShortName">tx_en</obj_property>
+      <obj_property name="ObjectShortName">tx_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/M00_AXIS_tvalid_tb" type="logic">
+      <obj_property name="ElementShortName">M00_AXIS_tvalid_tb</obj_property>
+      <obj_property name="ObjectShortName">M00_AXIS_tvalid_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_M00_AXIS_inst/mst_exec_state" type="array">
+      <obj_property name="ElementShortName">mst_exec_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mst_exec_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_M00_AXIS_inst/stream_from_fifo" type="logic">
+      <obj_property name="ElementShortName">stream_from_fifo</obj_property>
+      <obj_property name="ObjectShortName">stream_from_fifo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/stream_from_fifo" type="logic">
+      <obj_property name="ElementShortName">stream_from_fifo</obj_property>
+      <obj_property name="ObjectShortName">stream_from_fifo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/write_pointer" type="array">
+      <obj_property name="ElementShortName">write_pointer[10:0]</obj_property>
+      <obj_property name="ObjectShortName">write_pointer[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/M00_AXIS_tdata_tb" type="array">
+      <obj_property name="ElementShortName">M00_AXIS_tdata_tb[23:0]</obj_property>
+      <obj_property name="ObjectShortName">M00_AXIS_tdata_tb[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/M00_AXIS_tvalid_tb" type="logic">
+      <obj_property name="ElementShortName">M00_AXIS_tvalid_tb</obj_property>
+      <obj_property name="ObjectShortName">M00_AXIS_tvalid_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_M00_AXIS_inst/stream_from_fifo" type="logic">
+      <obj_property name="ElementShortName">stream_from_fifo</obj_property>
+      <obj_property name="ObjectShortName">stream_from_fifo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/stream_from_fifo" type="logic">
+      <obj_property name="ElementShortName">stream_from_fifo</obj_property>
+      <obj_property name="ObjectShortName">stream_from_fifo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXIS_inst/S_AXIS_TDATA" type="array">
+      <obj_property name="ElementShortName">S_AXIS_TDATA[23:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TDATA[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/height_counter" type="array">
+      <obj_property name="ElementShortName">height_counter[29:0]</obj_property>
+      <obj_property name="ObjectShortName">height_counter[29:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/S00_AXIS_tdata_tb" type="array">
+      <obj_property name="ElementShortName">S00_AXIS_tdata_tb[23:0]</obj_property>
+      <obj_property name="ObjectShortName">S00_AXIS_tdata_tb[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/enable_input" type="logic">
+      <obj_property name="ElementShortName">enable_input</obj_property>
+      <obj_property name="ObjectShortName">enable_input</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/S00_AXIS_tready_tb" type="logic">
+      <obj_property name="ElementShortName">S00_AXIS_tready_tb</obj_property>
+      <obj_property name="ObjectShortName">S00_AXIS_tready_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/input_done" type="logic">
+      <obj_property name="ElementShortName">input_done</obj_property>
+      <obj_property name="ObjectShortName">input_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/output_height_counter" type="array">
+      <obj_property name="ElementShortName">output_height_counter[29:0]</obj_property>
+      <obj_property name="ObjectShortName">output_height_counter[29:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/red" type="logic">
+      <obj_property name="ElementShortName">red</obj_property>
+      <obj_property name="ObjectShortName">red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/in_data_stream" type="array">
+      <obj_property name="ElementShortName">in_data_stream[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in_data_stream[23:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/ip_dut/led_detect_0/inst/led_detect_v1_0_S00_AXI_inst/green" type="logic">
+      <obj_property name="ElementShortName">green</obj_property>
+      <obj_property name="ObjectShortName">green</obj_property>
+   </wvobject>
+</wave_config>

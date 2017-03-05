@@ -1,0 +1,179 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Mar 02 20:58:28 2017
+# Process ID: 12956
+# Current directory: c:/Xilinx/ece532/tb_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13876 tb_3.xpr
+# Log file: c:/Xilinx/ece532/tb_4/vivado.log
+# Journal file: c:/Xilinx/ece532/tb_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project tb_3.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/ece532/img_processing_ip/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic4.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic1.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic1_bin.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic1_formatted.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic4_good.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic_red_hexdump.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic_red_green_blue_hex.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav'
+"xvlog -m64 --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ip/tb_3_led_detect_0_0/sim/tb_3_led_detect_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+WARNING: [VRFC 10-986] literal value truncated to fit in 6 bits [c:/Xilinx/ece532/tb_4/tb_3.srcs/sim_1/new/tb.v:145]
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_0
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 02 20:59:27 2017...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 892.785 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {c:/Xilinx/ece532/tb_4/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config c:/Xilinx/ece532/tb_4/tb_behav.wcfg
+WARNING: Simulation object /tb/write_pointer was not found in the design.
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000000ns
+run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 961.523 ; gain = 49.445
+xsim: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 961.523 ; gain = 68.738
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000000ns
+launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 961.523 ; gain = 68.738
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10000 us
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 983.699 ; gain = 22.176
+run 10000 us
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 986.117 ; gain = 2.418
+run 10000 us
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 991.414 ; gain = 5.297
+run 10000 us
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 997.012 ; gain = 5.598
+run 10000 us
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 997.012 ; gain = 0.000
+run 20000 us
+run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 998.367 ; gain = 1.355
+run 100000 us
+run: Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1008.188 ; gain = 9.820
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10000 us
+run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1086.781 ; gain = 0.000
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1086.781 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic4.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic1.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic1_bin.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic1_formatted.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic4_good.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic_red_hexdump.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic_red_green_blue_hex.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav'
+"xvlog -m64 --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ip/tb_3_led_detect_0_0/sim/tb_3_led_detect_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.srcs/sources_1/bd/tb_3/hdl/tb_3_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+ERROR: [XSIM 43-3225] Cannot find design unit xil_defaultlib.tb in library work located at xsim.dir/work.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 02 21:57:16 2017...

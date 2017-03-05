@@ -1,0 +1,111 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Mar 03 01:32:13 2017
+# Process ID: 16516
+# Current directory: c:/Xilinx/ece532/tb_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15172 tb_3.xpr
+# Log file: c:/Xilinx/ece532/tb_4/vivado.log
+# Journal file: c:/Xilinx/ece532/tb_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project tb_3.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/ece532/img_processing_ip/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 813.609 ; gain = 131.016
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/test1.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic4.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic1.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic1_bin.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic1_formatted.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic4_good.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic_red_hexdump.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic_red_green_blue_hex.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic_golden_values.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic_golden_test.txt'
+INFO: [USF-XSim-25] Exported 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/pic_blue_test_hex.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav'
+"xvlog -m64 --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/hdl/tb_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_M00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_M00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0_S00_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_detect_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.ip_user_files/bd/tb_3/ip/tb_3_led_detect_0_0/sim/tb_3_led_detect_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_3_led_detect_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+WARNING: [VRFC 10-969] keyword 'unsigned' is not allowed here in this mode of verilog [c:/Xilinx/ece532/tb_4/tb_3.srcs/sim_1/new/tb.v:74]
+WARNING: [VRFC 10-986] literal value truncated to fit in 6 bits [c:/Xilinx/ece532/tb_4/tb_3.srcs/sim_1/new/tb.v:135]
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed486eb1ed64d5fbfb4aeb230fe046d --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXI(AXIS_TDA...
+Compiling module xil_defaultlib.led_detect_v1_0_M00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0_S00_AXIS(FRAME_W...
+Compiling module xil_defaultlib.led_detect_v1_0
+Compiling module xil_defaultlib.tb_3_led_detect_0_0
+Compiling module xil_defaultlib.tb_3
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Mar 03 01:34:42 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'c:/Xilinx/ece532/tb_4/tb_3.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {c:/Xilinx/ece532/tb_4/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config c:/Xilinx/ece532/tb_4/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 30000000ns
+run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 949.934 ; gain = 50.047
+xsim: Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 949.934 ; gain = 125.816
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 30000000ns
+launch_simulation: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 949.934 ; gain = 125.816
