@@ -26,20 +26,20 @@
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/tb_3.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="nexys_video"/>
-    <Option Name="WTXSimLaunchSim" Val="128"/>
+    <Option Name="WTXSimLaunchSim" Val="139"/>
     <Option Name="WTModelSimLaunchSim" Val="1"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="1"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="2"/>
-    <Option Name="WTModelSimExportSim" Val="2"/>
-    <Option Name="WTQuestaExportSim" Val="2"/>
-    <Option Name="WTIesExportSim" Val="2"/>
-    <Option Name="WTVcsExportSim" Val="2"/>
-    <Option Name="WTRivieraExportSim" Val="2"/>
-    <Option Name="WTActivehdlExportSim" Val="2"/>
+    <Option Name="WTXSimExportSim" Val="4"/>
+    <Option Name="WTModelSimExportSim" Val="4"/>
+    <Option Name="WTQuestaExportSim" Val="4"/>
+    <Option Name="WTIesExportSim" Val="4"/>
+    <Option Name="WTVcsExportSim" Val="4"/>
+    <Option Name="WTRivieraExportSim" Val="4"/>
+    <Option Name="WTActivehdlExportSim" Val="4"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
@@ -50,12 +50,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hw_handoff/tb_3_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="ip/tb_3_led_detect_0_0/tb_3_led_detect_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hw_handoff/tb_3.hwh"/>
-        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hdl/tb_3.hwdef"/>
-        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="tb_3_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hdl/tb_3.v"/>
+        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="ip/tb_3_led_detect_0_1/tb_3_led_detect_0_1.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/tb_3/hdl/tb_3_wrapper.v">
         <FileInfo>
@@ -105,8 +101,18 @@
       <File Path="$PPRDIR/tests/pic_red_hexdump.txt"/>
       <File Path="$PPRDIR/tests/pic_red_green_blue_hex.txt"/>
       <File Path="$PPRDIR/tests/pic_blue_test_hex.txt"/>
-      <File Path="$PPRDIR/tests/pic_golden_values.txt"/>
-      <File Path="$PPRDIR/tests/pic_golden_test.txt"/>
+      <File Path="$PSRCDIR/sim_1/imports/tests/pic_golden_values.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/tests/pic_golden_values.txt"/>
+          <Attr Name="ImportTime" Val="1488765518"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/tests/pic_golden_test.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/tests/pic_golden_test.txt"/>
+          <Attr Name="ImportTime" Val="1488769275"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="tb"/>
@@ -115,7 +121,7 @@
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/tb_behav.wcfg"/>
-        <Option Name="xsim.simulate.runtime" Val="30000000ns"/>
+        <Option Name="xsim.simulate.runtime" Val="20000000ns"/>
       </Config>
     </FileSet>
     <FileSet Name="sim_2" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_2">

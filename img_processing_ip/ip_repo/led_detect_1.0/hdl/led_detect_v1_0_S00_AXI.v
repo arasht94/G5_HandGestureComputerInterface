@@ -438,8 +438,11 @@
         end
     end
     
-    wire red = in_data_stream[23:16] > ((in_data_stream[15:8] + in_data_stream[7:0]) >> 1);
-    wire green = in_data_stream[15:8] > ((in_data_stream[23:16] + in_data_stream[7:0]) >> 1);
+    //wire red = (in_data_stream[23:16] - ((in_data_stream[15:8] + in_data_stream[7:0]) >> 1)) > 64;
+    //wire green = (in_data_stream[15:8] - ((in_data_stream[23:16] + in_data_stream[7:0]) >> 1)) > 64;
+    
+    wire red = (in_data_stream[23:16] > 64) && (in_data_stream[15:8] < 64) && (in_data_stream[7:0] < 64);
+    wire green = (in_data_stream[15:8] > 64) && (in_data_stream[23:16] < 64) && (in_data_stream[7:0] < 64);
     
   // Stream input data into fifo
   // fifo impl
