@@ -3,19 +3,19 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="c:/Xilinx/ece532/tb_4/tb_3.xpr">
+<Project Version="7" Minor="14" Path="C:/ece532/tb_4/tb_3.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="1ed486eb1ed64d5fbfb4aeb230fe046d"/>
     <Option Name="Part" Val="xc7a200tsbg484-1"/>
     <Option Name="CompiledLibDir" Val="$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/modelsim"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
-    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirIES" Val="$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/ies"/>
-    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/vcs"/>
-    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/riviera"/>
-    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/activehdl"/>
+    <Option Name="CompiledLibDirModelSim" Val="$PPRDIR/../../Users/jaziz/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../Users/jaziz/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PPRDIR/../../Users/jaziz/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PPRDIR/../../Users/jaziz/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PPRDIR/../../Users/jaziz/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PPRDIR/../../Users/jaziz/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/Users/Arash/AppData/Roaming/Xilinx/Vivado/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/$PPRDIR/ECE532/project/ece532/tb_3/tb_3.cache/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
@@ -26,7 +26,7 @@
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/tb_3.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="nexys_video"/>
-    <Option Name="WTXSimLaunchSim" Val="119"/>
+    <Option Name="WTXSimLaunchSim" Val="128"/>
     <Option Name="WTModelSimLaunchSim" Val="1"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -50,12 +50,12 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hdl/tb_3.v"/>
-        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hdl/tb_3.hwdef"/>
         <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hw_handoff/tb_3_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hw_handoff/tb_3.hwh"/>
-        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="tb_3_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="ip/tb_3_led_detect_0_0/tb_3_led_detect_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hw_handoff/tb_3.hwh"/>
+        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hdl/tb_3.hwdef"/>
+        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="tb_3_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="tb_3.bd" FileRelPathName="hdl/tb_3.v"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/tb_3/hdl/tb_3_wrapper.v">
         <FileInfo>

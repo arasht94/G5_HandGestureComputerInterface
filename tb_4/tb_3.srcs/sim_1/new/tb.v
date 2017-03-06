@@ -94,6 +94,11 @@ module tb();
         output_aligned = 0; 
         output_bytes_written = 0;
         output_height_counter = `BMP_HEADER / `IMAGE_DEPTH;
+        
+        S00_AXIS_tdata_tb[7:0] <= test_vector[height_counter][23:16];
+                    S00_AXIS_tdata_tb[15:8] <= test_vector[height_counter][15:8];
+                    S00_AXIS_tdata_tb[23:16] <= test_vector[height_counter][7:0]; 
+                    S00_AXIS_tstrb_tb <= 4'hf;
          
         //copy bmp header to output values
         for(i = 0; i < `BMP_HEADER / `IMAGE_DEPTH; i=i+1)
@@ -115,9 +120,9 @@ module tb();
     //write the input vector to the DUT
     always@(posedge clock) begin
         if(enable_input && S00_AXIS_tready_tb == 1) begin
-            S00_AXIS_tdata_tb[7:0] <= test_vector[height_counter][23:16];
-            S00_AXIS_tdata_tb[15:8] <= test_vector[height_counter][15:8];
-            S00_AXIS_tdata_tb[23:16] <= test_vector[height_counter][7:0]; 
+            S00_AXIS_tdata_tb[7:0] <= test_vector[height_counter+1][23:16];
+            S00_AXIS_tdata_tb[15:8] <= test_vector[height_counter+1][15:8];
+            S00_AXIS_tdata_tb[23:16] <= test_vector[height_counter+1][7:0]; 
             S00_AXIS_tstrb_tb <= 4'hf;
             
             if(height_counter < `IMAGE_HEIGHT)
