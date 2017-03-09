@@ -1,0 +1,126 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+Process ID: 1136
+
+Current time: 	2/8/17 6:26:57 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.2/tps/win64/jre
+
+User name: 	tabrizim
+User home directory: C:/Users/tabrizim
+User working directory: W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: C:/Xilinx/Vivado
+RDI Data directory: C:/Xilinx/Vivado/2016.2/data
+RDI Bin directory: C:/Xilinx/Vivado/2016.2/bin
+
+Vivado preferences path: C:/Users/tabrizim/AppData/Roaming/Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: C:/Users/tabrizim/AppData/Roaming/Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	221 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 470 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 34 MB (+33109kb) [00:00:02]
+// [Engine Memory]: 404 MB (+271866kb) [00:00:02]
+// aZ:y (cv:JFrame): Older Project Version: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aZ:y)
+// Opening Vivado Project: W:\523_fuck_xilinx\NexysVideo-master\Projects\hdmi\proj\hdmi.xpr. Version: Vivado v2015.3 
+// bL:g (cv:JFrame):  Open Project : addNotify
+dismissDialog("Older Project Version"); // aZ:y (cv:JFrame)
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj/hdmi.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: IP_LOCK_CHANGE
+// [Engine Memory]: 515 MB (+95710kb) [00:00:07]
+// HMemoryUtils.trashcanNow. Engine heap size: 515 MB. GUI used memory: 29 MB. Current time: 2/8/17 6:26:59 PM EST
+// TclEventType: IP_LOCK_CHANGE
+// [Engine Memory]: 583 MB (+43658kb) [00:00:12]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 632 MB (+21220kb) [00:00:15]
+// [GUI Memory]: 84 MB (+50564kb) [00:00:15]
+// [Engine Memory]: 672 MB (+8591kb) [00:00:15]
+// [GUI Memory]: 91 MB (+2608kb) [00:00:16]
+// [Engine Memory]: 765 MB (+62930kb) [00:00:16]
+// [GUI Memory]: 102 MB (+6910kb) [00:00:16]
+// [GUI Memory]: 109 MB (+2268kb) [00:00:16]
+// [Engine Memory]: 822 MB (+19322kb) [00:00:17]
+// [GUI Memory]: 115 MB (+68kb) [00:00:17]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj/hdmi.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Mohammad/Desktop/ECE532/NexysVideo-master/Projects/hdmi/proj' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [Project 1-230] Project 'hdmi.xpr' upgraded for this version of Vivado. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 122 MB (+1367kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: hdmi; location: W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj; part: xc7a200tsbg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1068.199 ; gain = 374.512 
+// Elapsed time: 15 seconds
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+// al:y (cv:JFrame): Project Upgraded: addNotify
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectButton(PAResourceQtoS.ReportIPStatusInfoDialog_IGNORE, "Ignore"); // a:JButton (JPanel:JComponent, al:y)
+dismissDialog("Project Upgraded"); // al:y (cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // af:JMenuItem (JPopupMenu:JComponent, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// ai:x (cv:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ai:x)
+dismissDialog("Launch SDK"); // ai:x (cv:JFrame)
+// Tcl Message: launch_sdk -workspace W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk -hwspec W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk -hwspec W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// [GUI Memory]: 128 MB (+267kb) [00:00:31]
+// [GUI Memory]: 134 MB (+70kb) [00:08:50]
+// Elapsed time: 985 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // af:JMenuItem (JPopupMenu:JComponent, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// ai:x (cv:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ai:x)
+dismissDialog("Launch SDK"); // ai:x (cv:JFrame)
+// Tcl Message: launch_sdk -workspace W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk -hwspec W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk -hwspec W:/523_fuck_xilinx/NexysVideo-master/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// [GUI Memory]: 142 MB (+453kb) [00:17:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 844 MB. GUI used memory: 56 MB. Current time: 2/8/17 6:52:26 PM EST
