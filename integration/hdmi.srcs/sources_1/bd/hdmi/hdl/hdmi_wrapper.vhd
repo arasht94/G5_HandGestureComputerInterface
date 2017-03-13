@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
---Date        : Wed Mar 08 19:10:31 2017
+--Date        : Thu Mar 09 14:34:40 2017
 --Host        : SFB520WS18 running 64-bit Service Pack 1  (build 7601)
 --Command     : generate_target hdmi_wrapper.bd
 --Design      : hdmi_wrapper

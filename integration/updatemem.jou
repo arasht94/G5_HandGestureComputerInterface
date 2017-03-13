@@ -2,11 +2,11 @@
 # updatemem v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # 
-# Start of session at: Thu Feb 09 16:44:55 2017
-# Process ID: 1656
-# Current directory: W:/NexysVideo-master_2015.3/Projects/hdmi/proj
-# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2016.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo W:/NexysVideo-master_2015.3/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper_hw_platform_2/hdmi_wrapper.mmi -data C:/Xilinx/SDK/2016.2/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc hdmi_i/microblaze_0 -bit W:/NexysVideo-master_2015.3/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper_hw_platform_2/hdmi_wrapper.bit -out W:/NexysVideo-master_2015.3/Projects/hdmi/proj/hdmi.sdk/hdmi_wrapper_hw_platform_2/download.bit -force
-# Log file: W:/NexysVideo-master_2015.3/Projects/hdmi/proj/updatemem.log
-# Journal file: W:/NexysVideo-master_2015.3/Projects/hdmi/proj\updatemem.jou
+# Start of session at: Fri Mar 10 14:57:12 2017
+# Process ID: 3140
+# Current directory: W:/ece532/integration
+# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2016.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo W:/ece532/integration/hdmi.sdk/hdmi_wrapper_hw_platform_3/hdmi_wrapper.mmi -data C:/Xilinx/SDK/2016.2/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc hdmi_i/microblaze_0 -bit W:/ece532/integration/hdmi.sdk/hdmi_wrapper_hw_platform_3/hdmi_wrapper.bit -out W:/ece532/integration/hdmi.sdk/hdmi_wrapper_hw_platform_3/download.bit -force
+# Log file: W:/ece532/integration/updatemem.log
+# Journal file: W:/ece532/integration\updatemem.jou
 #-----------------------------------------------------------
 source C:/Xilinx/SDK/2016.2/scripts/updatemem/main.tcl -notrace

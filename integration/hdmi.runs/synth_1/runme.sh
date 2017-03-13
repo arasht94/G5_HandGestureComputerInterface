@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='W:/ece532/hdmi/hdmi.runs/synth_1'
+HD_PWD='W:/ece532/integration/hdmi.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

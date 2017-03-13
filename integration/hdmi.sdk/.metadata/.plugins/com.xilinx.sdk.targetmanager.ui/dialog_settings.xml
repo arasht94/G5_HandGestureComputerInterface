@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="bootloop" key="hdmi_wrapper_hw_platform_3-microblaze_0-initElf"/>
+	<item value="hdmi_wrapper.mmi" key="hdmi_wrapper_hw_platform_0-bmmFile"/>
+	<item value="bootloop" key="hdmi_wrapper_hw_platform_1-microblaze_0-initElf"/>
+	<item value="Auto Detect" key="hdmi_wrapper_hw_platform_3-device"/>
+	<item value="hdmi_wrapper.bit" key="hdmi_wrapper_hw_platform_3-bitFile"/>
 	<item value="bootloop" key="hdmi_wrapper_hw_platform_2-microblaze_0-initElf"/>
 	<item value="hdmi_wrapper.bit" key="hdmi_wrapper_hw_platform_2-bitFile"/>
 	<item value="hdmi_wrapper.bit" key="hdmi_wrapper_hw_platform_1-bitFile"/>
-	<item value="hdmi_wrapper.mmi" key="hdmi_wrapper_hw_platform_0-bmmFile"/>
-	<item value="bootloop" key="hdmi_wrapper_hw_platform_1-microblaze_0-initElf"/>
 	<item value="Auto Detect" key="hdmi_wrapper_hw_platform_0-device"/>
 	<item value="Auto Detect" key="hdmi_wrapper_hw_platform_1-device"/>
 	<item value="Auto Detect" key="hdmi_wrapper_hw_platform_2-device"/>
@@ -14,9 +17,12 @@
 	<item value="false" key="hdmi_wrapper_hw_platform_0-partial_bit"/>
 	<item value="false" key="hdmi_wrapper_hw_platform_2-partial_bit"/>
 	<item value="hdmi_wrapper.bit" key="hdmi_wrapper_hw_platform_0-bitFile"/>
-	<item value="hdmi_wrapper_hw_platform_2" key="programfpga.hwplatform"/>
+	<item value="hdmi_wrapper_hw_platform_3" key="programfpga.hwplatform"/>
 	<item value="Local" key="hdmi_wrapper_hw_platform_2-target"/>
+	<item value="hdmi_wrapper.mmi" key="hdmi_wrapper_hw_platform_3-bmmFile"/>
+	<item value="Local" key="hdmi_wrapper_hw_platform_3-target"/>
 	<item value="hdmi_wrapper.mmi" key="hdmi_wrapper_hw_platform_2-bmmFile"/>
+	<item value="false" key="hdmi_wrapper_hw_platform_3-partial_bit"/>
 	<item value="Local" key="hdmi_wrapper_hw_platform_0-target"/>
 	<item value="Local" key="hdmi_wrapper_hw_platform_1-target"/>
 </section>

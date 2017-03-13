@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Mar 08 20:59:05 2017">
+<application name="pa" timeStamp="Fri Mar 10 16:43:10 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="cee279fadc0b42ff9950d898241c41d5" type="ProjectID"/>
-<property name="ProjectIteration" value="9" type="ProjectIteration"/>
+<property name="ProjectIteration" value="11" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -19,61 +19,44 @@ This means code written to parse this file will need to be revisited each subseq
 <item name="Java Command Handlers">
 <property name="AutoConnectTarget" value="1" type="JavaHandler"/>
 <property name="CreateBlockDesign" value="1" type="JavaHandler"/>
-<property name="CustomizeRSBBlock" value="55" type="JavaHandler"/>
+<property name="CustomizeRSBBlock" value="59" type="JavaHandler"/>
 <property name="EditDelete" value="7" type="JavaHandler"/>
 <property name="EditProperties" value="4" type="JavaHandler"/>
 <property name="EditUndo" value="7" type="JavaHandler"/>
 <property name="LaunchProgramFpga" value="1" type="JavaHandler"/>
 <property name="MakeRSBConnection" value="1" type="JavaHandler"/>
-<property name="NewLaunchHardware" value="2" type="JavaHandler"/>
-<property name="OpenBlockDesign" value="9" type="JavaHandler"/>
+<property name="NewExportHardware" value="2" type="JavaHandler"/>
+<property name="NewLaunchHardware" value="8" type="JavaHandler"/>
+<property name="OpenBlockDesign" value="14" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="1" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="4" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="5" type="JavaHandler"/>
 <property name="ReportIPStatus" value="2" type="JavaHandler"/>
 <property name="ResetLayout" value="8" type="JavaHandler"/>
-<property name="RunBitgen" value="6" type="JavaHandler"/>
+<property name="RunBitgen" value="8" type="JavaHandler"/>
 <property name="RunDesignAhead" value="1" type="JavaHandler"/>
 <property name="RunImplementation" value="3" type="JavaHandler"/>
 <property name="RunSynthesis" value="1" type="JavaHandler"/>
-<property name="SaveDesign" value="7" type="JavaHandler"/>
+<property name="SaveDesign" value="8" type="JavaHandler"/>
 <property name="SaveRSBDesign" value="5" type="JavaHandler"/>
 <property name="ShowProductGuide" value="1" type="JavaHandler"/>
-<property name="ShowView" value="5" type="JavaHandler"/>
+<property name="ShowView" value="6" type="JavaHandler"/>
+<property name="ToggleViewNavigator" value="1" type="JavaHandler"/>
 <property name="UpgradeIP" value="2" type="JavaHandler"/>
-<property name="ValidateRSBDesign" value="12" type="JavaHandler"/>
-<property name="ViewLayoutCmd" value="2" type="JavaHandler"/>
-<property name="ViewTaskSynthesis" value="5" type="JavaHandler"/>
+<property name="ValidateRSBDesign" value="14" type="JavaHandler"/>
+<property name="ViewLayoutCmd" value="3" type="JavaHandler"/>
+<property name="ViewTaskSynthesis" value="7" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceAtoD.AbstractFileView_RELOAD, Reload" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CmdMsgDialog_MESSAGES, [Timing 38-249] Generated clock hdmi_i/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O. [w:/ece532/hdmi/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_tc_0_0/hdmi_v_tc_0_0_clocks.xdc:2]. Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock., 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CmdMsgDialog_OK, OK" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SAVE_DESIGN, save_design" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN, save_rsb_design" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, System_validate_bd_design_rsb" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, Launch SDK" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String" value="1" type="GuiResourceData"/>
 <property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, IP Integrator, Open Block Design], 7, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Open Synthesized Design], 18, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.LogMonitor_MONITOR, 1010, 61" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Implementation, Write Bitstream, [DRC 23-20] Rule violation (UCIO-1" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PAGraphicalView_VIEW, View" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PAViews_CODE, Code" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PAViews_PACKAGE, 694, 4605, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, GPIO_36476 (1" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, Scalar ports (0" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, Scalar ports (1" value="6" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, TMDS_36817 (8" value="4" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, TMDS_IN_data_p (6" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, ext_reset_23608 (1" value="23" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, hdmi_hpd (1" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, reset ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; , 4, (String" value="4" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, reset ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; , 4, reset, 0, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="3" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="5" type="GuiMode"/>
+<property name="GuiMode" value="1" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="4" type="TclMode"/>
+<property name="TclMode" value="0" type="TclMode"/>
 </item>
 </section>
 </application>

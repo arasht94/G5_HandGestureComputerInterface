@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="W:/ece532/hdmi/hdmi.xpr">
+<Project Version="7" Minor="14" Path="W:/ece532/integration/hdmi.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="60cc6ffeebca4f0a807e4111be23ecb5"/>
@@ -54,62 +54,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="hdl/hdmi.vhd"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_xbar_1/hdmi_xbar_1.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_xbar_0/hdmi_xbar_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_xlconstant_0_0/hdmi_xlconstant_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_v_vid_in_axi4s_0_0/hdmi_v_vid_in_axi4s_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_v_tc_1_0/hdmi_v_tc_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_v_tc_0_0/hdmi_v_tc_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_rst_mig_7series_0_pxl_0/hdmi_rst_mig_7series_0_pxl_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_rst_mig_7series_0_100M_0/hdmi_rst_mig_7series_0_100M_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_rgb2dvi_0_0/hdmi_rgb2dvi_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_microblaze_0_xlconcat_0/hdmi_microblaze_0_xlconcat_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_lmb_bram_0/hdmi_lmb_bram_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_v_axi4s_vid_out_0_0/hdmi_v_axi4s_vid_out_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_ilmb_bram_if_cntlr_0/hdmi_ilmb_bram_if_cntlr_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_dlmb_v10_0/hdmi_dlmb_v10_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_dlmb_bram_if_cntlr_0/hdmi_dlmb_bram_if_cntlr_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_microblaze_0_axi_periph_0/hdmi_microblaze_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_ilmb_v10_0/hdmi_ilmb_v10_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_microblaze_0_axi_intc_0/hdmi_microblaze_0_axi_intc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_microblaze_0_0/hdmi_microblaze_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_axi_vdma_1_0/hdmi_axi_vdma_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_mdm_1_0/hdmi_mdm_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_dvi2rgb_0_0/hdmi_dvi2rgb_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_axi_vdma_0_0/hdmi_axi_vdma_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_axi_uartlite_0_0/hdmi_axi_uartlite_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_axi_timer_0_0/hdmi_axi_timer_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_axi_mem_intercon_0/hdmi_axi_mem_intercon_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_axi_gpio_video_0/hdmi_axi_gpio_video_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_axi_dynclk_0_0/hdmi_axi_dynclk_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_led_detect_0_2/hdmi_led_detect_0_2.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_s00_regslice_0/hdmi_s00_regslice_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_s01_regslice_0/hdmi_s01_regslice_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_m00_data_fifo_0/hdmi_m00_data_fifo_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_s04_regslice_0/hdmi_s04_regslice_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_s05_regslice_0/hdmi_s05_regslice_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_xlconcat_0_1/hdmi_xlconcat_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_auto_us_1/hdmi_auto_us_1.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_auto_rs_w_0/hdmi_auto_rs_w_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_auto_us_0/hdmi_auto_us_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_m00_regslice_0/hdmi_m00_regslice_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_xlconstant_1_0/hdmi_xlconstant_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="hdmi_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="hdmi.bmm"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_auto_rs_w_2/hdmi_auto_rs_w_2.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_xlconstant_2_0/hdmi_xlconstant_2_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_s02_regslice_0/hdmi_s02_regslice_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_auto_ds_0/hdmi_auto_ds_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="hdl/hdmi.hwdef"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="hw_handoff/hdmi.hwh"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="hw_handoff/hdmi_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_auto_us_3/hdmi_auto_us_3.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_s03_regslice_0/hdmi_s03_regslice_0.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_auto_rs_w_3/hdmi_auto_rs_w_3.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_auto_us_2/hdmi_auto_us_2.xci"/>
-        <CompFileExtendedInfo CompFileName="hdmi.bd" FileRelPathName="ip/hdmi_auto_rs_w_1/hdmi_auto_rs_w_1.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/hdmi_wrapper.vhd">
         <FileInfo>
@@ -186,9 +130,9 @@
         <Step Id="synth_design">
           <Option Id="ResourceSharing">2</Option>
           <Option Id="FsmExtraction">1</Option>
-          <Option Id="RepFanoutThreshold">400</Option>
           <Option Id="NoCombineLuts">1</Option>
           <Option Id="ShregMinSize">5</Option>
+          <Option Id="RepFanoutThreshold">400</Option>
           <Option Id="KeepEquivalentRegisters">1</Option>
         </Step>
       </Strategy>

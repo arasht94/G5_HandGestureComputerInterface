@@ -1,141 +1,715 @@
-18:29:59 **** Incremental Build of configuration Debug for project videodemo ****
+12:48:40 **** Incremental Build of configuration Debug for project videodemo ****
 make all 
 make: Nothing to be done for `all'.
-18:30:11 **** Incremental Build of configuration Debug for project videodemo ****
+12:49:36 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:216:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c:214:7: warning: unused variable 'userInput' [-Wunused-variable]
+  char userInput = 0;
+       ^
+../src/video_demo.c:213:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:439:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:76:26: warning: 'vdmaConfig' defined but not used [-Wunused-variable]
+ static XAxiVdma_DmaSetup vdmaConfig; /*VDMA_1 read channel configuration*/
+                          ^
+../src/video_demo.c:77:26: warning: 'vdmaConfig2' defined but not used [-Wunused-variable]
+ static XAxiVdma_DmaSetup vdmaConfig2; /*VDMA_1 write channel configuration*/
+                          ^
+../src/video_demo.c:78:30: warning: 'frame_count_config' defined but not used [-Wunused-variable]
+ static XAxiVdma_FrameCounter frame_count_config;
+                              ^
+../src/video_demo.c:79:30: warning: 'frame_count_config2' defined but not used [-Wunused-variable]
+ static XAxiVdma_FrameCounter frame_count_config2;
+                              ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63534	    680	18670568	18734782	11ddebe	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:06:12 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:246:2: warning: implicit declaration of function 'read_config' [-Wimplicit-function-declaration]
+  read_config(&vdma2, &vdma2Config_1, &frame_count_config_1);
+  ^
+../src/video_demo.c:246:39: error: 'frame_count_config_1' undeclared (first use in this function)
+  read_config(&vdma2, &vdma2Config_1, &frame_count_config_1);
+                                       ^
+../src/video_demo.c:246:39: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:247:2: warning: implicit declaration of function 'write_config' [-Wimplicit-function-declaration]
+  write_config(&vdma2, &vdma2Config_2, &frame_count_config_2);
+  ^
+../src/video_demo.c:247:40: error: 'frame_count_config_2' undeclared (first use in this function)
+  write_config(&vdma2, &vdma2Config_2, &frame_count_config_2);
+                                        ^
+../src/video_demo.c:248:2: warning: implicit declaration of function 'parking_read' [-Wimplicit-function-declaration]
+  parking_read(&vdma);
+  ^
+../src/video_demo.c:216:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c:214:7: warning: unused variable 'userInput' [-Wunused-variable]
+  char userInput = 0;
+       ^
+../src/video_demo.c:213:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:352:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:78:30: warning: 'frame_count_config' defined but not used [-Wunused-variable]
+ static XAxiVdma_FrameCounter frame_count_config;
+                              ^
+../src/video_demo.c:79:30: warning: 'frame_count_config2' defined but not used [-Wunused-variable]
+ static XAxiVdma_FrameCounter frame_count_config2;
+                              ^
+make: *** [src/video_demo.o] Error 1
+13:06:34 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:246:2: warning: implicit declaration of function 'read_config' [-Wimplicit-function-declaration]
+  read_config(&vdma2, &vdma2Config_1, &frame_count_config_1);
+  ^
+../src/video_demo.c:247:2: warning: implicit declaration of function 'write_config' [-Wimplicit-function-declaration]
+  write_config(&vdma2, &vdma2Config_2, &frame_count_config_2);
+  ^
+../src/video_demo.c:248:2: warning: implicit declaration of function 'parking_read' [-Wimplicit-function-declaration]
+  parking_read(&vdma);
+  ^
+../src/video_demo.c:216:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c:214:7: warning: unused variable 'userInput' [-Wunused-variable]
+  char userInput = 0;
+       ^
+../src/video_demo.c:213:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:352:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63618	    680	18670574	18734872	11ddf18	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:07:26 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c:41:18: fatal error: vdma.h: No such file or directory
+compilation terminated.
+make: *** [src/video_demo.o] Error 1
+13:07:42 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:217:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c:215:7: warning: unused variable 'userInput' [-Wunused-variable]
+  char userInput = 0;
+       ^
+../src/video_demo.c:214:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:353:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63618	    680	18670574	18734872	11ddf18	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:08:16 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:217:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c:215:7: warning: unused variable 'userInput' [-Wunused-variable]
+  char userInput = 0;
+       ^
+../src/video_demo.c:214:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:355:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63618	    680	18670574	18734872	11ddf18	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:10:09 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:264:31: error: 'vdma_1' undeclared (first use in this function)
+      dma_write_to_memory(i , &vdma_1,
+                               ^
+../src/video_demo.c:264:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:265:15: error: 'vdmaConfig_2' undeclared (first use in this function)
+              &vdmaConfig_2,
+               ^
+../src/video_demo.c:269:13: error: 'vdmaConfig_1' undeclared (first use in this function)
+            &vdmaConfig_1,
+             ^
+../src/video_demo.c:272:12: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+            memptr);
+            ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:217:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c:215:7: warning: unused variable 'userInput' [-Wunused-variable]
+  char userInput = 0;
+       ^
+../src/video_demo.c:214:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:371:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+make: *** [src/video_demo.o] Error 1
+13:10:16 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:262:31: error: 'vdma_1' undeclared (first use in this function)
+      dma_write_to_memory(i , &vdma_1,
+                               ^
+../src/video_demo.c:262:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:263:15: error: 'vdmaConfig_2' undeclared (first use in this function)
+              &vdmaConfig_2,
+               ^
+../src/video_demo.c:267:13: error: 'vdmaConfig_1' undeclared (first use in this function)
+            &vdmaConfig_1,
+             ^
+../src/video_demo.c:270:12: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+            memptr);
+            ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:369:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+make: *** [src/video_demo.o] Error 1
+13:11:13 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:270:12: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+            memptr);
+            ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:369:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63762	    680	18670574	18735016	11ddfa8	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:12:13 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:263:83: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+                                                                                   ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:362:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63762	    680	18670574	18735016	11ddfa8	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:24:59 **** Incremental Build of configuration Debug for project videodemo ****
 make all 
 make: Nothing to be done for `all'.
-18:33:47 **** Incremental Build of configuration Debug for project videodemo ****
+13:26:36 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:263:83: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+                                                                                   ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:362:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63762	    680	18670574	18735016	11ddfa8	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:26:43 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:263:83: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+                                                                                   ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:362:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63762	    680	18670574	18735016	11ddfa8	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:34:54 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/vdma/vdma.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vdma/vdma.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/vdma/vdma.d" -MT"src/vdma/vdma.o" -o "src/vdma/vdma.o" "../src/vdma/vdma.c"
+In file included from W:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'read_config':
+W:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:60:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^
+../src/vdma/vdma.c: In function 'dma_read_from_memory':
+../src/vdma/vdma.c:70:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+In file included from W:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'write_config':
+W:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:175:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^
+../src/vdma/vdma.c: In function 'dma_write_to_memory':
+../src/vdma/vdma.c:185:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/vdma/vdma.c: In function 'reset_dma_write':
+../src/vdma/vdma.c:326:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/vdma/vdma.c: In function 'reset_dma_read':
+../src/vdma/vdma.c:330:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/vdma/vdma.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63762	    680	18670574	18735016	11ddfa8	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:35:56 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:262:83: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+                                                                                   ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:268:19: error: 'vdma_1' undeclared (first use in this function)
+   Stop_Dma_write(&vdma_1);
+                   ^
+../src/video_demo.c:268:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:367:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+make: *** [src/video_demo.o] Error 1
+13:36:12 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:262:83: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+                                                                                   ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:367:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63802	    680	18670574	18735056	11ddfd0	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:36:27 **** Incremental Build of configuration Debug for project videodemo ****
 make all 
 make: Nothing to be done for `all'.
-18:34:01 **** Incremental Build of configuration Debug for project videodemo ****
+13:54:54 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:257:83: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+                                                                                   ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:362:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63762	    680	18670574	18735016	11ddfa8	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+13:56:38 **** Incremental Build of configuration Debug for project videodemo ****
 make all 
 make: Nothing to be done for `all'.
-18:36:55 **** Incremental Build of configuration Debug for project videodemo ****
+14:02:05 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:257:83: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+                                                                                   ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:362:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:256:4: warning: 'i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    dma_write_to_memory(i , &vdma2,&vdma2Config_2,&frame_count_config_2,pFrames[2]);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63686	    680	18670568	18734934	11ddf56	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+14:57:58 **** Incremental Build of configuration Debug for project videodemo ****
 make all 
 make: Nothing to be done for `all'.
-18:38:03 **** Incremental Build of configuration Debug for project videodemo ****
+15:09:03 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:257:83: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+                                                                                   ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:362:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:256:4: warning: 'i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    dma_write_to_memory(i , &vdma2,&vdma2Config_2,&frame_count_config_2,pFrames[2]);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63710	    680	18670568	18734958	11ddf6e	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:10:13 **** Incremental Build of configuration Debug for project videodemo ****
 make all 
 make: Nothing to be done for `all'.
-18:38:14 **** Incremental Build of configuration Debug for project videodemo ****
+15:12:54 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:257:83: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+                                                                                   ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:362:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:256:4: warning: 'i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    dma_write_to_memory(i , &vdma2,&vdma2Config_2,&frame_count_config_2,pFrames[2]);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63710	    680	18670568	18734958	11ddf6e	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:13:26 **** Incremental Build of configuration Debug for project videodemo ****
 make all 
 make: Nothing to be done for `all'.
-18:40:26 **** Incremental Build of configuration Debug for project videodemo ****
+16:42:57 **** Auto Build of configuration Debug for project videodemo ****
 make all 
-make: Nothing to be done for `all'.
-18:40:53 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:41:19 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:41:51 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:42:44 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:42:56 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:44:50 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:50:58 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:51:27 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:52:13 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:53:38 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:54:32 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:55:11 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-18:59:35 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-19:02:53 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-19:03:02 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-16:29:45 **** Build of project videodemo_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/axivdma_v6_0/src"
-make -C microblaze_0/libsrc/axivdma_v6_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Running Make include in microblaze_0/libsrc/bram_v4_0/src"
-make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Running Make include in microblaze_0/libsrc/cpu_v2_3/src"
-make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Running Make include in microblaze_0/libsrc/gpio_v4_0/src"
-make -C microblaze_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Running Make include in microblaze_0/libsrc/intc_v3_4/src"
-make -C microblaze_0/libsrc/intc_v3_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Running Make include in microblaze_0/libsrc/standalone_v5_2/src"
-make -C microblaze_0/libsrc/standalone_v5_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Running Make include in microblaze_0/libsrc/tmrctr_v3_0/src"
-make -C microblaze_0/libsrc/tmrctr_v3_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Running Make include in microblaze_0/libsrc/uartlite_v3_1/src"
-make -C microblaze_0/libsrc/uartlite_v3_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Running Make include in microblaze_0/libsrc/vtc_v7_0/src"
-make -C microblaze_0/libsrc/vtc_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Running Make libs in microblaze_0/libsrc/axivdma_v6_0/src"
-make -C microblaze_0/libsrc/axivdma_v6_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Compiling axivdma"
-"Running Make libs in microblaze_0/libsrc/bram_v4_0/src"
-make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Compiling bram"
-"Running Make libs in microblaze_0/libsrc/cpu_v2_3/src"
-make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/gpio_v4_0/src"
-make -C microblaze_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_4/src"
-make -C microblaze_0/libsrc/intc_v3_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/standalone_v5_2/src"
-make -C microblaze_0/libsrc/standalone_v5_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Compiling standalone";
-"Running Make libs in microblaze_0/libsrc/tmrctr_v3_0/src"
-make -C microblaze_0/libsrc/tmrctr_v3_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Compiling tmrctr"
-"Running Make libs in microblaze_0/libsrc/uartlite_v3_1/src"
-make -C microblaze_0/libsrc/uartlite_v3_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Compiling uartlite"
-"Running Make libs in microblaze_0/libsrc/vtc_v7_0/src"
-make -C microblaze_0/libsrc/vtc_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
-"Compiling video timing controller"
-'Finished building libraries'
-16:29:56 **** Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-16:43:38 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-16:46:51 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-16:50:21 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-16:52:42 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-17:00:14 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-17:03:22 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
-17:04:21 **** Incremental Build of configuration Debug for project videodemo ****
-make all 
-make: Nothing to be done for `all'.
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:257:83: warning: passing argument 6 of 'dma_read_from_memory' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+                                                                                   ^
+In file included from ../src/video_demo.c:41:0:
+../src/vdma/vdma.h:31:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'volatile u8 * {aka volatile unsigned char *}'
+ int dma_read_from_memory(int ind, XAxiVdma *vdma,
+     ^
+../src/video_demo.c:215:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:362:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:257:4: warning: 'i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    dma_read_from_memory(i, &vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0],memptr);
+    ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/integration/hdmi.sdk/standalone_bsp_0/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63658	    680	18670574	18734912	11ddf40	videodemo.elf
+Finished building: videodemo.elf.size
+ 

@@ -231,6 +231,9 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0/user_design/constraints/hdmi_mig_7series_0_0_ooc.xdc
 
+# XDC: bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0_board.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_mig_7series_0_0 || ORIG_REF_NAME==hdmi_mig_7series_0_0}]
+
 # XDC: bd/hdmi/ip/hdmi_rgb2dvi_0_0/src/rgb2dvi.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_rgb2dvi_0_0 || ORIG_REF_NAME==hdmi_rgb2dvi_0_0}] {/U0 }]/U0 ]]
 

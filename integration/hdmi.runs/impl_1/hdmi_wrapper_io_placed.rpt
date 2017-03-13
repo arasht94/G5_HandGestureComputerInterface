@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Wed Mar 08 20:44:21 2017
+| Date         : Thu Mar 09 15:01:43 2017
 | Host         : SFB520WS18 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_io -file hdmi_wrapper_io_placed.rpt
 | Design       : hdmi_wrapper
@@ -212,7 +212,7 @@ Table of Contents
 | G1         | DDR3_reset_n       | High Range | IO_L5P_T0_AD13P_35           | OUTPUT        | LVCMOS15    |      35 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |
 | G2         | DDR3_dq[0]         | High Range | IO_L8N_T1_AD14N_35           | BIDIR         | SSTL15      |      35 |            | FAST |    UNTUNED_SPLIT_50 |            FP_VTT_50 |         | FIXED      |           |          | Internal | NONE             |
 | G3         | DDR3_dm[0]         | High Range | IO_L11N_T1_SRCC_35           | TRISTATE      | SSTL15      |      35 |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |
-| G4         |                    | High Range | IO_L12N_T1_MRCC_35           | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |
+| G4         | reset              | High Range | IO_L12N_T1_MRCC_35           | INPUT         | SSTL15      |      35 |            |      |                     |                 NONE |         | FIXED      |           |          | Internal | NONE             |
 | G5         |                    |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |
 | G6         |                    |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |
 | G7         |                    |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |
@@ -435,7 +435,7 @@ Table of Contents
 | U4         |                    |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |
 | U5         |                    | High Range | IO_L14N_T2_SRCC_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |          |                  |
 | U6         |                    | High Range | IO_L16P_T2_34                | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |          |                  |
-| U7         | reset              | High Range | IO_25_34                     | INPUT         | LVCMOS33    |      34 |            |      |                     |                 NONE |         | UNFIXED    |           |          |          | NONE             |
+| U7         |                    | High Range | IO_25_34                     | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |          |                  |
 | U8         |                    | Dedicated  | CFGBVS_0                     | Config        |             |       0 |            |      |                     |                      |         |            |           |          |          |                  |
 | U9         |                    | Dedicated  | M2_0                         | Config        |             |       0 |            |      |                     |                      |         |            |           |          |          |                  |
 | U10        |                    | Dedicated  | M1_0                         | Config        |             |       0 |            |      |                     |                      |         |            |           |          |          |                  |
