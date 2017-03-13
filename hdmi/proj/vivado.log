@@ -1,0 +1,678 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Mar 09 13:51:12 2017
+# Process ID: 13256
+# Current directory: C:/ece532/hdmi/proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12388 C:\ece532\hdmi\proj\hdmi.xpr
+# Log file: C:/ece532/hdmi/proj/vivado.log
+# Journal file: C:/ece532/hdmi/proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/ece532/hdmi/proj/hdmi.xpr
+INFO: [Project 1-313] Project file moved from 'W:/NexysVideo-master_2015.3/Projects/hdmi/proj' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ece532/hdmi/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'hdmi.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+hdmi_auto_us_0
+hdmi_axi_vdma_0_0
+hdmi_axi_gpio_video_0
+hdmi_microblaze_0_axi_intc_0
+hdmi_xbar_0
+hdmi_axi_timer_0_0
+hdmi_axi_uartlite_0_0
+hdmi_mdm_1_0
+hdmi_microblaze_0_0
+hdmi_xbar_1
+hdmi_dlmb_bram_if_cntlr_0
+hdmi_dlmb_v10_0
+hdmi_s01_regslice_0
+hdmi_v_tc_0_0
+hdmi_ilmb_bram_if_cntlr_0
+hdmi_ilmb_v10_0
+hdmi_lmb_bram_0
+hdmi_mig_7series_0_0
+hdmi_auto_rs_w_1
+hdmi_rst_mig_7series_0_100M_0
+hdmi_rst_mig_7series_0_pxl_0
+hdmi_v_axi4s_vid_out_0_0
+hdmi_s00_regslice_0
+hdmi_v_tc_1_0
+hdmi_v_vid_in_axi4s_0_0
+hdmi_s02_regslice_0
+hdmi_s03_regslice_0
+hdmi_m00_regslice_0
+hdmi_auto_ds_0
+hdmi_auto_rs_w_0
+hdmi_auto_us_1
+hdmi_auto_rs_w_2
+
+open_project: Time (s): cpu = 00:00:48 ; elapsed = 00:00:30 . Memory (MB): peak = 967.410 ; gain = 266.609
+update_compile_order -fileset sources_1
+open_bd_design {C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+Adding cell -- digilentinc.com:ip:axi_dynclk:1.0 - axi_dynclk_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_video
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding cell -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding cell -- xilinx.com:ip:axi_vdma:6.2 - axi_vdma_0
+Adding cell -- digilentinc.com:ip:dvi2rgb:1.5 - dvi2rgb_0
+Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding cell -- xilinx.com:ip:microblaze:9.5 - microblaze_0
+Adding cell -- xilinx.com:ip:axi_intc:4.1 - microblaze_0_axi_intc
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - microblaze_0_xlconcat
+Adding cell -- xilinx.com:ip:mig_7series:2.4 - mig_7series_0
+Adding cell -- digilentinc.com:ip:rgb2dvi:1.2 - rgb2dvi_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_mig_7series_0_100M
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_mig_7series_0_pxl
+Adding cell -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_1
+Adding cell -- xilinx.com:ip:v_vid_in_axi4s:4.0 - v_vid_in_axi4s_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - lmb_bram
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - m00_regslice
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - auto_rs_w
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s03_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s02_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s01_regslice
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - auto_rs_w
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - auto_rs_w
+Successfully read diagram <hdmi> from BD file <C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd>
+validate_bd_design -force
+ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
+* BD design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+hdmi_auto_us_0
+hdmi_axi_vdma_0_0
+hdmi_axi_gpio_video_0
+hdmi_microblaze_0_axi_intc_0
+hdmi_xbar_0
+hdmi_axi_timer_0_0
+hdmi_axi_uartlite_0_0
+hdmi_mdm_1_0
+hdmi_microblaze_0_0
+hdmi_xbar_1
+hdmi_dlmb_bram_if_cntlr_0
+hdmi_dlmb_v10_0
+hdmi_s01_regslice_0
+hdmi_v_tc_0_0
+hdmi_ilmb_bram_if_cntlr_0
+hdmi_ilmb_v10_0
+hdmi_lmb_bram_0
+hdmi_mig_7series_0_0
+hdmi_auto_rs_w_1
+hdmi_rst_mig_7series_0_100M_0
+hdmi_rst_mig_7series_0_pxl_0
+hdmi_v_axi4s_vid_out_0_0
+hdmi_s00_regslice_0
+hdmi_v_tc_1_0
+hdmi_v_vid_in_axi4s_0_0
+hdmi_s02_regslice_0
+hdmi_s03_regslice_0
+hdmi_m00_regslice_0
+hdmi_auto_ds_0
+hdmi_auto_rs_w_0
+hdmi_auto_us_1
+hdmi_auto_rs_w_2
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+report_ip_status -name ip_status 
+export_ip_user_files -of_objects [get_ips  {hdmi_ilmb_bram_if_cntlr_0 hdmi_microblaze_0_axi_periph_0 hdmi_axi_mem_intercon_0 hdmi_microblaze_0_0 hdmi_v_vid_in_axi4s_0_0 hdmi_v_axi4s_vid_out_0_0 hdmi_lmb_bram_0 hdmi_microblaze_0_axi_intc_0 hdmi_axi_timer_0_0 hdmi_rst_mig_7series_0_pxl_0 hdmi_ilmb_v10_0 hdmi_mdm_1_0 hdmi_v_tc_0_0 hdmi_axi_vdma_0_0 hdmi_dlmb_bram_if_cntlr_0 hdmi_v_tc_1_0 hdmi_rst_mig_7series_0_100M_0 hdmi_axi_gpio_video_0 hdmi_dlmb_v10_0 hdmi_mig_7series_0_0 hdmi_axi_uartlite_0_0}] -no_script -reset -quiet
+upgrade_ip [get_ips  {hdmi_ilmb_bram_if_cntlr_0 hdmi_microblaze_0_axi_periph_0 hdmi_axi_mem_intercon_0 hdmi_microblaze_0_0 hdmi_v_vid_in_axi4s_0_0 hdmi_v_axi4s_vid_out_0_0 hdmi_lmb_bram_0 hdmi_microblaze_0_axi_intc_0 hdmi_axi_timer_0_0 hdmi_rst_mig_7series_0_pxl_0 hdmi_ilmb_v10_0 hdmi_mdm_1_0 hdmi_v_tc_0_0 hdmi_axi_vdma_0_0 hdmi_dlmb_bram_if_cntlr_0 hdmi_v_tc_1_0 hdmi_rst_mig_7series_0_100M_0 hdmi_axi_gpio_video_0 hdmi_dlmb_v10_0 hdmi_mig_7series_0_0 hdmi_axi_uartlite_0_0}] -log ip_upgrade.log
+Upgrading 'C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd'
+INFO: [IP_Flow 19-3422] Upgraded hdmi_axi_gpio_video_0 (AXI GPIO 2.0) from revision 8 to revision 11
+INFO: [IP_Flow 19-3422] Upgraded hdmi_axi_mem_intercon_0 (AXI Interconnect 2.1) from revision 7 to revision 10
+INFO: [IP_Flow 19-3422] Upgraded hdmi_axi_timer_0_0 (AXI Timer 2.0) from revision 8 to revision 11
+INFO: [IP_Flow 19-3422] Upgraded hdmi_axi_uartlite_0_0 (AXI Uartlite 2.0) from revision 10 to revision 13
+INFO: [IP_Flow 19-3422] Upgraded hdmi_axi_vdma_0_0 (AXI Video Direct Memory Access 6.2) from revision 5 to revision 8
+INFO: [IP_Flow 19-3422] Upgraded hdmi_dlmb_bram_if_cntlr_0 (LMB BRAM Controller 4.0) from revision 7 to revision 9
+INFO: [IP_Flow 19-3422] Upgraded hdmi_dlmb_v10_0 (Local Memory Bus (LMB) 1.0 3.0) from revision 7 to revision 8
+INFO: [IP_Flow 19-3422] Upgraded hdmi_ilmb_bram_if_cntlr_0 (LMB BRAM Controller 4.0) from revision 7 to revision 9
+INFO: [IP_Flow 19-3422] Upgraded hdmi_ilmb_v10_0 (Local Memory Bus (LMB) 1.0 3.0) from revision 7 to revision 8
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [IP_Flow 19-3422] Upgraded hdmi_lmb_bram_0 (Block Memory Generator 8.3) from revision 0 to revision 3
+INFO: [IP_Flow 19-3422] Upgraded hdmi_mdm_1_0 (MicroBlaze Debug Module (MDM) 3.2) from revision 4 to revision 6
+INFO: [IP_Flow 19-1972] Upgraded hdmi_microblaze_0_0 from MicroBlaze 9.5 to MicroBlaze 9.6
+INFO: [IP_Flow 19-3422] Upgraded hdmi_microblaze_0_axi_intc_0 (AXI Interrupt Controller 4.1) from revision 5 to revision 7
+INFO: [IP_Flow 19-3422] Upgraded hdmi_microblaze_0_axi_periph_0 (AXI Interconnect 2.1) from revision 7 to revision 10
+INFO: [IP_Flow 19-1972] Upgraded hdmi_mig_7series_0_0 from Memory Interface Generator (MIG 7 Series) 2.4 to Memory Interface Generator (MIG 7 Series) 4.0
+INFO: [IP_Flow 19-3422] Upgraded hdmi_rst_mig_7series_0_100M_0 (Processor System Reset 5.0) from revision 8 to revision 9
+INFO: [IP_Flow 19-3422] Upgraded hdmi_rst_mig_7series_0_pxl_0 (Processor System Reset 5.0) from revision 8 to revision 9
+INFO: [IP_Flow 19-3422] Upgraded hdmi_v_axi4s_vid_out_0_0 (AXI4-Stream to Video Out 4.0) from revision 0 to revision 3
+INFO: [IP_Flow 19-3422] Upgraded hdmi_v_tc_0_0 (Video Timing Controller 6.1) from revision 6 to revision 8
+INFO: [IP_Flow 19-3422] Upgraded hdmi_v_tc_1_0 (Video Timing Controller 6.1) from revision 6 to revision 8
+INFO: [IP_Flow 19-3422] Upgraded hdmi_v_vid_in_axi4s_0_0 (Video In to AXI4-Stream 4.0) from revision 0 to revision 3
+Wrote  : <C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/ece532/hdmi/proj/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:29 ; elapsed = 00:01:04 . Memory (MB): peak = 1395.488 ; gain = 315.859
+report_ip_status -name ip_status 
+validate_bd_design
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.AsyncRst' 
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.SyncRst' 
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+INFO: [xilinx.com:ip:axi_vdma:6.2-15] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [xilinx.com:ip:axi_vdma:6.2-155] /axi_vdma_0 
+                    To get the better performance, ensure AXI Memory Map clock frequency is greater than equal to AXI Streaming clock frequency.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x9FFFFFFF.
+validate_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1412.547 ; gain = 3.191
+save_bd_design
+Wrote  : <C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'hdmi.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi.vhd
+VHDL Output written to : C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi_wrapper.vhd
+Wrote  : <C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dynclk_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_video .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dvi2rgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_intc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_xlconcat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mig_7series_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_pxl .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_vid_in_axi4s_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/s00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/s01_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/s02_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s03_couplers/s03_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/m00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_ds .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_rs_w .
+Exporting to file C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hw_handoff/hdmi.hwh
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.AsyncRst' 
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.SyncRst' 
+Generated Block Design Tcl file C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hw_handoff/hdmi_bd.tcl
+Generated Hardware Definition File C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi.hwdef
+[Thu Mar 09 14:00:51 2017] Launched synth_1...
+Run output will be captured here: C:/ece532/hdmi/proj/hdmi.runs/synth_1/runme.log
+[Thu Mar 09 14:00:51 2017] Launched impl_1...
+Run output will be captured here: C:/ece532/hdmi/proj/hdmi.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:14 ; elapsed = 00:01:26 . Memory (MB): peak = 1513.844 ; gain = 80.992
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a200tsbg484-1
+INFO: [Netlist 29-17] Analyzing 1823 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_gpio_video_0/hdmi_axi_gpio_video_0_board.xdc] for cell 'hdmi_i/axi_gpio_video/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_gpio_video_0/hdmi_axi_gpio_video_0_board.xdc] for cell 'hdmi_i/axi_gpio_video/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_gpio_video_0/hdmi_axi_gpio_video_0.xdc] for cell 'hdmi_i/axi_gpio_video/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_gpio_video_0/hdmi_axi_gpio_video_0.xdc] for cell 'hdmi_i/axi_gpio_video/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_timer_0_0/hdmi_axi_timer_0_0.xdc] for cell 'hdmi_i/axi_timer_0/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_timer_0_0/hdmi_axi_timer_0_0.xdc] for cell 'hdmi_i/axi_timer_0/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_uartlite_0_0/hdmi_axi_uartlite_0_0_board.xdc] for cell 'hdmi_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_uartlite_0_0/hdmi_axi_uartlite_0_0_board.xdc] for cell 'hdmi_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_uartlite_0_0/hdmi_axi_uartlite_0_0.xdc] for cell 'hdmi_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_uartlite_0_0/hdmi_axi_uartlite_0_0.xdc] for cell 'hdmi_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_vdma_0_0/hdmi_axi_vdma_0_0.xdc] for cell 'hdmi_i/axi_vdma_0/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_vdma_0_0/hdmi_axi_vdma_0_0.xdc] for cell 'hdmi_i/axi_vdma_0/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'hdmi_i/dvi2rgb_0/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'hdmi_i/dvi2rgb_0/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_mdm_1_0/hdmi_mdm_1_0.xdc] for cell 'hdmi_i/mdm_1/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_mdm_1_0/hdmi_mdm_1_0.xdc:50]
+get_clocks: Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 2411.027 ; gain = 527.395
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_mdm_1_0/hdmi_mdm_1_0.xdc] for cell 'hdmi_i/mdm_1/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_microblaze_0_0/hdmi_microblaze_0_0.xdc] for cell 'hdmi_i/microblaze_0/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_microblaze_0_0/hdmi_microblaze_0_0.xdc] for cell 'hdmi_i/microblaze_0/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_microblaze_0_axi_intc_0/hdmi_microblaze_0_axi_intc_0.xdc] for cell 'hdmi_i/microblaze_0_axi_intc/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_microblaze_0_axi_intc_0/hdmi_microblaze_0_axi_intc_0.xdc] for cell 'hdmi_i/microblaze_0_axi_intc/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_dlmb_v10_0/hdmi_dlmb_v10_0.xdc] for cell 'hdmi_i/microblaze_0_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_dlmb_v10_0/hdmi_dlmb_v10_0.xdc] for cell 'hdmi_i/microblaze_0_local_memory/dlmb_v10/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ilmb_v10_0/hdmi_ilmb_v10_0.xdc] for cell 'hdmi_i/microblaze_0_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ilmb_v10_0/hdmi_ilmb_v10_0.xdc] for cell 'hdmi_i/microblaze_0_local_memory/ilmb_v10/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0/user_design/constraints/hdmi_mig_7series_0_0.xdc] for cell 'hdmi_i/mig_7series_0'
+WARNING: [Vivado 12-4777] Setting CLOCK_DEDICATED_ROUTE constraint on the PARENT net instead of the specified net segment (net name: hdmi_i/mig_7series_0/sys_clk_i). Placer only honors CLOCK_DEDICATED_ROUTE when set on the PARENT net, e.g. net segment directly connected to the driver. To eliminate this message, please update your constraint to specify the PARENT net instead. [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0/user_design/constraints/hdmi_mig_7series_0_0.xdc:37]
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0/user_design/constraints/hdmi_mig_7series_0_0.xdc] for cell 'hdmi_i/mig_7series_0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0_board.xdc] for cell 'hdmi_i/mig_7series_0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_mig_7series_0_0/hdmi_mig_7series_0_0_board.xdc] for cell 'hdmi_i/mig_7series_0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'hdmi_i/rgb2dvi_0/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'hdmi_i/rgb2dvi_0/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_100M_0/hdmi_rst_mig_7series_0_100M_0_board.xdc] for cell 'hdmi_i/rst_mig_7series_0_100M/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_100M_0/hdmi_rst_mig_7series_0_100M_0_board.xdc] for cell 'hdmi_i/rst_mig_7series_0_100M/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_100M_0/hdmi_rst_mig_7series_0_100M_0.xdc] for cell 'hdmi_i/rst_mig_7series_0_100M/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_100M_0/hdmi_rst_mig_7series_0_100M_0.xdc] for cell 'hdmi_i/rst_mig_7series_0_100M/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_pxl_0/hdmi_rst_mig_7series_0_pxl_0_board.xdc] for cell 'hdmi_i/rst_mig_7series_0_pxl/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_pxl_0/hdmi_rst_mig_7series_0_pxl_0_board.xdc] for cell 'hdmi_i/rst_mig_7series_0_pxl/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_pxl_0/hdmi_rst_mig_7series_0_pxl_0.xdc] for cell 'hdmi_i/rst_mig_7series_0_pxl/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_pxl_0/hdmi_rst_mig_7series_0_pxl_0.xdc] for cell 'hdmi_i/rst_mig_7series_0_pxl/U0'
+Parsing XDC File [C:/ece532/hdmi/src/constraints/NexysVideo_Master.xdc]
+Finished Parsing XDC File [C:/ece532/hdmi/src/constraints/NexysVideo_Master.xdc]
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_vdma_0_0/hdmi_axi_vdma_0_0_clocks.xdc] for cell 'hdmi_i/axi_vdma_0/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_vdma_0_0/hdmi_axi_vdma_0_0_clocks.xdc] for cell 'hdmi_i/axi_vdma_0/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_microblaze_0_axi_intc_0/hdmi_microblaze_0_axi_intc_0_clocks.xdc] for cell 'hdmi_i/microblaze_0_axi_intc/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_microblaze_0_axi_intc_0/hdmi_microblaze_0_axi_intc_0_clocks.xdc] for cell 'hdmi_i/microblaze_0_axi_intc/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'hdmi_i/rgb2dvi_0/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'hdmi_i/rgb2dvi_0/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_axi4s_vid_out_0_0/hdmi_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'hdmi_i/v_axi4s_vid_out_0/inst'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_axi4s_vid_out_0_0/hdmi_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'hdmi_i/v_axi4s_vid_out_0/inst'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_tc_0_0/hdmi_v_tc_0_0_clocks.xdc] for cell 'hdmi_i/v_tc_0/U0'
+INFO: [Timing 38-2] Deriving generated clocks [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_tc_0_0/hdmi_v_tc_0_0_clocks.xdc:2]
+CRITICAL WARNING: [Timing 38-249] Generated clock hdmi_i/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O. [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_tc_0_0/hdmi_v_tc_0_0_clocks.xdc:2]
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2440.879 ; gain = 0.000
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_tc_0_0/hdmi_v_tc_0_0_clocks.xdc] for cell 'hdmi_i/v_tc_0/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_tc_1_0/hdmi_v_tc_1_0_clocks.xdc] for cell 'hdmi_i/v_tc_1/U0'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_tc_1_0/hdmi_v_tc_1_0_clocks.xdc] for cell 'hdmi_i/v_tc_1/U0'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_vid_in_axi4s_0_0/hdmi_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'hdmi_i/v_vid_in_axi4s_0/inst'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_v_vid_in_axi4s_0_0/hdmi_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'hdmi_i/v_vid_in_axi4s_0/inst'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_auto_ds_0/hdmi_auto_ds_0_clocks.xdc] for cell 'hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_auto_ds_0/hdmi_auto_ds_0_clocks.xdc] for cell 'hdmi_i/axi_mem_intercon/m00_couplers/auto_ds/inst'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_auto_us_0/hdmi_auto_us_0_clocks.xdc] for cell 'hdmi_i/axi_mem_intercon/s00_couplers/auto_us/inst'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_auto_us_0/hdmi_auto_us_0_clocks.xdc] for cell 'hdmi_i/axi_mem_intercon/s00_couplers/auto_us/inst'
+Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_auto_us_1/hdmi_auto_us_1_clocks.xdc] for cell 'hdmi_i/axi_mem_intercon/s01_couplers/auto_us/inst'
+Finished Parsing XDC File [c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_auto_us_1/hdmi_auto_us_1_clocks.xdc] for cell 'hdmi_i/axi_mem_intercon/s01_couplers/auto_us/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'hdmi_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_microblaze_0_0/data/mb_bootloop_le.elf 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 798 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  IOBUFDS_DIFF_OUT_INTERMDISABLE => IOBUFDS_DIFF_OUT_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 64 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 32 instances
+  RAM16X1S => RAM32X1S (RAMS32): 512 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 169 instances
+
+open_run: Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 2440.879 ; gain = 830.867
+open_bd_design {C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+set_property  ip_repo_paths  {c:/ece532/hdmi/repo C:/ece532/img_processing_ip/ip_repo} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ece532/hdmi/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ece532/img_processing_ip/ip_repo'.
+startgroup
+create_bd_cell -type ip -vlnv user:user:led_detect:1.0 led_detect_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.2 axi_vdma_1
+endgroup
+report_ip_status -name ip_status 
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" Clk "Auto" }  [get_bd_intf_pins led_detect_0/S00_AXI]
+</led_detect_0/S00_AXI/S00_AXI_reg> is being mapped into </microblaze_0/Data> at <0x44A40000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" Clk "Auto" }  [get_bd_intf_pins axi_vdma_1/S_AXI_LITE]
+</axi_vdma_1/S_AXI_LITE/Reg> is being mapped into </microblaze_0/Data> at <0x44A50000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Slave "/mig_7series_0/S_AXI" Clk "Auto" }  [get_bd_intf_pins axi_vdma_1/M_AXI_MM2S]
+</mig_7series_0/memmap/memaddr> is being mapped into </axi_vdma_1/Data_MM2S> at <0x80000000 [ 512M ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Slave "/mig_7series_0/S_AXI" Clk "Auto" }  [get_bd_intf_pins axi_vdma_1/M_AXI_S2MM]
+</mig_7series_0/memmap/memaddr> is being mapped into </axi_vdma_1/Data_S2MM> at <0x80000000 [ 512M ]>
+endgroup
+set_property location {7 2679 2} [get_bd_cells axi_vdma_1]
+connect_bd_net [get_bd_pins led_detect_0/s00_axis_aresetn] [get_bd_pins rst_mig_7series_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins led_detect_0/m00_axis_aresetn] [get_bd_pins led_detect_0/s00_axi_aresetn]
+connect_bd_net [get_bd_pins led_detect_0/s00_axis_aclk] [get_bd_pins led_detect_0/s00_axi_aclk]
+connect_bd_net [get_bd_pins led_detect_0/m00_axis_aclk] [get_bd_pins led_detect_0/s00_axi_aclk]
+connect_bd_net [get_bd_pins axi_vdma_1/s_axis_s2mm_aclk] [get_bd_pins axi_vdma_1/m_axi_s2mm_aclk]
+connect_bd_net [get_bd_pins axi_vdma_1/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_1/m_axi_mm2s_aclk]
+connect_bd_intf_net [get_bd_intf_pins axi_vdma_1/M_AXIS_MM2S] [get_bd_intf_pins led_detect_0/S00_AXIS]
+startgroup
+set_property -dict [list CONFIG.NUM_PORTS {8}] [get_bd_cells microblaze_0_xlconcat]
+endgroup
+connect_bd_net [get_bd_pins axi_vdma_1/s2mm_introut] [get_bd_pins microblaze_0_xlconcat/In7]
+connect_bd_net [get_bd_pins microblaze_0_xlconcat/In6] [get_bd_pins led_detect_0/s00_axis_aresetn]
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins microblaze_0_xlconcat/In6] [get_bd_pins led_detect_0/s00_axis_aresetn]'
+connect_bd_net [get_bd_pins microblaze_0_xlconcat/In6] [get_bd_pins axi_vdma_1/mm2s_introut]
+set_property location {6 2249 -52} [get_bd_cells led_detect_0]
+set_property location {6 2268 -39} [get_bd_cells led_detect_0]
+set_property location {7 2685 -64} [get_bd_cells axi_vdma_1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+report_ip_status -name ip_status 
+connect_bd_net [get_bd_pins led_detect_0/m00_axis_tready] [get_bd_pins axi_vdma_1/s_axis_s2mm_tready]
+WARNING: [BD 41-1306] The connection to interface pin /led_detect_0/m00_axis_tready is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /axi_vdma_1/s_axis_s2mm_tready is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
+connect_bd_net [get_bd_pins led_detect_0/m00_axis_tvalid] [get_bd_pins axi_vdma_1/s_axis_s2mm_tvalid]
+WARNING: [BD 41-1306] The connection to interface pin /led_detect_0/m00_axis_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /axi_vdma_1/s_axis_s2mm_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
+connect_bd_net [get_bd_pins led_detect_0/m00_axis_tlast] [get_bd_pins axi_vdma_1/s_axis_s2mm_tlast]
+WARNING: [BD 41-1306] The connection to interface pin /led_detect_0/m00_axis_tlast is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /axi_vdma_1/s_axis_s2mm_tlast is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
+connect_bd_net [get_bd_pins led_detect_0/m00_axis_tdata] [get_bd_pins xlconcat_0/In0]
+WARNING: [BD 41-1306] The connection to interface pin /led_detect_0/m00_axis_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXIS
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property location {6.5 2385 -51} [get_bd_cells xlconstant_1]
+set_property location {7 2390 -75} [get_bd_cells xlconstant_1]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins xlconcat_0/In1]
+startgroup
+set_property -dict [list CONFIG.CONST_WIDTH {8} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
+endgroup
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins axi_vdma_1/s_axis_s2mm_tdata]
+WARNING: [BD 41-1306] The connection to interface pin /axi_vdma_1/s_axis_s2mm_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
+report_ip_status -name ip_status 
+startgroup
+set_property -dict [list CONFIG.IN1_WIDTH.VALUE_SRC USER CONFIG.IN0_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.IN0_WIDTH {24} CONFIG.IN1_WIDTH {8}] [get_bd_cells xlconcat_0]
+endgroup
+report_ip_status -name ip_status 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2
+endgroup
+set_property -dict [list CONFIG.CONST_WIDTH {3}] [get_bd_cells xlconstant_2]
+set_property location {6 2052 259} [get_bd_cells xlconstant_2]
+set_property location {5.5 1845 15} [get_bd_cells xlconstant_2]
+connect_bd_net [get_bd_pins xlconstant_2/dout] [get_bd_pins led_detect_0/s00_axis_tdata]
+WARNING: [BD 41-1306] The connection to interface pin /led_detect_0/s00_axis_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXIS
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins xlconstant_2/dout] [get_bd_pins led_detect_0/s00_axis_tdata]'
+connect_bd_net [get_bd_pins xlconstant_2/dout] [get_bd_pins led_detect_0/s00_axis_tstrb]
+WARNING: [BD 41-1306] The connection to interface pin /led_detect_0/s00_axis_tstrb is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXIS
+report_ip_status -name ip_status 
+validate_bd_design
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+INFO: [xilinx.com:ip:axi_vdma:6.2-15] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [xilinx.com:ip:axi_vdma:6.2-155] /axi_vdma_0 
+                    To get the better performance, ensure AXI Memory Map clock frequency is greater than equal to AXI Streaming clock frequency.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x9FFFFFFF.
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /led_detect_0/S00_AXIS(3) and /axi_vdma_1/M_AXIS_MM2S(4)
+validate_bd_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2456.602 ; gain = 0.000
+open_project C:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ece532/img_processing_ip/ip_repo/led_detect_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+update_compile_order -fileset sources_1
+startgroup
+current_project hdmi
+set_property -dict [list CONFIG.c_m_axi_s2mm_data_width.VALUE_SRC PROPAGATED] [get_bd_cells axi_vdma_1]
+set_property -dict [list CONFIG.c_m_axis_mm2s_tdata_width {24}] [get_bd_cells axi_vdma_1]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property -dict [list CONFIG.c_m_axis_mm2s_tdata_width {24}] [get_bd_cells axi_vdma_1]'
+INFO: [Common 17-17] undo 'set_property -dict [list CONFIG.c_m_axi_s2mm_data_width.VALUE_SRC PROPAGATED] [get_bd_cells axi_vdma_1]'
+INFO: [Common 17-17] undo 'current_project hdmi'
+INFO: [Common 17-17] undo 'startgroup'
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+current_project hdmi
+startgroup
+set_property -dict [list CONFIG.c_m_axis_mm2s_tdata_width {24}] [get_bd_cells axi_vdma_1]
+endgroup
+validate_bd_design
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+INFO: [xilinx.com:ip:axi_vdma:6.2-15] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [xilinx.com:ip:axi_vdma:6.2-155] /axi_vdma_0 
+                    To get the better performance, ensure AXI Memory Map clock frequency is greater than equal to AXI Streaming clock frequency.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x9FFFFFFF.
+validate_bd_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2532.352 ; gain = 0.000
+startgroup
+set_property -dict [list CONFIG.c_m_axi_s2mm_data_width.VALUE_SRC USER] [get_bd_cells axi_vdma_1]
+set_property -dict [list CONFIG.c_m_axi_mm2s_data_width {128} CONFIG.c_m_axis_mm2s_tdata_width {24} CONFIG.c_m_axi_s2mm_data_width {128} CONFIG.c_use_s2mm_fsync {0} CONFIG.c_mm2s_genlock_mode {0} CONFIG.c_s2mm_genlock_mode {0} CONFIG.c_mm2s_linebuffer_depth {2048} CONFIG.c_s2mm_linebuffer_depth {2048} CONFIG.c_s2mm_max_burst_length {256} CONFIG.c_mm2s_max_burst_length {4}] [get_bd_cells axi_vdma_1]
+endgroup
+delete_bd_objs [get_bd_nets xlconcat_0_dout]
+delete_bd_objs [get_bd_nets led_detect_0_m00_axis_tdata]
+connect_bd_net [get_bd_pins led_detect_0/m00_axis_tdata] [get_bd_pins axi_vdma_1/s_axis_s2mm_tdata]
+WARNING: [BD 41-1306] The connection to interface pin /led_detect_0/m00_axis_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /axi_vdma_1/s_axis_s2mm_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
+delete_bd_objs [get_bd_nets led_detect_0_m00_axis_tdata]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins axi_vdma_1/s_axis_s2mm_tdata]
+WARNING: [BD 41-1306] The connection to interface pin /axi_vdma_1/s_axis_s2mm_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
+connect_bd_net [get_bd_pins led_detect_0/m00_axis_tdata] [get_bd_pins xlconcat_0/In0]
+WARNING: [BD 41-1306] The connection to interface pin /led_detect_0/m00_axis_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXIS
+startgroup
+set_property -dict [list CONFIG.c_mm2s_max_burst_length {256}] [get_bd_cells axi_vdma_1]
+endgroup
+validate_bd_design
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+INFO: [xilinx.com:ip:axi_vdma:6.2-15] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [xilinx.com:ip:axi_vdma:6.2-155] /axi_vdma_0 
+                    To get the better performance, ensure AXI Memory Map clock frequency is greater than equal to AXI Streaming clock frequency.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x9FFFFFFF.
+validate_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2532.352 ; gain = 0.000
+save_bd_design
+Wrote  : <C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'hdmi.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi.vhd
+VHDL Output written to : C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi_wrapper.vhd
+Wrote  : <C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dynclk_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_video .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dvi2rgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_intc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_xlconcat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mig_7series_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_pxl .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_vid_in_axi4s_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block led_detect_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/s00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/s01_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/s02_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s03_couplers/s03_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/m00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_ds .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s04_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s05_couplers/auto_us .
+Exporting to file C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hw_handoff/hdmi.hwh
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.AsyncRst' 
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.SyncRst' 
+Generated Block Design Tcl file C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hw_handoff/hdmi_bd.tcl
+Generated Hardware Definition File C:/ece532/hdmi/proj/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi.hwdef
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Mar 09 15:36:57 2017] Launched synth_1...
+Run output will be captured here: C:/ece532/hdmi/proj/hdmi.runs/synth_1/runme.log
+[Thu Mar 09 15:36:57 2017] Launched impl_1...
+Run output will be captured here: C:/ece532/hdmi/proj/hdmi.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:13 ; elapsed = 00:01:37 . Memory (MB): peak = 2619.102 ; gain = 19.613
+close_project
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/ece532/hdmi/proj/hdmi.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 09 16:29:03 2017...
+close_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2778.938 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 09 16:31:22 2017...
