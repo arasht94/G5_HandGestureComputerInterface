@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# updatemem v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# 
+# Start of session at: Thu Mar 16 15:38:47 2017
+# Process ID: 1780
+# Current directory: w:/ece532/integration_Copy2
+# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2016.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo W:/ece532/integration_Copy2/hdmi.sdk/hdmi_wrapper_hw_platform_3/hdmi_wrapper.mmi -data C:/Xilinx/SDK/2016.2/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc hdmi_i/microblaze_0 -bit W:/ece532/integration_Copy2/hdmi.sdk/hdmi_wrapper_hw_platform_3/hdmi_wrapper.bit -out W:/ece532/integration_Copy2/hdmi.sdk/hdmi_wrapper_hw_platform_3/download.bit -force
+# Log file: w:/ece532/integration_Copy2/updatemem.log
+# Journal file: w:/ece532/integration_Copy2\updatemem.jou
+#-----------------------------------------------------------
+source C:/Xilinx/SDK/2016.2/scripts/updatemem/main.tcl -notrace

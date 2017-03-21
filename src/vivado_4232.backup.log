@@ -1,0 +1,1199 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Mar 16 09:56:39 2017
+# Process ID: 4232
+# Current directory: W:/ece532/integration_Copy
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4148 hdmi.xpr
+# Log file: W:/ece532/integration_Copy/vivado.log
+# Journal file: W:/ece532/integration_Copy\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project hdmi.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/NexysVideo-master_2015.3/Projects/hdmi/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/ece532/img_processing_ip/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 1179.191 ; gain = 548.965
+update_compile_order -fileset sources_1
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+Adding cell -- digilentinc.com:ip:axi_dynclk:1.0 - axi_dynclk_0
+Adding cell -- digilentinc.com:ip:dvi2rgb:1.5 - dvi2rgb_0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - microblaze_0_xlconcat
+Adding cell -- digilentinc.com:ip:rgb2dvi:1.2 - rgb2dvi_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_video
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding cell -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding cell -- xilinx.com:ip:axi_vdma:6.2 - axi_vdma_0
+Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding cell -- xilinx.com:ip:microblaze:9.6 - microblaze_0
+Adding cell -- xilinx.com:ip:axi_intc:4.1 - microblaze_0_axi_intc
+Adding cell -- xilinx.com:ip:mig_7series:4.0 - mig_7series_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_mig_7series_0_100M
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_mig_7series_0_pxl
+Adding cell -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_1
+Adding cell -- xilinx.com:ip:v_vid_in_axi4s:4.0 - v_vid_in_axi4s_0
+Adding cell -- xilinx.com:ip:axi_vdma:6.2 - axi_vdma_1
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding cell -- user:user:led_detect:1.0 - led_detect_0
+Adding cell -- xilinx.com:ip:ila:6.1 - ila_0
+Adding cell -- xilinx.com:ip:ila:6.1 - ila_1
+Adding cell -- xilinx.com:ip:ila:6.1 - ila_2
+Adding cell -- xilinx.com:ip:ila:6.1 - ila_3
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_data_fifo:2.1 - m00_data_fifo
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - m00_regslice
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s05_regslice
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - auto_rs_w
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s04_regslice
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - auto_rs_w
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s03_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s02_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s01_regslice
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - auto_rs_w
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - auto_rs_w
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - lmb_bram
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+Successfully read diagram <hdmi> from BD file <W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd>
+open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1594.273 ; gain = 375.973
+delete_bd_objs [get_bd_nets xlconcat_0_dout] [get_bd_nets axi_vdma_1_mm2s_introut] [get_bd_nets axi_vdma_1_s2mm_introut] [get_bd_intf_nets microblaze_0_axi_periph_M09_AXI] [get_bd_intf_nets axi_vdma_1_M_AXI_MM2S] [get_bd_intf_nets axi_vdma_1_M_AXI_S2MM] [get_bd_cells axi_vdma_1]
+delete_bd_objs [get_bd_nets xlconstant_1_dout] [get_bd_cells xlconcat_0]
+delete_bd_objs [get_bd_cells xlconstant_1]
+copy_bd_objs /  [get_bd_cells {axi_vdma_0}]
+set_property location {10 3073 79} [get_bd_cells axi_vdma_1]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" Clk "Auto" }  [get_bd_intf_pins axi_vdma_1/S_AXI_LITE]
+</axi_vdma_1/S_AXI_LITE/Reg> is being mapped into </microblaze_0/Data> at <0x44A50000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Slave "/mig_7series_0/S_AXI" Clk "Auto" }  [get_bd_intf_pins axi_vdma_1/M_AXI_MM2S]
+</mig_7series_0/memmap/memaddr> is being mapped into </axi_vdma_1/Data_MM2S> at <0x80000000 [ 512M ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Slave "/mig_7series_0/S_AXI" Clk "Auto" }  [get_bd_intf_pins axi_vdma_1/M_AXI_S2MM]
+</mig_7series_0/memmap/memaddr> is being mapped into </axi_vdma_1/Data_S2MM> at <0x80000000 [ 512M ]>
+endgroup
+delete_bd_objs [get_bd_nets axi_vdma_1_s_axis_s2mm_tready]
+delete_bd_objs [get_bd_nets led_detect_0_m00_axis_tlast]
+delete_bd_objs [get_bd_nets led_detect_0_m00_axis_tvalid]
+delete_bd_objs [get_bd_nets led_detect_0_m00_axis_tdata]
+connect_bd_intf_net [get_bd_intf_pins axi_vdma_1/S_AXIS_S2MM] [get_bd_intf_pins led_detect_0/M00_AXIS]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_MONITOR_TYPE {AXI} CONFIG.C_PROBE0_WIDTH {1} CONFIG.C_NUM_OF_PROBES {44} CONFIG.C_ENABLE_ILA_AXI_MON {true}] [get_bd_cells ila_1]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} CONFIG.C_NUM_OF_PROBES {9}] [get_bd_cells ila_1]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins ila_1/SLOT_0_AXIS] [get_bd_intf_pins led_detect_0/M00_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axi_vdma_1/M_AXIS_MM2S] [get_bd_intf_pins led_detect_0/S00_AXIS]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4} CONFIG.C_NUM_OF_PROBES {44}] [get_bd_cells ila_2]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4} CONFIG.C_NUM_OF_PROBES {44}] [get_bd_cells ila_3]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins ila_3/SLOT_0_AXI] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S04_AXI]
+connect_bd_intf_net [get_bd_intf_pins ila_2/SLOT_0_AXI] [get_bd_intf_pins axi_vdma_1/M_AXI_S2MM]
+copy_bd_objs /  [get_bd_cells {ila_3}]
+set_property location {6 1896 650} [get_bd_cells ila_4]
+set_property location {5 1640 1276} [get_bd_cells ila_4]
+set_property location {5 1581 1241} [get_bd_cells ila_4]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+set_property location {8 2609 1267} [get_bd_cells ila_4]
+connect_bd_intf_net [get_bd_intf_pins ila_4/SLOT_0_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_MM2S]
+connect_bd_net [get_bd_pins ila_4/clk] [get_bd_pins mig_7series_0/ui_clk]
+copy_bd_objs /  [get_bd_cells {ila_3}]
+set_property location {8 2676 922} [get_bd_cells ila_5]
+set_property location {9 2829 1228} [get_bd_cells ila_5]
+connect_bd_net [get_bd_pins ila_5/clk] [get_bd_pins ila_4/clk]
+connect_bd_intf_net [get_bd_intf_pins ila_5/SLOT_0_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_S2MM]
+copy_bd_objs /  [get_bd_cells {ila_3}]
+set_property location {9 2827 1325} [get_bd_cells ila_6]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} CONFIG.C_NUM_OF_PROBES {9}] [get_bd_cells ila_6]
+endgroup
+copy_bd_objs /  [get_bd_cells {ila_6}]
+set_property location {5 1654 1237} [get_bd_cells ila_7]
+connect_bd_intf_net [get_bd_intf_pins ila_7/SLOT_0_AXIS] [get_bd_intf_pins v_vid_in_axi4s_0/video_out]
+connect_bd_net [get_bd_pins ila_7/clk] [get_bd_pins mig_7series_0/ui_clk]
+connect_bd_intf_net [get_bd_intf_pins ila_6/SLOT_0_AXIS] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+connect_bd_net [get_bd_pins ila_6/clk] [get_bd_pins ila_5/clk]
+connect_bd_net [get_bd_pins axi_vdma_1/mm2s_introut] [get_bd_pins microblaze_0_xlconcat/In6]
+connect_bd_net [get_bd_pins microblaze_0_xlconcat/In7] [get_bd_pins axi_vdma_1/s2mm_introut]
+connect_bd_net [get_bd_pins axi_vdma_1/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_1/m_axi_mm2s_aclk]
+connect_bd_net [get_bd_pins axi_vdma_1/s_axis_s2mm_aclk] [get_bd_pins axi_vdma_1/m_axi_s2mm_aclk]
+save_bd_design
+Wrote  : <W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+save_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 2018.410 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+delete_bd_objs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2018.410 ; gain = 0.000
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.AsyncRst' 
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.SyncRst' 
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+INFO: [xilinx.com:ip:axi_vdma:6.2-15] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [xilinx.com:ip:axi_vdma:6.2-155] /axi_vdma_0 
+                    To get the better performance, ensure AXI Memory Map clock frequency is greater than equal to AXI Streaming clock frequency.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+ERROR: [BD 41-237] Bus Interface property CLK_DOMAIN does not match between /ila_6/SLOT_0_AXIS(hdmi_mig_7series_0_0_ui_clk) and /axi_vdma_0/M_AXIS_MM2S(hdmi_axi_dynclk_0_0_PXL_CLK_O)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /ila_7/SLOT_0_AXIS(100000000) and /v_vid_in_axi4s_0/video_out(160000000)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd 
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+delete_bd_objs [get_bd_nets mig_7series_0_ui_clk]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets mig_7series_0_ui_clk]'
+delete_bd_objs [get_bd_cells ila_6]
+copy_bd_objs /  [get_bd_cells {ila_7}]
+set_property location {7 2344 621} [get_bd_cells ila_8]
+set_property location {8 2574 656} [get_bd_cells ila_8]
+set_property location {8 2615 898} [get_bd_cells ila_8]
+set_property location {9 2797 1314} [get_bd_cells ila_8]
+connect_bd_net [get_bd_pins ila_8/clk] [get_bd_pins axi_dynclk_0/PXL_CLK_O]
+connect_bd_intf_net [get_bd_intf_pins ila_8/SLOT_0_AXIS] [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+save_bd_design
+Wrote  : <W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+save_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 2055.898 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+INFO: [xilinx.com:ip:axi_vdma:6.2-15] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [xilinx.com:ip:axi_vdma:6.2-155] /axi_vdma_0 
+                    To get the better performance, ensure AXI Memory Map clock frequency is greater than equal to AXI Streaming clock frequency.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /ila_7/SLOT_0_AXIS(100000000) and /v_vid_in_axi4s_0/video_out(160000000)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd 
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+delete_bd_objs [get_bd_cells ila_7]
+copy_bd_objs /  [get_bd_cells {ila_8}]
+set_property location {5 1585 1209} [get_bd_cells ila_9]
+connect_bd_intf_net [get_bd_intf_pins ila_9/SLOT_0_AXIS] [get_bd_intf_pins v_vid_in_axi4s_0/video_out]
+connect_bd_net [get_bd_pins ila_9/clk] [get_bd_pins mig_7series_0/ui_addn_clk_0]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+validate_bd_design
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+INFO: [xilinx.com:ip:axi_vdma:6.2-15] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [xilinx.com:ip:axi_vdma:6.2-155] /axi_vdma_0 
+                    To get the better performance, ensure AXI Memory Map clock frequency is greater than equal to AXI Streaming clock frequency.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+validate_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2146.234 ; gain = 0.000
+validate_bd_design -force
+INFO: [Common 17-365] Interrupt caught but 'validate_bd_design' cannot be canceled. Please wait for command to finish.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+INFO: [xilinx.com:ip:axi_vdma:6.2-15] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [xilinx.com:ip:axi_vdma:6.2-155] /axi_vdma_0 
+                    To get the better performance, ensure AXI Memory Map clock frequency is greater than equal to AXI Streaming clock frequency.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_4/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_5/SLOT_0_AXI(1) and /axi_vdma_0/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+validate_bd_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2146.234 ; gain = 0.000
+INFO: [Common 17-681] Processing pending cancel.
+save_bd_design
+Wrote  : <W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+launch_runs impl_1 -to_step write_bitstream
+INFO: [BD 41-1662] The design 'hdmi.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi.vhd
+VHDL Output written to : W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi_wrapper.vhd
+Wrote  : <W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dynclk_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_video .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dvi2rgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_intc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_xlconcat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mig_7series_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_pxl .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_vid_in_axi4s_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block led_detect_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/s00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/s01_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/s02_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s03_couplers/s03_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s04_couplers/s04_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s05_couplers/s05_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/m00_data_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/m00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_ds .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s04_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s04_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s05_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s05_couplers/auto_rs_w .
+Exporting to file W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hw_handoff/hdmi.hwh
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.AsyncRst' 
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.SyncRst' 
+Generated Block Design Tcl file W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hw_handoff/hdmi_bd.tcl
+Generated Hardware Definition File W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi.hwdef
+[Thu Mar 16 10:21:15 2017] Launched synth_1...
+Run output will be captured here: W:/ece532/integration_Copy/hdmi.runs/synth_1/runme.log
+[Thu Mar 16 10:21:15 2017] Launched impl_1...
+Run output will be captured here: W:/ece532/integration_Copy/hdmi.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:01:48 . Memory (MB): peak = 2195.027 ; gain = 48.793
+delete_bd_objs [get_bd_cells ila_9]
+delete_bd_objs [get_bd_cells ila_8]
+delete_bd_objs [get_bd_cells ila_5]
+delete_bd_objs [get_bd_cells ila_4]
+delete_bd_objs [get_bd_cells ila_2]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_cells ila_2]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_cells ila_4]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_cells ila_5]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_cells ila_8]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_cells ila_9]'
+redo
+INFO: [Common 17-16] redo 'delete_bd_objs [get_bd_cells ila_9]'
+redo
+INFO: [Common 17-16] redo 'delete_bd_objs [get_bd_cells ila_8]'
+redo
+INFO: [Common 17-16] redo 'delete_bd_objs [get_bd_cells ila_5]'
+redo
+INFO: [Common 17-16] redo 'delete_bd_objs [get_bd_cells ila_4]'
+redo
+INFO: [Common 17-16] redo 'delete_bd_objs [get_bd_cells ila_2]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_cells ila_2]'
+set_property location {10 2934 440} [get_bd_cells ila_2]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_DATA_DEPTH {4096}] [get_bd_cells ila_2]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_DATA_DEPTH {4096}] [get_bd_cells ila_3]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_DATA_DEPTH {4096}] [get_bd_cells ila_1]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_DATA_DEPTH {4096}] [get_bd_cells ila_0]
+endgroup
+save_bd_design
+Wrote  : <W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+delete_bd_objs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2837.801 ; gain = 0.000
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_0' with propagated value(32). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(128) on '/axi_vdma_1' with propagated value(32). Command ignored
+INFO: [xilinx.com:ip:axi_vdma:6.2-15] /axi_vdma_0 
+                    All clocks connected to AXI VDMA are not identical, therefore configuring AXI-VDMA in ASYNC mode.
+WARNING: [xilinx.com:ip:axi_vdma:6.2-155] /axi_vdma_0 
+                    To get the better performance, ensure AXI Memory Map clock frequency is greater than equal to AXI Streaming clock frequency.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:microblaze:9.6-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x9FFFFFFF.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_3/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_MM2S(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /ila_2/SLOT_0_AXI(1) and /axi_vdma_1/M_AXI_S2MM(0)
+VHDL Output written to : W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi.vhd
+VHDL Output written to : W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi_wrapper.vhd
+Wrote  : <W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dynclk_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_video .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dvi2rgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_intc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_xlconcat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mig_7series_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_pxl .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_vid_in_axi4s_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block led_detect_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/s00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/s01_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/s02_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s03_couplers/s03_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s04_couplers/s04_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s05_couplers/s05_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/m00_data_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/m00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_ds .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s04_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s04_couplers/auto_rs_w .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s05_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s05_couplers/auto_rs_w .
+Exporting to file W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hw_handoff/hdmi.hwh
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.AsyncRst' 
+WARNING: [IP_Flow 19-3331] Invalid parameters found in dependency constraints of 'BUSIF_ENABLEMENT.SyncRst' 
+Generated Block Design Tcl file W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hw_handoff/hdmi_bd.tcl
+Generated Hardware Definition File W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdl/hdmi.hwdef
+[Thu Mar 16 11:03:50 2017] Launched synth_1...
+Run output will be captured here: W:/ece532/integration_Copy/hdmi.runs/synth_1/runme.log
+[Thu Mar 16 11:03:50 2017] Launched impl_1...
+Run output will be captured here: W:/ece532/integration_Copy/hdmi.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:50 ; elapsed = 00:01:54 . Memory (MB): peak = 2837.801 ; gain = 0.000
+open_hw
+file copy -force W:/ece532/integration_Copy/hdmi.runs/impl_1/hdmi_wrapper.sysdef W:/ece532/integration_Copy/hdmi.sdk/hdmi_wrapper.hdf
+
+launch_sdk -workspace W:/ece532/integration_Copy/hdmi.sdk -hwspec W:/ece532/integration_Copy/hdmi.sdk/hdmi_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace W:/ece532/integration_Copy/hdmi.sdk -hwspec W:/ece532/integration_Copy/hdmi.sdk/hdmi_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.2
+  **** Build date : Jun  2 2016-16:57:03
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+ERROR: [Labtoolstcl 44-469] There is no current hw_target.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+ERROR: [Labtoolstcl 44-469] There is no current hw_target.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+ERROR: [Labtoolstcl 44-469] There is no current hw_target.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210276690173B
+INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7a200t_0 and the probes file W:/ece532/integration_Copy/hdmi.runs/impl_1/debug_nets.ltx.
+The device design has 0 ILA core(s) and 0 VIO core(s). The probes file has 4 ILA core(s) and 0 VIO core(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file OR
+2. Goto device properties and associate the correct probes file with the programming file already programmed in the device.
+set_property PROBES.FILE {W:/ece532/integration_Copy/hdmi.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {W:/ece532/integration_Copy/hdmi.runs/impl_1/hdmi_wrapper.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2837.801 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7a200t (JTAG device index = 0) is programmed with a design that has 4 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]]
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+set_property TRIGGER_COMPARE_VALUE gt24'h00_0000 [get_hw_probes hdmi_i/led_detect_0_M00_AXIS_TDATA -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE gt128'h0000_0000_0000_0000_0000_0000_0000_0000 [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_WDATA -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+set_property TRIGGER_COMPARE_VALUE gt128'h0000_0000_0000_0000_0000_0000_0000_0000 [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_MM2S_RDATA -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_4' trigger was armed at 2017-Mar-16 11:58:42
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2017-Mar-16 11:58:59
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 11:59:03
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 11:59:03
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 11:59:10
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_4' triggered at 2017-Mar-16 12:01:24
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2017-Mar-16 12:01:42
+set_property TRIGGER_COMPARE_VALUE eq24'hXX_XXXX [get_hw_probes hdmi_i/led_detect_0_M00_AXIS_TDATA -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes hdmi_i/led_detect_0_M00_AXIS_TVALID -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:05:44
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:05:44
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:05:54
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:05:54
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:05:56
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:05:56
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:06:34
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:06:34
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:06:41
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:06:41
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:06:58
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:06:58
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:07:00
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:07:00
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes hdmi_i/led_detect_0_M00_AXIS_TREADY -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:08:42
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:08:42
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:09:50
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:09:50
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:22:24
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:22:24
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2017-Mar-16 12:22:36
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2017-Mar-16 12:22:36
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2017-Mar-16 12:25:24
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2017-Mar-16 12:25:24
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:25:36
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:25:36
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_4' trigger was armed at 2017-Mar-16 12:26:05
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_4' triggered at 2017-Mar-16 12:26:05
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 12:26:26
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:26:28
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2017-Mar-16 12:30:03
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2017-Mar-16 12:30:03
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:30:11
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:30:11
+set_property TRIGGER_COMPARE_VALUE eq128'hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_WDATA -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_AWVALID -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 12:33:30
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:33:35
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:33:42
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:33:42
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_AWREADY -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 12:34:04
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:34:07
+set_property TRIGGER_COMPARE_VALUE eq1'b0 [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_AWREADY -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 12:34:37
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:34:38
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_AWVALID -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_AWREADY -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 12:35:10
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:35:11
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:35:11
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_WVALID -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:36:03
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_WVALID -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 12:36:28
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:36:29
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:36:29
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:11
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:11
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:14
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:14
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:15
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:15
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:17
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:17
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:18
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:18
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:21
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:21
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:24
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:24
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:27
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:27
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:31
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:31
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:34
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:34
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:37
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:37
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:37:41
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:37:41
+set_property TRIGGER_COMPARE_VALUE eq1'b0 [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_WVALID -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:38:08
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2017-Mar-16 12:38:08
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_WVALID -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:39:02
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:39:02
+set_property TRIGGER_COMPARE_VALUE gt32'h0000_0000 [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_AWADDR -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:39:48
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 12:50:01
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:50:03
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:50:14
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:50:14
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:50:27
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:50:27
+launch_sdk -workspace W:/ece532/integration_Copy/hdmi.sdk -hwspec W:/ece532/integration_Copy/hdmi.sdk/hdmi_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace W:/ece532/integration_Copy/hdmi.sdk -hwspec W:/ece532/integration_Copy/hdmi.sdk/hdmi_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 12:55:02
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:55:05
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:55:12
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:55:12
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:55:20
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:55:20
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 12:55:28
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:55:30
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2017-Mar-16 12:56:23
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2017-Mar-16 12:56:23
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:56:34
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:56:34
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2017-Mar-16 12:57:29
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2017-Mar-16 12:57:29
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:58:13
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:58:13
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 12:58:19
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 12:58:20
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_4' trigger was armed at 2017-Mar-16 12:58:29
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_4' triggered at 2017-Mar-16 12:58:29
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2017-Mar-16 12:59:13
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2017-Mar-16 12:59:13
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:59:26
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:59:26
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:59:36
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:59:36
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:59:38
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:59:38
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:59:40
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:59:40
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:59:42
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:59:42
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 12:59:44
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 12:59:44
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2017-Mar-16 13:10:38
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2017-Mar-16 13:10:38
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:10:45
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:10:45
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:10:46
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:10:46
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:19:02
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:19:02
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:19:05
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:19:05
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:19:07
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:19:07
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:19:08
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:19:09
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:19:10
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:19:10
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:19:12
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:19:12
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:19:17
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:19:17
+set_property TRIGGER_COMPARE_VALUE eq32'hXXXX_XXXX [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_AWADDR -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes hdmi_i/axi_vdma_1_M_AXI_S2MM_WVALID -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_3' trigger was stopped by user at 2017-Mar-16 13:19:39
+WARNING: [Labtools 27-157] hw_ila [hw_ila_3] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2017-Mar-16 13:19:43
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:24:44
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:24:44
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_4' trigger was armed at 2017-Mar-16 13:24:54
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_4' triggered at 2017-Mar-16 13:24:54
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2017-Mar-16 13:29:49
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2017-Mar-16 13:29:49
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:29:53
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:29:53
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:29:56
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:29:56
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2017-Mar-16 13:29:57
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2017-Mar-16 13:29:57
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_4' trigger was armed at 2017-Mar-16 13:30:04
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_3"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_4' triggered at 2017-Mar-16 13:30:04
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+launch_sdk -workspace W:/ece532/integration_Copy/hdmi.sdk -hwspec W:/ece532/integration_Copy/hdmi.sdk/hdmi_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace W:/ece532/integration_Copy/hdmi.sdk -hwspec W:/ece532/integration_Copy/hdmi.sdk/hdmi_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+set_property PROBES.FILE {W:/ece532/integration_Copy/hdmi.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {W:/ece532/integration_Copy/hdmi.runs/impl_1/hdmi_wrapper.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2837.801 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7a200t (JTAG device index = 0) is programmed with a design that has 4 ILA core(s).
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
+launch_sdk -workspace W:/ece532/integration_Copy/hdmi.sdk -hwspec W:/ece532/integration_Copy/hdmi.sdk/hdmi_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace W:/ece532/integration_Copy/hdmi.sdk -hwspec W:/ece532/integration_Copy/hdmi.sdk/hdmi_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+ERROR: [Xicom 50-38] xicom: Core access failed. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Core access failed. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Core access failed. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Core access failed. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Core access failed. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Labtools 27-3176] hw_server failed during internal command.
+Resolution: Check that the hw_server is running and the hardware connectivity to the target
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]
+ERROR: [Xicom 50-38] xicom: Core access failed. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Core access failed. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Core access failed. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Core access failed. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Core access failed. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Labtools 27-3176] hw_server failed during internal command.
+Resolution: Check that the hw_server is running and the hardware connectivity to the target
+open_bd_design {W:/ece532/integration_Copy/hdmi.srcs/sources_1/bd/hdmi/hdmi.bd}
