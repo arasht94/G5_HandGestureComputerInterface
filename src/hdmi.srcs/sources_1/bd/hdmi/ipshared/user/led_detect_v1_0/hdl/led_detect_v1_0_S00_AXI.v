@@ -226,7 +226,7 @@
 	    begin
 	      slv_reg0 <= 0;
 	      slv_reg1 <= 0;
-	      slv_reg2 <= 0;
+	      //slv_reg2 <= 0;
 	      slv_reg3 <= 0;
 	      slv_reg4 <= 0;
 	      slv_reg5 <= 0;
@@ -279,8 +279,8 @@
 	              end  
 	          default : begin
 	                      slv_reg0 <= slv_reg0;
-	                      slv_reg1 <= slv_reg1;
-	                      slv_reg2 <= slv_reg2;
+	                      //slv_reg1 <= slv_reg1;
+	                      //slv_reg2 <= slv_reg2;
 	                      slv_reg3 <= slv_reg3;
 	                      slv_reg4 <= slv_reg4;
 	                      slv_reg5 <= slv_reg5;
@@ -424,25 +424,25 @@
 	// Add user logic here
 	
 	// Set up registers to store locations of leds
-    /*always @ (posedge S_AXI_ACLK)
+    always @ (posedge S_AXI_ACLK)
     begin
       if (S_AXI_ARESETN == 1'b0 || slv_reg0[0] == 1'b0) //if reset or ip not enabled 
         begin
           slv_reg1 <= 0; //reset ledr_xy
-          slv_reg2 <= 1; //reset ledg_xy
+          slv_reg2 <= 0; //reset ledg_xy
         end 
       else 
         begin
           slv_reg1 <= ledr_xy;
           slv_reg2 <= ledg_xy;
         end
-    end*/
+    end
     
     //wire red = (in_data_stream[23:16] - ((in_data_stream[15:8] + in_data_stream[7:0]) >> 1)) > 64;
     //wire green = (in_data_stream[15:8] - ((in_data_stream[23:16] + in_data_stream[7:0]) >> 1)) > 64;
     
-    wire red = (in_data_stream[23:16] > 64) && (in_data_stream[15:8] < 64) && (in_data_stream[7:0] < 64);
-    wire green = (in_data_stream[15:8] > 64) && (in_data_stream[23:16] < 64) && (in_data_stream[7:0] < 64);
+    wire red = (in_data_stream[23:16] > slv_reg3) && (in_data_stream[15:8] < slv_reg3) && (in_data_stream[7:0] < slv_reg3);
+    wire green = (in_data_stream[15:8] > slv_reg4) && (in_data_stream[23:16] < slv_reg4) && (in_data_stream[7:0] < slv_reg4);
     
   // Stream input data into fifo
   // fifo impl

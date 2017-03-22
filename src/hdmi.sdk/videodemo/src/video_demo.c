@@ -39,6 +39,7 @@
 #include "xil_cache.h"
 #include "xparameters.h"
 #include "vdma/vdma.h"
+#include "led_detect.h"
 
 /*
  * XPAR redefines
@@ -50,10 +51,10 @@
 #define VID_VTC_ID XPAR_VTC_1_DEVICE_ID
 #define VID_GPIO_ID XPAR_AXI_GPIO_VIDEO_DEVICE_ID
 #define VID_VTC_IRPT_ID XPAR_INTC_0_VTC_1_VEC_ID
-#define VID_GPIO_IRPT_ID XPAR_INTC_0_GPIO_0_VEC_ID
+#define VID_GPIO_IRPT_ID XPAR_INTC_0_GPIO_1_VEC_ID
 #define SCU_TIMER_ID XPAR_AXI_TIMER_0_DEVICE_ID
 #define UART_BASEADDR XPAR_UARTLITE_0_BASEADDR
-
+#define LED_DETECT_BASE_ADDR XPAR_LED_DETECT_0_S00_AXI_BASEADDR
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
 /* ------------------------------------------------------------ */
@@ -163,6 +164,8 @@ void DemoInitialize()
 		return;
 	}
 
+
+
 	/*
 	 * Initialize the Display controller and start it
 	 */
@@ -203,6 +206,18 @@ void DemoInitialize()
 	 * Set the Video Detect callback to trigger the menu to reset, displaying the new detected resolution
 	 */
 	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
+
+	/*
+	 * Enable IP and Write Registers
+	 */
+	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG3_OFFSET, 200);
+	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG4_OFFSET, 200);
+	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG0_OFFSET, 1);
+
+	/*
+	 * Write all GPIO out to 1
+	 */
+	Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR, 0x3f);
 
 	DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, DEMO_PATTERN_1);
 
@@ -253,31 +268,13 @@ void DemoRun()
 		locked = XGpio_DiscreteRead(GpioPtr, 2);
 
 		//control vdmas
-		//start_frame_read();
 		for (i = 0; i < 720; i++){ //1280/32 *3 = 120
 			read_config(&vdma2, &vdma2Config_1, &frame_count_config_1);
 			dma_read_from_memory(i,&vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0]);
-		//}
-		//Stop_Dma_read(&vdma2);
 
-		//for (i = 0; i < 120; i++){ //1280/32 *3 = 120
 			write_config(&vdma2, &vdma2Config_2, &frame_count_config_2);
 			dma_write_to_memory(i,&vdma2,&vdma2Config_2,&frame_count_config_2,pFrames[1]);
 		}
-
-		//Stop_Dma_write(&vdma2);
-		/*for(i=0; i<DEMO_MAX_FRAME; i+=3){
-			frameBuf[1][i] = 0x00;
-			frameBuf[1][i+1] = 0xff;
-			frameBuf[1][i+2] = 0x00;
-		}*/
-
-		//DisplayChangeFrame(&dispCtrl, 1);
-		//park first vdma
-		//parking_read(&vdma);
-
-		//Stop_Dma_write(&vdma2);
-		//Stop_Dma_read(&vdma2);
 	}
 
 

@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Mar 21 17:02:03 2017
+# Process ID: 5752
+# Current directory: W:/ece532/img_processing_ip/ip_repo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5088 W:\ece532\img_processing_ip\ip_repo\edit_led_detect_v1_0.xpr
+# Log file: W:/ece532/img_processing_ip/ip_repo/vivado.log
+# Journal file: W:/ece532/img_processing_ip/ip_repo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.xpr
+INFO: [Project 1-313] Project file moved from 'C:/ece532/img_processing_ip/ip_repo' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.ip_user_files', nor could it be found using path 'C:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/ece532/img_processing_ip/ip_repo/led_detect_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Mar 21 17:04:13 2017] Launched synth_1...
+Run output will be captured here: W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.runs/synth_1/runme.log
+[Tue Mar 21 17:04:13 2017] Launched impl_1...
+Run output will be captured here: W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Mar 21 17:08:41 2017] Launched synth_1...
+Run output will be captured here: W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.runs/synth_1/runme.log
+[Tue Mar 21 17:08:41 2017] Launched impl_1...
+Run output will be captured here: W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Mar 21 17:14:12 2017] Launched synth_1...
+Run output will be captured here: W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.runs/synth_1/runme.log
+[Tue Mar 21 17:14:12 2017] Launched impl_1...
+Run output will be captured here: W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Mar 21 17:23:48 2017] Launched synth_1...
+Run output will be captured here: W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.runs/synth_1/runme.log
+[Tue Mar 21 17:23:48 2017] Launched impl_1...
+Run output will be captured here: W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Mar 21 17:28:24 2017] Launched synth_1...
+Run output will be captured here: W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.runs/synth_1/runme.log
+[Tue Mar 21 17:28:24 2017] Launched impl_1...
+Run output will be captured here: W:/ece532/img_processing_ip/ip_repo/edit_led_detect_v1_0.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 21 17:31:08 2017...

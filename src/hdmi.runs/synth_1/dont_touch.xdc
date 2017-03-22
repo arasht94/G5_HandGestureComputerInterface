@@ -93,23 +93,20 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_xbar_1 || 
 # IP: bd/hdmi/ip/hdmi_xlconstant_2_0/hdmi_xlconstant_2_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_xlconstant_2_0 || ORIG_REF_NAME==hdmi_xlconstant_2_0}]
 
-# IP: bd/hdmi/ip/hdmi_led_detect_0_2/hdmi_led_detect_0_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_led_detect_0_2 || ORIG_REF_NAME==hdmi_led_detect_0_2}]
+# IP: bd/hdmi/ip/hdmi_axi_vdma_0_1/hdmi_axi_vdma_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_axi_vdma_0_1 || ORIG_REF_NAME==hdmi_axi_vdma_0_1}]
+
+# IP: bd/hdmi/ip/hdmi_led_detect_0_0/hdmi_led_detect_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_led_detect_0_0 || ORIG_REF_NAME==hdmi_led_detect_0_0}]
+
+# IP: bd/hdmi/ip/hdmi_axi_gpio_0_0/hdmi_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_axi_gpio_0_0 || ORIG_REF_NAME==hdmi_axi_gpio_0_0}]
 
 # IP: bd/hdmi/ip/hdmi_ila_0_0/hdmi_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_ila_0_0 || ORIG_REF_NAME==hdmi_ila_0_0}]
 
-# IP: bd/hdmi/ip/hdmi_ila_1_1/hdmi_ila_1_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_ila_1_1 || ORIG_REF_NAME==hdmi_ila_1_1}]
-
-# IP: bd/hdmi/ip/hdmi_ila_2_0/hdmi_ila_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_ila_2_0 || ORIG_REF_NAME==hdmi_ila_2_0}]
-
-# IP: bd/hdmi/ip/hdmi_ila_3_0/hdmi_ila_3_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_ila_3_0 || ORIG_REF_NAME==hdmi_ila_3_0}]
-
-# IP: bd/hdmi/ip/hdmi_axi_vdma_0_1/hdmi_axi_vdma_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_axi_vdma_0_1 || ORIG_REF_NAME==hdmi_axi_vdma_0_1}]
+# IP: bd/hdmi/ip/hdmi_ila_0_1/hdmi_ila_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_ila_0_1 || ORIG_REF_NAME==hdmi_ila_0_1}]
 
 # IP: bd/hdmi/ip/hdmi_s00_regslice_0/hdmi_s00_regslice_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_s00_regslice_0 || ORIG_REF_NAME==hdmi_s00_regslice_0}]
@@ -288,26 +285,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/hdmi/ip/hdmi_xbar_1/hdmi_xbar_1_ooc.xdc
 
-# XDC: bd/hdmi/ip/hdmi_ila_0_0/ila_v6_1/constraints/ila.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_ila_0_0 || ORIG_REF_NAME==hdmi_ila_0_0}] {/U0 }]/U0 ]]
-
-# XDC: bd/hdmi/ip/hdmi_ila_0_0/hdmi_ila_0_0_ooc.xdc
-
-# XDC: bd/hdmi/ip/hdmi_ila_1_1/ila_v6_1/constraints/ila.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_ila_1_1 || ORIG_REF_NAME==hdmi_ila_1_1}] {/U0 }]/U0 ]]
-
-# XDC: bd/hdmi/ip/hdmi_ila_1_1/hdmi_ila_1_1_ooc.xdc
-
-# XDC: bd/hdmi/ip/hdmi_ila_2_0/ila_v6_1/constraints/ila.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_ila_2_0 || ORIG_REF_NAME==hdmi_ila_2_0}] {/U0 }]/U0 ]]
-
-# XDC: bd/hdmi/ip/hdmi_ila_2_0/hdmi_ila_2_0_ooc.xdc
-
-# XDC: bd/hdmi/ip/hdmi_ila_3_0/ila_v6_1/constraints/ila.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_ila_3_0 || ORIG_REF_NAME==hdmi_ila_3_0}] {/U0 }]/U0 ]]
-
-# XDC: bd/hdmi/ip/hdmi_ila_3_0/hdmi_ila_3_0_ooc.xdc
-
 # XDC: bd/hdmi/ip/hdmi_axi_vdma_0_1/hdmi_axi_vdma_0_1.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_axi_vdma_0_1 || ORIG_REF_NAME==hdmi_axi_vdma_0_1}] {/U0 }]/U0 ]]
 
@@ -315,6 +292,24 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_axi_vdma_0_1 || ORIG_REF_NAME==hdmi_axi_vdma_0_1}] {/U0 }]/U0 ]]
 
 # XDC: bd/hdmi/ip/hdmi_axi_vdma_0_1/hdmi_axi_vdma_0_1_ooc.xdc
+
+# XDC: bd/hdmi/ip/hdmi_axi_gpio_0_0/hdmi_axi_gpio_0_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_axi_gpio_0_0 || ORIG_REF_NAME==hdmi_axi_gpio_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/hdmi/ip/hdmi_axi_gpio_0_0/hdmi_axi_gpio_0_0_ooc.xdc
+
+# XDC: bd/hdmi/ip/hdmi_axi_gpio_0_0/hdmi_axi_gpio_0_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_axi_gpio_0_0 || ORIG_REF_NAME==hdmi_axi_gpio_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/hdmi/ip/hdmi_ila_0_0/ila_v6_1/constraints/ila.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_ila_0_0 || ORIG_REF_NAME==hdmi_ila_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/hdmi/ip/hdmi_ila_0_0/hdmi_ila_0_0_ooc.xdc
+
+# XDC: bd/hdmi/ip/hdmi_ila_0_1/ila_v6_1/constraints/ila.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==hdmi_ila_0_1 || ORIG_REF_NAME==hdmi_ila_0_1}] {/U0 }]/U0 ]]
+
+# XDC: bd/hdmi/ip/hdmi_ila_0_1/hdmi_ila_0_1_ooc.xdc
 
 # XDC: bd/hdmi/ip/hdmi_s00_regslice_0/hdmi_s00_regslice_0_ooc.xdc
 

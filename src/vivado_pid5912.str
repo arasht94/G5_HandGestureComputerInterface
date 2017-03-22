@@ -1,0 +1,111 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+Process ID: 5912
+
+Current time: 	3/21/17 7:09:51 PM EDT
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.2/tps/win64/jre
+
+User name: 	dezfoul2
+User home directory: C:/Users/dezfoul2
+User working directory: W:/ece532/src
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: C:/Xilinx/Vivado
+RDI Data directory: C:/Xilinx/Vivado/2016.2/data
+RDI Bin directory: C:/Xilinx/Vivado/2016.2/bin
+
+Vivado preferences path: C:/Users/dezfoul2/AppData/Roaming/Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: C:/Users/dezfoul2/AppData/Roaming/Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	229 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 459 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bL:g (cv:JFrame):  Open Project : addNotify
+// Opening Vivado Project: hdmi.xpr. Version: Vivado v2016.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project hdmi.xpr 
+// [GUI Memory]: 42 MB (+41629kb) [00:00:03]
+// [Engine Memory]: 438 MB (+308218kb) [00:00:03]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 461 MB. GUI used memory: 29 MB. Current time: 3/21/17 7:09:53 PM EDT
+// [Engine Memory]: 466 MB (+5685kb) [00:00:08]
+// TclEventType: IP_LOCK_CHANGE
+// [Engine Memory]: 516 MB (+28536kb) [00:00:13]
+// TclEventType: IP_LOCK_CHANGE
+// [Engine Memory]: 600 MB (+61153kb) [00:00:18]
+// HMemoryUtils.trashcanNow. Engine heap size: 600 MB. GUI used memory: 29 MB. Current time: 3/21/17 7:10:08 PM EDT
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 665 MB (+36670kb) [00:00:32]
+// [GUI Memory]: 71 MB (+28278kb) [00:00:32]
+// [Engine Memory]: 800 MB (+106334kb) [00:00:33]
+// [GUI Memory]: 81 MB (+6345kb) [00:00:33]
+// [GUI Memory]: 85 MB (+377kb) [00:00:33]
+// [GUI Memory]: 91 MB (+1830kb) [00:00:33]
+// [GUI Memory]: 100 MB (+4134kb) [00:00:34]
+// [Engine Memory]: 840 MB (+169kb) [00:00:34]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project hdmi.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/ece532/img_processing_ip/ip_repo'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/ece532/src/repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: hdmi; location: W:/ece532/src; part: xc7a200tsbg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 1098.008 ; gain = 398.465 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 865 MB. GUI used memory: 56 MB. Current time: 3/21/17 7:10:28 PM EDT
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 26); // x:Y (w:G, cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 26, true); // x:Y (w:G, cv:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Open Target]", 27, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bL:g (cv:JFrame):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Elapsed time: 42 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, bL:g)
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 

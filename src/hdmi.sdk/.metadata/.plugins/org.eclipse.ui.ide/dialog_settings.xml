@@ -5,6 +5,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="W:\ece532\src\hdmi.sdk"/>
 			<item value="W:\NexysVideo-master_2015.3\Projects\hdmi\sdk"/>
 			<item value="W:\523_fuck_xilinx\NexysVideo-master\Projects\hdmi\sdk"/>
 			<item value="C:\Users\Mohammad\Desktop\ECE532\NexysVideo-master\Projects\hdmi\sdk"/>

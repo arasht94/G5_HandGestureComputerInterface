@@ -1,0 +1,498 @@
+
+*** Running vivado
+    with args -log led_detect_v1_0.vds -m64 -mode batch -messageDb vivado.pb -notrace -source led_detect_v1_0.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source led_detect_v1_0.tcl -notrace
+Command: synth_design -top led_detect_v1_0 -part xc7a200tsbg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5972 
+WARNING: [Synth 8-2507] parameter declaration becomes local in led_detect_v1_0_S00_AXIS with formal parameter declaration list [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_S00_AXIS.v:63]
+WARNING: [Synth 8-2507] parameter declaration becomes local in led_detect_v1_0_M00_AXIS with formal parameter declaration list [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_M00_AXIS.v:69]
+WARNING: [Synth 8-2507] parameter declaration becomes local in led_detect_v1_0_S00_AXI with formal parameter declaration list [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_S00_AXI.v:468]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 328.430 ; gain = 120.941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'led_detect_v1_0' [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0.v:4]
+	Parameter FRAME_WIDTH bound to: 1280 - type: integer 
+	Parameter FRAME_HEIGHT bound to: 720 - type: integer 
+	Parameter AXIS_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter FIFO_WIDTH bound to: 1280 - type: integer 
+	Parameter FIFO_BITS bound to: 11 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'led_detect_v1_0_S00_AXI' [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_S00_AXI.v:4]
+	Parameter AXIS_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter FIFO_WIDTH bound to: 1280 - type: integer 
+	Parameter FIFO_BITS bound to: 11 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 2 - type: integer 
+	Parameter WRITE bound to: 2'b00 
+	Parameter STREAM bound to: 2'b01 
+INFO: [Synth 8-155] case statement is not full and has no default [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_S00_AXI.v:477]
+INFO: [Synth 8-256] done synthesizing module 'led_detect_v1_0_S00_AXI' (1#1) [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'led_detect_v1_0_M00_AXIS' [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_M00_AXIS.v:4]
+	Parameter FRAME_WIDTH bound to: 1280 - type: integer 
+	Parameter FRAME_HEIGHT bound to: 720 - type: integer 
+	Parameter FIFO_WIDTH bound to: 1280 - type: integer 
+	Parameter FIFO_BITS bound to: 11 - type: integer 
+	Parameter AXIS_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter INIT_COUNTER bound to: 2'b01 
+	Parameter SEND_STREAM bound to: 2'b10 
+INFO: [Synth 8-155] case statement is not full and has no default [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_M00_AXIS.v:112]
+INFO: [Synth 8-256] done synthesizing module 'led_detect_v1_0_M00_AXIS' (2#1) [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_M00_AXIS.v:4]
+INFO: [Synth 8-638] synthesizing module 'led_detect_v1_0_S00_AXIS' [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_S00_AXIS.v:4]
+	Parameter FRAME_WIDTH bound to: 1280 - type: integer 
+	Parameter FRAME_HEIGHT bound to: 720 - type: integer 
+	Parameter FIFO_WIDTH bound to: 1280 - type: integer 
+	Parameter FIFO_BITS bound to: 11 - type: integer 
+	Parameter AXIS_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter WRITE_FIFO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'led_detect_v1_0_S00_AXIS' (3#1) [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0_S00_AXIS.v:4]
+WARNING: [Synth 8-3848] Net ledr_xy in module/entity led_detect_v1_0 does not have driver. [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0.v:77]
+WARNING: [Synth 8-3848] Net ledg_xy in module/entity led_detect_v1_0 does not have driver. [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0.v:78]
+INFO: [Synth 8-256] done synthesizing module 'led_detect_v1_0' (4#1) [W:/ece532/img_processing_ip/ip_repo/led_detect_1.0/hdl/led_detect_v1_0.v:4]
+WARNING: [Synth 8-3331] design led_detect_v1_0_S00_AXIS has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design led_detect_v1_0_S00_AXIS has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design led_detect_v1_0_S00_AXIS has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design led_detect_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design led_detect_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design led_detect_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design led_detect_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design led_detect_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design led_detect_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 349.020 ; gain = 141.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 349.020 ; gain = 141.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tsbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 349.020 ; gain = 141.531
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Synth 8-5546] ROM "fifo_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "read_pointer" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 366.578 ; gain = 159.090
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               24 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   7 Input     32 Bit        Muxes := 6     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module led_detect_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   7 Input     32 Bit        Muxes := 6     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 10    
+Module led_detect_v1_0_M00_AXIS 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
+Module led_detect_v1_0_S00_AXIS 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 505.789 ; gain = 298.301
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "led_detect_v1_0_S00_AXI_inst/fifo_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led_detect_v1_0_S00_AXI_inst/fifo_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led_detect_v1_0_M00_AXIS_inst/read_pointer" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design led_detect_v1_0 has port m00_axis_tstrb[2] driven by constant 1
+WARNING: [Synth 8-3917] design led_detect_v1_0 has port m00_axis_tstrb[1] driven by constant 1
+WARNING: [Synth 8-3917] design led_detect_v1_0 has port m00_axis_tstrb[0] driven by constant 1
+WARNING: [Synth 8-3331] design led_detect_v1_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design led_detect_v1_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design led_detect_v1_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design led_detect_v1_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design led_detect_v1_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design led_detect_v1_0 has unconnected port s00_axi_arprot[0]
+WARNING: [Synth 8-3331] design led_detect_v1_0 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design led_detect_v1_0 has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design led_detect_v1_0 has unconnected port s00_axis_tstrb[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 506.223 ; gain = 298.734
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 506.223 ; gain = 298.734
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-5784] Optimized 8 bits of RAM "led_detect_v1_0_S00_AXI_inst/in_fifo_reg" due to constant propagation. Old ram width 24 bits, new ram width 16 bits.
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM led_detect_v1_0_S00_AXI_inst/in_fifo_reg to conserve power
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++----------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name     | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|led_detect_v1_0 | led_detect_v1_0_S00_AXI_inst/in_fifo_reg | 2 K x 24               | W |   | 2 K x 24(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
++----------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_detect_v1_0_S00_AXI_inst/fifo_state_reg[1] )
+INFO: [Synth 8-3886] merging instance 'led_detect_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'led_detect_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_detect_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'led_detect_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'led_detect_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_detect_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/fifo_state_reg[1]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/axi_bresp_reg[0]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/axi_rresp_reg[0]) is unused and will be removed from module led_detect_v1_0.
+INFO: [Synth 8-3886] merging instance 'led_detect_v1_0_S00_AXI_inst/fifo_state_reg[0]' (FDRE) to 'led_detect_v1_0_S00_AXI_inst/stream_from_fifo_reg'
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/fifo_state_reg[0]) is unused and will be removed from module led_detect_v1_0.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 529.039 ; gain = 321.551
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 529.039 ; gain = 321.551
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 529.039 ; gain = 321.551
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[31]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[30]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[29]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[28]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[27]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[26]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[25]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[24]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[23]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[22]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[21]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[20]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[19]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[18]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[17]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[16]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[15]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[14]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[13]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[12]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[11]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[10]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[9]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[8]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[7]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[6]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[5]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[4]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[3]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[2]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[1]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[0]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[31]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[30]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[29]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[28]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[27]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[26]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[25]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[24]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[23]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[22]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[21]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[20]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[19]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[18]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[17]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[16]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[15]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[14]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[13]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[12]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[11]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[10]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[9]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[8]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[7]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[6]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[5]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[4]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[3]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[2]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[1]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg1_reg[0]__0) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[31]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[30]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[29]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[28]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[27]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[26]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[25]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[24]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[23]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[22]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[21]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[20]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[19]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[18]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[17]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[16]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[15]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[14]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[13]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[12]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[11]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[10]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[9]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[8]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[7]) is unused and will be removed from module led_detect_v1_0.
+WARNING: [Synth 8-3332] Sequential element (led_detect_v1_0_S00_AXI_inst/slv_reg2_reg[6]) is unused and will be removed from module led_detect_v1_0.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4480] The timing for the instance led_detect_v1_0_S00_AXI_inst/in_fifo_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 529.090 ; gain = 321.602
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 529.090 ; gain = 321.602
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 529.090 ; gain = 321.602
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 529.090 ; gain = 321.602
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 529.090 ; gain = 321.602
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 529.090 ; gain = 321.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 529.090 ; gain = 321.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 529.090 ; gain = 321.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 529.090 ; gain = 321.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     3|
+|2     |CARRY4   |    24|
+|3     |LUT1     |     3|
+|4     |LUT2     |   124|
+|5     |LUT3     |    10|
+|6     |LUT4     |    59|
+|7     |LUT5     |    62|
+|8     |LUT6     |    52|
+|9     |RAMB36E1 |     1|
+|10    |FDRE     |   201|
+|11    |IBUF     |    80|
+|12    |OBUF     |    63|
+|13    |OBUFT    |     8|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------------------------+-------------------------+------+
+|      |Instance                        |Module                   |Cells |
++------+--------------------------------+-------------------------+------+
+|1     |top                             |                         |   690|
+|2     |  led_detect_v1_0_M00_AXIS_inst |led_detect_v1_0_M00_AXIS |    45|
+|3     |  led_detect_v1_0_S00_AXIS_inst |led_detect_v1_0_S00_AXIS |    36|
+|4     |  led_detect_v1_0_S00_AXI_inst  |led_detect_v1_0_S00_AXI  |   455|
++------+--------------------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 529.090 ; gain = 321.602
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 164 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 529.090 ; gain = 288.461
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 529.090 ; gain = 321.602
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 126 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 599.563 ; gain = 362.395
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 599.563 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 21 17:28:44 2017...

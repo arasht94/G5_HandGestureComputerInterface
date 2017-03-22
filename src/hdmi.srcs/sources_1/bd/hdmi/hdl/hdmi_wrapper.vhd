@@ -1,8 +1,8 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
---Date        : Thu Mar 16 14:36:15 2017
---Host        : SFB520WS34 running 64-bit Service Pack 1  (build 7601)
+--Date        : Tue Mar 21 19:51:17 2017
+--Host        : SFB520WS31 running 64-bit Service Pack 1  (build 7601)
 --Command     : generate_target hdmi_wrapper.bd
 --Design      : hdmi_wrapper
 --Purpose     : IP block netlist
@@ -37,6 +37,7 @@ entity hdmi_wrapper is
     TMDS_OUT_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
     ddc_scl_io : inout STD_LOGIC;
     ddc_sda_io : inout STD_LOGIC;
+    gpio_tri_o : out STD_LOGIC_VECTOR ( 5 downto 0 );
     hdmi_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
     hdmi_rx_txen : out STD_LOGIC_VECTOR ( 0 to 0 );
     reset : in STD_LOGIC;
@@ -79,6 +80,7 @@ architecture STRUCTURE of hdmi_wrapper is
     TMDS_OUT_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
     usb_uart_rxd : in STD_LOGIC;
     usb_uart_txd : out STD_LOGIC;
+    GPIO_tri_o : out STD_LOGIC_VECTOR ( 5 downto 0 );
     hdmi_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
     reset : in STD_LOGIC;
     sys_clk_i : in STD_LOGIC;
@@ -136,6 +138,7 @@ hdmi_i: component hdmi
       DDR3_ras_n => DDR3_ras_n,
       DDR3_reset_n => DDR3_reset_n,
       DDR3_we_n => DDR3_we_n,
+      GPIO_tri_o(5 downto 0) => gpio_tri_o(5 downto 0),
       TMDS_IN_clk_n => TMDS_IN_clk_n,
       TMDS_IN_clk_p => TMDS_IN_clk_p,
       TMDS_IN_data_n(2 downto 0) => TMDS_IN_data_n(2 downto 0),

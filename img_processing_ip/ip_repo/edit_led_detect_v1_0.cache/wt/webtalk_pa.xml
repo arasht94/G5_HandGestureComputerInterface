@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Thu Feb 23 23:13:54 2017">
+<application name="pa" timeStamp="Tue Mar 21 17:31:02 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="222c564584644573aa518d4e38a9d99f" type="ProjectID"/>
-<property name="ProjectIteration" value="1" type="ProjectIteration"/>
+<property name="ProjectIteration" value="6" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -23,167 +23,19 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="IPPackagerWizardHandler" value="2" type="JavaHandler"/>
 <property name="NewIPLocationHandler" value="1" type="JavaHandler"/>
 <property name="OpenBlockDesign" value="1" type="JavaHandler"/>
+<property name="RunBitgen" value="5" type="JavaHandler"/>
+<property name="ShowView" value="5" type="JavaHandler"/>
 <property name="ToggleViewNavigator" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="CANCEL, Cancel" value="1" type="GuiResourceData"/>
-<property name="FINISH, Finish" value="2" type="GuiResourceData"/>
-<property name="NEXT, Next " value="8" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, Create and Package IP..." value="2" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_NEW_IP_LOCATION, New IP Location..." value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, hdmi_wrapper - STRUCTURE (hdmi_wrapper.vhd" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, led_detect_v1_0 (led_detect_v1_0.v" value="15" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, IP Integrator, Open Block Design], 7, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_IP_LOCATION, Open Recent IP Location" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_REPORT, Report" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_TOOLS, Tools" value="4" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_WINDOW, Window" value="4" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIPProjectWizard_IP_LOCATION, (String" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIPProjectWizard_IP_LOCATION, C:/ece532/img_processing_ip" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_ADD_NEW_INTERFACE, (String" value="4" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_CREATE_NEW_AXI4_IP_CREATE_AXI4, Create a new AXI4 peripheral. Create an AXI4 IP, driver, software test application, IP Integrator AXI4 BFM simulation and debug demonstration design." value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_DATA_WIDTH, 32, 0" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_DESCRIPTION_MY_NEW_AXI_IP, LED detect 24 bit" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_DESCRIPTION_MY_NEW_AXI_IP, LED detection" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_EDIT_IP, Edit IP" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_INTERFACES_TREE, [Interfaces, M00_AXIS], 2, false" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_INTERFACES_TREE, [Interfaces, S00_AXIS], 3, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_INTERFACES_TREE, [Interfaces, S00_AXI], 1, false" value="3" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_INTERFACE_MODE, Master, 0" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_INTERFACE_TYPE, Stream, 2" value="4" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_NAME_MYIP, led_detect" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_NAME_MYIP, led_detect_24" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_NUMBER_OF_REGISTERS, 4" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.NewIpWizard_NUMBER_OF_REGISTERS, 6" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SystemBuilderMenu_ADD_IP, Add IP..." value="3" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, Expand/Collapse" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, (String" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Implementation, Write Bitstream, [Vivado 12-1345] Error(s" value="1" type="GuiResourceData"/>
 <property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, read_p, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, track" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, track, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, user" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, user, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.MainWinMenuMgr_LAYOUT, Layout" value="2" type="GuiResourceData"/>
-<property name="RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, Don't show this dialog again, false" value="1" type="GuiResourceData"/>
-<property name="RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, Customize Commands" value="2" type="GuiResourceData"/>
-<property name="led_detect_v1_0.v, 172, 478" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0.v, 177, 314" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0.v, 182, 362" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0.v, 196, 591" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0.v, 201, 118" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0.v, 339, 396" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 182, 453" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 182, 453, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 208, 448" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 208, 448, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 223, 485" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 225, 531" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 229, 320" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 231, 507" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 259, 583" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 259, 583, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 263, 478" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 271, 364" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 334, 304" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 356, 192" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 362, 193" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 379, 432" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 383, 341" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 383, 341, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 386, 332" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 386, 332, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 390, 468" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 396, 710" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 412, 393" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 551, 245" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 559, 329" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 575, 169" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_M00_AXIS.v, 700, 236" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXI.v, 205, 148" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXI.v, 226, 563" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXI.v, 234, 541" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXI.v, 363, 338" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXI.v, 425, 412" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXI.v, 438, 519" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 108, 197" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 122, 126" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 123, 230" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 123, 429" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 130, 418" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 143, 462" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 143, 462, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 149, 186" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 149, 186, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 149, 491" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 150, 183" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 151, 301" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 151, 518" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 155, 388, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 156, 129" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 157, 390" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 160, 243" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 160, 243, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 161, 175" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 174, 208" value="2" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 174, 208, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 174, 268" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 175, 469" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 176, 427" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 176, 427, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 184, 255" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 186, 335" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 188, 214" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 191, 242" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 204, 461" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 208, 351" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 211, 196" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 215, 239" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 216, 290" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 221, 279" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 221, 431" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 225, 255" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 233, 415" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 235, 424" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 237, 428" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 237, 428, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 240, 265" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 252, 362" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 260, 547" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 310, 278" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 313, 434" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 322, 433" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 322, 433, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 326, 398" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 329, 467" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 337, 361" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 344, 415" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 354, 147" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 355, 147, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 362, 144" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 379, 143" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 397, 445" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 441, 412" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 444, 435" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 473, 326" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 515, 407" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 529, 437" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 637, 401" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 637, 91" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 65, 493" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 747, 474" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 750, 489" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 79, 377" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 89, 419" value="1" type="GuiResourceData"/>
-<property name="led_detect_v1_0_S00_AXIS.v, 99, 470" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="33" type="GuiMode"/>
+<property name="GuiMode" value="4" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="28" type="TclMode"/>
+<property name="TclMode" value="2" type="TclMode"/>
 </item>
 </section>
 </application>

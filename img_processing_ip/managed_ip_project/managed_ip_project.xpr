@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="C:/ece532/img_processing_ip/managed_ip_project/managed_ip_project.xpr">
+<Project Version="7" Minor="14" Path="W:/ece532/img_processing_ip/managed_ip_project/managed_ip_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="a6cbb950987b4578b90ce4b9a6bb5e91"/>

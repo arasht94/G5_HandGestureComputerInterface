@@ -42,7 +42,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 
@@ -107,16 +106,16 @@ set rc [catch {
   set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_pxl_0/hdmi_rst_mig_7series_0_pxl_0_board.xdc]
   read_xdc -ref hdmi_rst_mig_7series_0_pxl_0 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_pxl_0/hdmi_rst_mig_7series_0_pxl_0.xdc
   set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_rst_mig_7series_0_pxl_0/hdmi_rst_mig_7series_0_pxl_0.xdc]
-  read_xdc -ref hdmi_ila_0_0 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_0_0/ila_v6_1/constraints/ila.xdc
-  set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_0_0/ila_v6_1/constraints/ila.xdc]
-  read_xdc -ref hdmi_ila_1_1 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_1_1/ila_v6_1/constraints/ila.xdc
-  set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_1_1/ila_v6_1/constraints/ila.xdc]
-  read_xdc -ref hdmi_ila_2_0 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_2_0/ila_v6_1/constraints/ila.xdc
-  set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_2_0/ila_v6_1/constraints/ila.xdc]
-  read_xdc -ref hdmi_ila_3_0 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_3_0/ila_v6_1/constraints/ila.xdc
-  set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_3_0/ila_v6_1/constraints/ila.xdc]
   read_xdc -ref hdmi_axi_vdma_0_1 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_vdma_0_1/hdmi_axi_vdma_0_1.xdc
   set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_vdma_0_1/hdmi_axi_vdma_0_1.xdc]
+  read_xdc -prop_thru_buffers -ref hdmi_axi_gpio_0_0 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_gpio_0_0/hdmi_axi_gpio_0_0_board.xdc
+  set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_gpio_0_0/hdmi_axi_gpio_0_0_board.xdc]
+  read_xdc -ref hdmi_axi_gpio_0_0 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_gpio_0_0/hdmi_axi_gpio_0_0.xdc
+  set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_gpio_0_0/hdmi_axi_gpio_0_0.xdc]
+  read_xdc -ref hdmi_ila_0_0 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_0_0/ila_v6_1/constraints/ila.xdc
+  set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_0_0/ila_v6_1/constraints/ila.xdc]
+  read_xdc -ref hdmi_ila_0_1 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_0_1/ila_v6_1/constraints/ila.xdc
+  set_property processing_order EARLY [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_0_1/ila_v6_1/constraints/ila.xdc]
   read_xdc W:/NexysVideo-master_2015.3/Projects/hdmi/src/constraints/NexysVideo_Master.xdc
   read_xdc -ref hdmi_axi_vdma_0_0 -cells U0 w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_vdma_0_0/hdmi_axi_vdma_0_0_clocks.xdc
   set_property processing_order LATE [get_files w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_axi_vdma_0_0/hdmi_axi_vdma_0_0_clocks.xdc]
