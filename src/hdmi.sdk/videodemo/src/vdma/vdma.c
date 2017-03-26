@@ -242,7 +242,7 @@ int dma_write_to_memory(int ind, XAxiVdma *vdma, XAxiVdma_DmaSetup *vdmaConfig, 
 	//xil_printf("Write channel start status is %d\r\n", Status);
 	if (Status != XST_SUCCESS)
 	{
-		xil_printf("Start Write transfer failed %d\r\n", Status);
+		//xil_printf("Start Write transfer failed %d\r\n", Status);
 		return XST_FAILURE;
 	}
 

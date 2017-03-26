@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="hdmi" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1490140359"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1490140359"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1490140359"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1490382517"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1490382517"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1490382517"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\hdmi_axi_dynclk_0_0\hdmi_axi_dynclk_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_dynclk_0"/>
@@ -252,14 +252,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\hdmi_led_detect_0_0\hdmi_led_detect_0_0.xci" Type="IP">
-        <Instance HierarchyPath="led_detect_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\hdmi_axi_gpio_0_0\hdmi_axi_gpio_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_gpio_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -278,6 +270,14 @@
       </File>
       <File Name="ip\hdmi_ila_0_1\hdmi_ila_0_1.xci" Type="IP">
         <Instance HierarchyPath="ila_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\hdmi_led_detect_0_1\hdmi_led_detect_0_1.xci" Type="IP">
+        <Instance HierarchyPath="led_detect_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

@@ -1,8 +1,8 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
---Date        : Tue Mar 21 19:51:17 2017
---Host        : SFB520WS31 running 64-bit Service Pack 1  (build 7601)
+--Date        : Fri Mar 24 15:07:18 2017
+--Host        : BA3155WS20 running 64-bit Service Pack 1  (build 7601)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
 --Purpose     : IP block netlist
@@ -8455,45 +8455,6 @@ architecture STRUCTURE of hdmi is
     s2mm_introut : out STD_LOGIC
   );
   end component hdmi_axi_vdma_0_1;
-  component hdmi_led_detect_0_0 is
-  port (
-    m00_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    m00_axis_tstrb : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m00_axis_tlast : out STD_LOGIC;
-    m00_axis_tvalid : out STD_LOGIC;
-    m00_axis_tready : in STD_LOGIC;
-    m00_axis_aclk : in STD_LOGIC;
-    m00_axis_aresetn : in STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC;
-    s00_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    s00_axis_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axis_tlast : in STD_LOGIC;
-    s00_axis_tvalid : in STD_LOGIC;
-    s00_axis_tready : out STD_LOGIC;
-    s00_axis_aclk : in STD_LOGIC;
-    s00_axis_aresetn : in STD_LOGIC
-  );
-  end component hdmi_led_detect_0_0;
   component hdmi_axi_gpio_0_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -8546,6 +8507,45 @@ architecture STRUCTURE of hdmi is
     probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component hdmi_ila_0_1;
+  component hdmi_led_detect_0_1 is
+  port (
+    m00_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    m00_axis_tstrb : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axis_tlast : out STD_LOGIC;
+    m00_axis_tvalid : out STD_LOGIC;
+    m00_axis_tready : in STD_LOGIC;
+    m00_axis_aclk : in STD_LOGIC;
+    m00_axis_aresetn : in STD_LOGIC;
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC;
+    s00_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    s00_axis_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axis_tlast : in STD_LOGIC;
+    s00_axis_tvalid : in STD_LOGIC;
+    s00_axis_tready : out STD_LOGIC;
+    s00_axis_aclk : in STD_LOGIC;
+    s00_axis_aresetn : in STD_LOGIC
+  );
+  end component hdmi_led_detect_0_1;
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal TMDS_IN_1_CLK_N : STD_LOGIC;
   signal TMDS_IN_1_CLK_P : STD_LOGIC;
@@ -9587,7 +9587,7 @@ ila_1: component hdmi_ila_0_1
       probe7(0) => '0',
       probe8(0) => '0'
     );
-led_detect_0: component hdmi_led_detect_0_0
+led_detect_0: component hdmi_led_detect_0_1
      port map (
       m00_axis_aclk => mig_7series_0_ui_clk,
       m00_axis_aresetn => rst_mig_7series_0_100M_peripheral_aresetn(0),

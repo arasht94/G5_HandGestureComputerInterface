@@ -16,10 +16,7 @@
 		parameter integer C_S_AXI_ADDR_WIDTH	= 5
 	)
 	(
-		// Users to add ports here
-    input wire [31:0] ledr_xy,
-    input wire [31:0] ledg_xy,
-    
+		// Users to add ports here    
     input wire [AXIS_TDATA_WIDTH-1:0] in_data_stream,
     output wire [AXIS_TDATA_WIDTH-1:0] out_data_stream,
     input wire in_fifo_wren,
@@ -225,7 +222,7 @@
 	  if ( S_AXI_ARESETN == 1'b0 )
 	    begin
 	      slv_reg0 <= 0;
-	      slv_reg1 <= 0;
+	      //slv_reg1 <= 0;
 	      //slv_reg2 <= 0;
 	      slv_reg3 <= 0;
 	      slv_reg4 <= 0;
@@ -242,7 +239,7 @@
 	                // Slave register 0
 	                slv_reg0[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
-	          3'h1:
+	          /*3'h1:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
@@ -255,7 +252,7 @@
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 2
 	                slv_reg2[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
-	              end  
+	              end*/  
 	          3'h3:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
@@ -424,25 +421,48 @@
 	// Add user logic here
 	
 	// Set up registers to store locations of leds
+	reg [31:0] ledr_xy;
+    reg [31:0] ledg_xy;
+    
+    reg [15:0] y_coord;
+    
     always @ (posedge S_AXI_ACLK)
     begin
-      if (S_AXI_ARESETN == 1'b0 || slv_reg0[0] == 1'b0) //if reset or ip not enabled 
+      if (S_AXI_ARESETN == 1'b0 || slv_reg0 == 32'b0) //if reset or ip not enabled 
         begin
+          y_coord <= 0;
           slv_reg1 <= 0; //reset ledr_xy
           slv_reg2 <= 0; //reset ledg_xy
         end 
       else 
         begin
-          slv_reg1 <= ledr_xy;
-          slv_reg2 <= ledg_xy;
+          if (y_coord == 720) begin //hit limit
+            y_coord <= 0;
+            slv_reg1 <= ledr_xy;
+            slv_reg2 <= ledg_xy;
+          end else if (write_pointer == 1279) begin
+            y_coord <= y_coord + 1;
+          end else begin
+            y_coord <= y_coord;
+          end
         end
     end
     
     //wire red = (in_data_stream[23:16] - ((in_data_stream[15:8] + in_data_stream[7:0]) >> 1)) > 64;
     //wire green = (in_data_stream[15:8] - ((in_data_stream[23:16] + in_data_stream[7:0]) >> 1)) > 64;
+
+    wire mode1 = (slv_reg0 == 32'b01);
+    wire mode2 = (slv_reg0 == 32'b10);
+    wire mode3 = (slv_reg0 == 32'b11);
+        
+    wire red = (mode1 && (in_data_stream[23:16] > slv_reg3) && (in_data_stream[15:8] < slv_reg5) && (in_data_stream[7:0] < slv_reg5))
+            || (mode2 && (in_data_stream[23:16] > slv_reg3) && (in_data_stream[15:8] < slv_reg5) && (in_data_stream[7:0] < slv_reg5))
+            || (mode3 && (in_data_stream[7:0] > slv_reg3) && (in_data_stream[15:8] < slv_reg5) && (in_data_stream[23:16] < slv_reg5));
+            
+    wire green = (mode1 && (in_data_stream[15:8] > slv_reg4) && (in_data_stream[23:16] < slv_reg5) && (in_data_stream[7:0] < slv_reg5))
+              || (mode2 && (in_data_stream[7:0] > slv_reg4) && (in_data_stream[23:16] < slv_reg5) && (in_data_stream[15:8] < slv_reg5))
+              || (mode3 && (in_data_stream[15:8] > slv_reg4) && (in_data_stream[23:16] < slv_reg5) && (in_data_stream[7:0] < slv_reg5));
     
-    wire red = (in_data_stream[23:16] > slv_reg3) && (in_data_stream[15:8] < slv_reg3) && (in_data_stream[7:0] < slv_reg3);
-    wire green = (in_data_stream[15:8] > slv_reg4) && (in_data_stream[23:16] < slv_reg4) && (in_data_stream[7:0] < slv_reg4);
     
   // Stream input data into fifo
   // fifo impl
@@ -452,13 +472,21 @@
     begin 
       if (in_fifo_wren) begin
         if (red) begin
-          in_fifo[write_pointer] <= 24'hff0000; //pure red
+          in_fifo[write_pointer] <= {{8{mode1||mode2}}, {8{1'b0}}, {8{mode3}}}; //24'hff0000; //pure red
+          ledr_xy[31:16] <= write_pointer;
+          ledr_xy[15:0] <= y_coord;
+          ledg_xy <= ledg_xy;
         end
         else if (green) begin
-          in_fifo[write_pointer] <= 24'h00ff00; //pure green
+          in_fifo[write_pointer] <= {{8{1'b0}}, {8{mode1||mode3}}, {8{mode2}}}; //24'h00ff00; //pure green
+          ledg_xy[31:16] <= write_pointer;
+          ledg_xy[15:0] <= y_coord;
+          ledr_xy <= ledr_xy;
         end
         else begin
           in_fifo[write_pointer] <= 24'h000000; //black
+          ledr_xy <= ledr_xy;
+          ledg_xy <= ledg_xy;
         end
       end
     end

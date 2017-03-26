@@ -74,8 +74,8 @@
 		input wire  s00_axis_tvalid
 	);
 	
-	wire [31:0] ledr_xy;
-	wire [31:0] ledg_xy;
+//	wire [31:0] ledr_xy;
+//	wire [31:0] ledg_xy;
 	
 	wire [AXIS_TDATA_WIDTH-1:0] in_data_stream;
 	wire [FIFO_BITS-1:0] write_pointer;
@@ -96,8 +96,8 @@
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) led_detect_v1_0_S00_AXI_inst (
-		.ledr_xy(ledr_xy),
-		.ledg_xy(ledg_xy),
+//		.ledr_xy(ledr_xy),
+//		.ledg_xy(ledg_xy),
 		.in_data_stream(in_data_stream),
 		.out_data_stream(out_data_stream),
 		.in_fifo_wren(fifo_wren),

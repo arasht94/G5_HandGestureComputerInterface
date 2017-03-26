@@ -1,6 +1,48 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Fri Mar 24 14:57:56 2017
+| Host         : BA3155WS20 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7a200tsbg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'hdmi_led_detect_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of hdmi_led_detect_0_1 (user:user:led_detect:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Thu Mar 23 16:27:16 2017
+| Host         : SFB520WS24 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7a200tsbg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'hdmi_led_detect_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of hdmi_led_detect_0_0 (user:user:led_detect:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
 | Date         : Tue Mar 21 17:31:50 2017
 | Host         : SFB520WS31 running 64-bit Service Pack 1  (build 7601)
 | Command      : upgrade_ip

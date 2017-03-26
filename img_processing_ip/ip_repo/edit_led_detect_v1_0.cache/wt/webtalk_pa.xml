@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Mar 21 17:31:02 2017">
+<application name="pa" timeStamp="Wed Mar 22 20:31:32 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="222c564584644573aa518d4e38a9d99f" type="ProjectID"/>
 <property name="ProjectIteration" value="6" type="ProjectIteration"/>
@@ -28,14 +28,39 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ToggleViewNavigator" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, (String" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Implementation, Write Bitstream, [Vivado 12-1345] Error(s" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, led_detect_v1_0 (led_detect_v1_0.v" value="7" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, ledG_xy" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, ledr_xy" value="3" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, slv_reg1" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, slv_reg3, true" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, slv_reg4, true" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, slv_reg5, true" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 123, 453" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 144, 418" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 144, 418, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 166, 382, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 166, 384" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 166, 405" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 166, 405, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 172, 77" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 172, 77, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 178, 419" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 178, 419, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 184, 296" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 184, 296, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 199, 165" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 199, 165, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 256, 293" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 256, 293, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 275, 195" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 275, 195, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 94, 497" value="1" type="GuiResourceData"/>
+<property name="led_detect_v1_0_S00_AXI.v, 94, 497, false, false, false, false, true" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="4" type="GuiMode"/>
+<property name="GuiMode" value="2" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="2" type="TclMode"/>
+<property name="TclMode" value="0" type="TclMode"/>
 </item>
 </section>
 </application>

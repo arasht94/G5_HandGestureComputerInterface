@@ -207,5 +207,8 @@ vhdl xil_defaultlib "../../../bd/hdmi/ip/hdmi_xlconstant_0_0/sim/hdmi_xlconstant
 vhdl xil_defaultlib "../../../bd/hdmi/hdl/hdmi.vhd" 
 vhdl xil_defaultlib "../../../bd/hdmi/ip/hdmi_xlconstant_2_0/sim/hdmi_xlconstant_2_0.vhd" 
 vhdl xil_defaultlib "../../../bd/hdmi/ip/hdmi_axi_vdma_0_1/sim/hdmi_axi_vdma_0_1.vhd" 
+vhdl xil_defaultlib "../../../bd/hdmi/ip/hdmi_axi_gpio_0_0/sim/hdmi_axi_gpio_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/hdmi/ip/hdmi_ila_0_0/sim/hdmi_ila_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/hdmi/ip/hdmi_ila_0_1/sim/hdmi_ila_0_1.vhd" 
 
 nosort
