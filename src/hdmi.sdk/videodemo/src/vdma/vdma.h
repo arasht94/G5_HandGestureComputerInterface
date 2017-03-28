@@ -20,11 +20,11 @@
 /*					Procedure Declarations						*/
 /* ------------------------------------------------------------ */
 void vdma_config(XAxiVdma_DmaSetup *vdmaConfig);
-void read_config(XAxiVdma *vdma,
+int read_config(XAxiVdma *vdma,
 				 XAxiVdma_DmaSetup *vdmaConfig,
 				 XAxiVdma_FrameCounter *frame_count_config
 				 );
-void write_config(XAxiVdma *vdma,
+int write_config(XAxiVdma *vdma,
 				 XAxiVdma_DmaSetup *vdmaConfig_2,
 				 XAxiVdma_FrameCounter *frame_count_config
 				 );

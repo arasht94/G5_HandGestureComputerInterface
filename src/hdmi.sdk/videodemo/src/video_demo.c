@@ -164,7 +164,9 @@ void DemoInitialize()
 		xil_printf("VDMA2 Configuration Initialization failed %d\r\n", Status);
 		return;
 	}
-
+	//configure objects for the vdma2
+	read_config(&vdma2, &vdma2Config_1, &frame_count_config_1);
+	write_config(&vdma2, &vdma2Config_2, &frame_count_config_2);
 
 
 	/*
@@ -214,7 +216,6 @@ void DemoInitialize()
 	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG3_OFFSET, 220);
 	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG4_OFFSET, 220);
 	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG5_OFFSET, 100);
-	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG0_OFFSET, 2);
 
 	//initialize the gesture detection buffers
 	reset_buffers(rxbuffer,rybuffer);
@@ -242,7 +243,7 @@ void DemoRun()
 {
 	int status;
 	XGpio *GpioPtr = &videoCapt.gpio;
-	int i;
+	int i,j;
 
 	xil_printf("Test1\n");
 
@@ -270,22 +271,25 @@ void DemoRun()
 	if (status == XST_DMA_ERROR)
 		xil_printf("\n\rWARNING: AXI VDM A Error detected and cleared\n\r");
 
-
 	//loop and grab from vdmas
 	while(1){
 		//spin if not ready, plug HDMI-IN out and back in
 		while (XUartLite_IsReceiveEmpty(UART_BASEADDR) && !fRefresh);
 		XGpio_DiscreteRead(GpioPtr, 2);
 
+		//enable the IP
+		LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG0_OFFSET, 2);
+
 		//control vdmas
 		for (i = 0; i < 720; i++){ //720 = number of rows
 			//read row into IP
-			read_config(&vdma2, &vdma2Config_1, &frame_count_config_1);
 			dma_read_from_memory(i,&vdma2,&vdma2Config_1,&frame_count_config_1,pFrames[0]);
 
+			//sleep a little
+			for(j=0; j<250; j++);
+
 			//write row from IP to DDR
-			write_config(&vdma2, &vdma2Config_2, &frame_count_config_2);
-			dma_write_to_memory(i,&vdma2,&vdma2Config_2,&frame_count_config_2,pFrames[1]);
+			while(dma_write_to_memory(i,&vdma2,&vdma2Config_2,&frame_count_config_2,pFrames[1]) == XST_FAILURE);
 		}
 
 		//read the xy values from IP for both colours and separate the x and y values
@@ -296,12 +300,15 @@ void DemoRun()
 		split_coordinates(gxy,&gx,&gy);
 		xil_printf("RED:(%d,%d) GREEN:(%d,%d) rxy:%x gxy:%x\n",rx,ry,gx,gy,rxy,gxy);
 
-		//perform gesture detection
-		Gesture detected_gesture = gesture_detect(rx,ry,rxbuffer,rybuffer,gx,gy,gxbuffer,gybuffer);
+		//disable IP to reset to ycoord
+		LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG0_OFFSET, 0);
 
-		if(detected_gesture != NONE){
-			xil_printf("Gesture:%d\n",detected_gesture);
-		}
+		//perform gesture detection
+		//Gesture detected_gesture = gesture_detect(rx,ry,rxbuffer,rybuffer,gx,gy,gxbuffer,gybuffer);
+
+		//if(detected_gesture != NONE){
+		//	xil_printf("Gesture:%d\n",detected_gesture);
+		//}
 	}
 
 
@@ -404,14 +411,12 @@ Gesture scroll_detect(){
 	int dy [GESTURE_CHECK_DURATION-1];
 	int total_dx = 0;
 	int total_dy = 0;
-
 	for (i=0; i<GESTURE_CHECK_DURATION; i++)
 	{
 		dx[i] = xbuffer[i] - xbuffer[i-1];
 		dy[i] = ybuffer[i] - ybuffer[i-1];
 		total_dx += dx[i];
 		total_dy += dy[i];
-
 		if(total_dx < SCROLL_X_THRESHOLD && total_dy > SCROLL_Y_THRESHOLD)
 		{
 			reset_buffers();
