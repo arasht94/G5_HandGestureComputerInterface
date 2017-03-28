@@ -192,7 +192,7 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="hdmi_i/n_0_7"/>
+        <net name="hdmi_i/n_0_6"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -204,7 +204,7 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="hdmi_i/n_0_6"/>
+        <net name="hdmi_i/n_0_5"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -216,7 +216,7 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="hdmi_i/n_0_5"/>
+        <net name="hdmi_i/n_0_4"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -252,7 +252,7 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="hdmi_i/n_0_9"/>
+        <net name="hdmi_i/n_0_16"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -264,7 +264,7 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="hdmi_i/n_0_15"/>
+        <net name="hdmi_i/n_0_12"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -276,7 +276,7 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="hdmi_i/n_0_14"/>
+        <net name="hdmi_i/n_0_11"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -288,7 +288,7 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="hdmi_i/n_0_13"/>
+        <net name="hdmi_i/n_0_10"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -300,7 +300,7 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="hdmi_i/n_0_17"/>
+        <net name="hdmi_i/n_0_2"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -312,7 +312,99 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="hdmi_i/n_0_0"/>
+        <net name="hdmi_i/n_0_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="HW_ILA" value="hdmi_i/ila_2"/>
+        <Option Id="PROBE_PORT" value="0"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="11"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/led_detect_0_write_pointer[10]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[9]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[8]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[7]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[6]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[5]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[4]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[3]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[2]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[1]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="HW_ILA" value="hdmi_i/ila_2"/>
+        <Option Id="PROBE_PORT" value="1"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="16"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/led_detect_0_y_coord[15]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[14]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[13]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[12]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[11]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[10]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[9]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[8]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[7]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[6]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[5]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[4]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[3]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[2]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[1]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="HW_ILA" value="hdmi_i/ila_2"/>
+        <Option Id="PROBE_PORT" value="2"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/led_detect_0_ledr_xy[31]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[30]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[29]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[28]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[27]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[26]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[25]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[24]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[23]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[22]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[21]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[20]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[19]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[18]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[17]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[16]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[15]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[14]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[13]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[12]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[11]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[10]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[9]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[8]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[7]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[6]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[5]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[4]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[3]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[2]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[1]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[0]"/>
       </nets>
     </probe>
   </probeset>

@@ -1,6 +1,72 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Mon Mar 27 18:39:24 2017
+| Host         : SFB520WS35 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7a200tsbg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'hdmi_led_detect_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of hdmi_led_detect_0_1 (user:user:led_detect:1.0) from (Rev. 10) to (Rev. 12)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'hdmi_led_detect_0_1'. These changes may impact your design.
+
+
+-Upgrade has added port 'ledr_xy'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Mon Mar 27 15:00:25 2017
+| Host         : SFB520WS36 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7a200tsbg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'hdmi_led_detect_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of hdmi_led_detect_0_1 (user:user:led_detect:1.0) from (Rev. 9) to (Rev. 10)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'hdmi_led_detect_0_1'. These changes may impact your design.
+
+
+-Upgrade has added port 'write_pointer'
+
+-Upgrade has added port 'y_coord'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
 | Date         : Fri Mar 24 14:57:56 2017
 | Host         : BA3155WS20 running 64-bit Service Pack 1  (build 7601)
 | Command      : upgrade_ip

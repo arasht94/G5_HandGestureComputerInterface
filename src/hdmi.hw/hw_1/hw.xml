@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="1">
-  <device name="xc7a200t_0" gui_info="dashboard1=hw_ila_1[xc7a200t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a200t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a200t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a200t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a200t_0/hw_ila_1/Waveform=ILA_WAVE_1;],dashboard2=hw_ila_2[xc7a200t_0/hw_ila_2/Status=ILA_STATUS_1;xc7a200t_0/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7a200t_0/hw_ila_2/Settings=ILA_SETTINGS_1;xc7a200t_0/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7a200t_0/hw_ila_2/Waveform=ILA_WAVE_1;]"/>
+  <device name="xc7a200t_0" gui_info="dashboard1=hw_ila_1[xc7a200t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a200t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a200t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a200t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a200t_0/hw_ila_1/Waveform=ILA_WAVE_1;],dashboard2=hw_ila_2[xc7a200t_0/hw_ila_2/Status=ILA_STATUS_1;xc7a200t_0/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7a200t_0/hw_ila_2/Settings=ILA_SETTINGS_1;xc7a200t_0/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7a200t_0/hw_ila_2/Waveform=ILA_WAVE_1;],dashboard3=hw_ila_3[xc7a200t_0/hw_ila_3/Waveform=ILA_WAVE_1;xc7a200t_0/hw_ila_3/Status=ILA_STATUS_1;xc7a200t_0/hw_ila_3/Capture Setup=ILA_CAPTURE_1;xc7a200t_0/hw_ila_3/Settings=ILA_SETTINGS_1;xc7a200t_0/hw_ila_3/Trigger Setup=ILA_TRIGGER_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a200t_0" gui_info="">
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
@@ -28,6 +28,18 @@
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
+    <Object name="hw_ila_1" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="hw_ila_2" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="hw_ila_3" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="hdmi_i/axi_vdma_1_M_AXIS_MM2S_TDATA[23:0]" gui_info="Trigger Setup=0"/>
@@ -41,6 +53,8 @@
     <Object name="hdmi_i/led_detect_0_M00_AXIS_TDATA[23:0]" gui_info="Trigger Setup=1"/>
     <Object name="hdmi_i/led_detect_0_M00_AXIS_TREADY" gui_info=""/>
     <Object name="hdmi_i/led_detect_0_M00_AXIS_TVALID" gui_info="Trigger Setup=0"/>
+    <Object name="hdmi_i/led_detect_0_write_pointer[10:0]" gui_info="Trigger Setup=0"/>
+    <Object name="hdmi_i/led_detect_0_y_coord[15:0]" gui_info=""/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -990,7 +1004,7 @@
         <net name="hdmi_i/axi_vdma_1_M_AXI_S2MM_WVALID"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="gt24&apos;h00_0000"/>
@@ -1081,6 +1095,113 @@
         <net name="hdmi_i/led_detect_0_M00_AXIS_TVALID"/>
       </nets>
     </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="MAP" value="probe2[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/led_detect_0_ledr_xy[31]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[30]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[29]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[28]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[27]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[26]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[25]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[24]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[23]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[22]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[21]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[20]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[19]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[18]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[17]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[16]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[15]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[14]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[13]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[12]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[11]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[10]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[9]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[8]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[7]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[6]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[5]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[4]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[3]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[2]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[1]"/>
+        <net name="hdmi_i/led_detect_0_ledr_xy[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq11&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq11&apos;u1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="MAP" value="probe0[10:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq11&apos;u1"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/led_detect_0_write_pointer[10]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[9]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[8]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[7]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[6]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[5]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[4]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[3]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[2]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[1]"/>
+        <net name="hdmi_i/led_detect_0_write_pointer[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="MAP" value="probe1[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/led_detect_0_y_coord[15]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[14]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[13]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[12]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[11]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[10]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[9]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[8]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[7]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[6]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[5]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[4]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[3]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[2]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[1]"/>
+        <net name="hdmi_i/led_detect_0_y_coord[0]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
@@ -1096,6 +1217,74 @@
       </probeOptions>
       <nets>
         <net name="hdmi_i/n_0_0"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe8[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/n_0_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe6[2]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/n_0_10"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe6[1]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/n_0_11"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/n_0_12"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -1147,6 +1336,23 @@
       </probeOptions>
       <nets>
         <net name="hdmi_i/n_0_15"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/n_0_16"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -1470,6 +1676,23 @@
       </probeOptions>
       <nets>
         <net name="hdmi_i/n_0_199"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe7[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/n_0_2"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -2056,6 +2279,23 @@
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="MAP" value="probe2[2]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_i/n_0_4"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="MAP" value="probe33[3]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -2397,7 +2637,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="MAP" value="probe2[2]"/>
+        <Option Id="MAP" value="probe2[1]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2414,7 +2654,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="MAP" value="probe2[1]"/>
+        <Option Id="MAP" value="probe2[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>

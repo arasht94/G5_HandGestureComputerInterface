@@ -23,6 +23,8 @@
     input [FIFO_BITS-1:0] write_pointer,
     input [FIFO_BITS-1:0] read_pointer,
     output reg stream_from_fifo,
+    output reg [15:0] y_coord,
+    output reg [31:0] ledr_xy,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -421,10 +423,10 @@
 	// Add user logic here
 	
 	// Set up registers to store locations of leds
-	reg [31:0] ledr_xy;
+	//reg [31:0] ledr_xy;
     reg [31:0] ledg_xy;
     
-    reg [15:0] y_coord;
+    //reg [15:0] y_coord;
     
     always @ (posedge S_AXI_ACLK)
     begin
@@ -434,8 +436,24 @@
           slv_reg1 <= 0; //reset ledr_xy
           slv_reg2 <= 0; //reset ledg_xy
         end 
+      else if (write_pointer == 1279) 
+        begin
+          if (y_coord == 719) begin
+            y_coord <= 0;
+            slv_reg1 <= ledr_xy;
+            slv_reg2 <= ledg_xy;
+          end
+          else begin
+            y_coord <= y_coord + 1;
+          end
+        end
       else 
         begin
+          y_coord <= y_coord;
+        end
+        
+      
+        /*begin
           if (y_coord == 720) begin //hit limit
             y_coord <= 0;
             slv_reg1 <= ledr_xy;
@@ -445,7 +463,7 @@
           end else begin
             y_coord <= y_coord;
           end
-        end
+        end*/
     end
     
     //wire red = (in_data_stream[23:16] - ((in_data_stream[15:8] + in_data_stream[7:0]) >> 1)) > 64;

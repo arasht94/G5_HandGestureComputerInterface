@@ -1091,3 +1091,141 @@ com.xilinx.sdk.targetmanager.TMException: MicroBlaze is under RESET. Check if th
 16:28:51 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
 16:28:53 INFO  : Processor reset is completed for microblaze_0
 17:01:09 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:51:02 INFO  : Launching XSDB server: xsdb.bat -interactive W:\ece532\src\hdmi.sdk\temp_xsdb_launch_script.tcl
+12:51:04 INFO  : XSDB server has started successfully.
+12:51:06 INFO  : Processing command line option -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+12:51:07 INFO  : Checking for hwspec changes in the project hdmi_wrapper_hw_platform_6.
+12:52:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:52:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+12:52:29 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+12:52:44 INFO  : Processor reset is completed for microblaze_0
+14:29:44 INFO  : Launching XSDB server: xsdb.bat -interactive W:\ece532\src\hdmi.sdk\temp_xsdb_launch_script.tcl
+14:29:46 INFO  : XSDB server has started successfully.
+14:29:49 INFO  : Processing command line option -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+14:29:49 INFO  : Checking for hwspec changes in the project hdmi_wrapper_hw_platform_6.
+15:06:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:06:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+15:06:36 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+15:06:57 INFO  : Processor reset is completed for microblaze_0
+15:12:55 INFO  : Processor reset is completed for microblaze_0
+15:15:16 INFO  : Processor reset is completed for microblaze_0
+15:55:27 INFO  : Processor reset is completed for microblaze_0
+16:00:11 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:00:13 INFO  : Processor reset is completed for microblaze_0
+16:04:22 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1490644246260,  Project:1490384660525
+16:04:22 INFO  : Project hdmi_wrapper_hw_platform_6's source hardware specification located at W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+16:04:36 INFO  : Copied contents of W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf into \hdmi_wrapper_hw_platform_6\system.hdf.
+16:04:39 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:04:54 INFO  : 
+16:04:55 INFO  : Updating hardware inferred compiler options for videodemo.
+16:04:55 INFO  : Clearing existing target manager status.
+16:05:56 INFO  : Processor reset is completed for microblaze_0
+16:26:29 INFO  : Processor reset is completed for microblaze_0
+16:27:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:27:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+16:27:58 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+16:28:01 INFO  : Processor reset is completed for microblaze_0
+16:44:46 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:45:02 INFO  : Launching XSDB server: xsdb.bat -interactive W:\ece532\src\hdmi.sdk\temp_xsdb_launch_script.tcl
+16:45:04 INFO  : XSDB server has started successfully.
+16:45:05 INFO  : Processing command line option -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+16:45:05 INFO  : Checking for hwspec changes in the project hdmi_wrapper_hw_platform_6.
+16:49:09 INFO  : Processor reset is completed for microblaze_0
+17:41:41 INFO  : Processor reset is completed for microblaze_0
+17:44:05 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:44:07 INFO  : Processor reset is completed for microblaze_0
+17:45:49 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:45:50 INFO  : Processor reset is completed for microblaze_0
+18:15:33 INFO  : Processor reset is completed for microblaze_0
+18:22:02 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:22:04 INFO  : Processor reset is completed for microblaze_0
+18:30:52 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:30:54 INFO  : Processor reset is completed for microblaze_0
+18:36:27 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:36:28 INFO  : Processor reset is completed for microblaze_0
+18:39:53 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:40:11 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:40:12 ERROR : Unexpected error while launching program.
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:144)
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(TM.java:481)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:451)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:701)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+18:41:13 INFO  : Launching XSDB server: xsdb.bat -interactive W:\ece532\src\hdmi.sdk\temp_xsdb_launch_script.tcl
+18:41:14 INFO  : XSDB server has started successfully.
+18:41:14 INFO  : Processing command line option -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+18:41:15 INFO  : Checking for hwspec changes in the project hdmi_wrapper_hw_platform_6.
+18:41:33 INFO  : Processor reset is completed for microblaze_0
+18:46:42 INFO  : Processor reset is completed for microblaze_0
+18:51:52 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:51:52 INFO  : Processor reset is completed for microblaze_0
+18:52:32 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:52:33 INFO  : Processor reset is completed for microblaze_0
+18:53:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:53:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+18:53:48 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+18:53:54 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:53:56 INFO  : Processor reset is completed for microblaze_0
+18:55:21 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:55:22 INFO  : Processor reset is completed for microblaze_0
+18:59:17 INFO  : Processor reset is completed for microblaze_0
+19:00:07 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+19:00:07 ERROR : Timeout occured while waiting to get reply for command "targets 0"
+19:01:36 INFO  : Processor reset is completed for microblaze_0
+19:02:23 INFO  : Processor reset is completed for microblaze_0
+19:02:55 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:03:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:03:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+19:03:26 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+19:06:46 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:06:47 INFO  : Processor reset is completed for microblaze_0
+19:08:36 INFO  : Processor reset is completed for microblaze_0
+19:11:33 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+19:11:33 ERROR : Timeout occured while waiting to get reply for command "xstop 0"
+19:29:52 INFO  : Processor reset is completed for microblaze_0
+19:30:37 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:30:38 INFO  : Processor reset is completed for microblaze_0
+19:31:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:31:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+19:31:19 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+19:31:32 INFO  : Processor reset is completed for microblaze_0
+19:31:49 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+19:31:49 ERROR : Timeout occured while waiting to get reply for command "targets 0"
+19:31:58 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:31:59 INFO  : Processor reset is completed for microblaze_0
+19:33:02 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:33:03 INFO  : Processor reset is completed for microblaze_0
+19:37:45 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:38:55 INFO  : Launching XSDB server: xsdb.bat -interactive W:\ece532\src\hdmi.sdk\temp_xsdb_launch_script.tcl
+19:38:56 INFO  : XSDB server has started successfully.
+19:38:56 INFO  : Processing command line option -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+19:38:56 INFO  : Checking for hwspec changes in the project hdmi_wrapper_hw_platform_6.
+19:38:59 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1490657842473,  Project:1490644246260
+19:38:59 INFO  : The hardware specification for project 'hdmi_wrapper_hw_platform_6' is different from W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+19:38:59 INFO  : Copied contents of W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf into \hdmi_wrapper_hw_platform_6\system.hdf.
+19:39:03 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:39:19 INFO  : 
+19:39:20 INFO  : Updating hardware inferred compiler options for videodemo.
+19:41:34 INFO  : Clearing existing target manager status.
+19:42:23 INFO  : Processor reset is completed for microblaze_0
+20:26:53 INFO  : Processor reset is completed for microblaze_0
+20:37:36 INFO  : Processor reset is completed for microblaze_0
+20:37:56 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:38:08 INFO  : Launching XSDB server: xsdb.bat -interactive W:\ece532\src\hdmi.sdk\temp_xsdb_launch_script.tcl
+20:38:09 INFO  : XSDB server has started successfully.
+20:38:09 INFO  : Processing command line option -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+20:38:09 INFO  : Checking for hwspec changes in the project hdmi_wrapper_hw_platform_6.
+20:38:21 INFO  : Processor reset is completed for microblaze_0
+20:39:54 INFO  : Processor reset is completed for microblaze_0
+20:57:27 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

@@ -1,8 +1,8 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
---Date        : Fri Mar 24 15:07:18 2017
---Host        : BA3155WS20 running 64-bit Service Pack 1  (build 7601)
+--Date        : Mon Mar 27 18:49:21 2017
+--Host        : SFB520WS35 running 64-bit Service Pack 1  (build 7601)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
 --Purpose     : IP block netlist
@@ -7734,7 +7734,7 @@ entity hdmi is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=71,numReposBlks=49,numNonXlnxBlks=4,numHierBlks=22,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=72,numReposBlks=50,numNonXlnxBlks=4,numHierBlks=22,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hdmi : entity is "hdmi.hwdef";
 end hdmi;
@@ -8507,6 +8507,14 @@ architecture STRUCTURE of hdmi is
     probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component hdmi_ila_0_1;
+  component hdmi_ila_1_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component hdmi_ila_1_0;
   component hdmi_led_detect_0_1 is
   port (
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -8541,6 +8549,9 @@ architecture STRUCTURE of hdmi is
     s00_axis_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axis_tlast : in STD_LOGIC;
     s00_axis_tvalid : in STD_LOGIC;
+    write_pointer : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    y_coord : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    ledr_xy : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axis_tready : out STD_LOGIC;
     s00_axis_aclk : in STD_LOGIC;
     s00_axis_aresetn : in STD_LOGIC
@@ -8679,6 +8690,9 @@ architecture STRUCTURE of hdmi is
   signal led_detect_0_M00_AXIS_TLAST : STD_LOGIC;
   signal led_detect_0_M00_AXIS_TREADY : STD_LOGIC;
   signal led_detect_0_M00_AXIS_TVALID : STD_LOGIC;
+  signal led_detect_0_ledr_xy : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal led_detect_0_write_pointer : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal led_detect_0_y_coord : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal microblaze_0_M_AXI_DC_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal microblaze_0_M_AXI_DC_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal microblaze_0_M_AXI_DC_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -9587,8 +9601,16 @@ ila_1: component hdmi_ila_0_1
       probe7(0) => '0',
       probe8(0) => '0'
     );
+ila_2: component hdmi_ila_1_0
+     port map (
+      clk => mig_7series_0_ui_clk,
+      probe0(10 downto 0) => led_detect_0_write_pointer(10 downto 0),
+      probe1(15 downto 0) => led_detect_0_y_coord(15 downto 0),
+      probe2(31 downto 0) => led_detect_0_ledr_xy(31 downto 0)
+    );
 led_detect_0: component hdmi_led_detect_0_1
      port map (
+      ledr_xy(31 downto 0) => led_detect_0_ledr_xy(31 downto 0),
       m00_axis_aclk => mig_7series_0_ui_clk,
       m00_axis_aresetn => rst_mig_7series_0_100M_peripheral_aresetn(0),
       m00_axis_tdata(23 downto 0) => led_detect_0_M00_AXIS_TDATA(23 downto 0),
@@ -9623,7 +9645,9 @@ led_detect_0: component hdmi_led_detect_0_1
       s00_axis_tlast => axi_vdma_1_M_AXIS_MM2S_TLAST,
       s00_axis_tready => axi_vdma_1_M_AXIS_MM2S_TREADY,
       s00_axis_tstrb(2 downto 0) => xlconstant_2_dout(2 downto 0),
-      s00_axis_tvalid => axi_vdma_1_M_AXIS_MM2S_TVALID
+      s00_axis_tvalid => axi_vdma_1_M_AXIS_MM2S_TVALID,
+      write_pointer(10 downto 0) => led_detect_0_write_pointer(10 downto 0),
+      y_coord(15 downto 0) => led_detect_0_y_coord(15 downto 0)
     );
 mdm_1: component hdmi_mdm_1_0
      port map (

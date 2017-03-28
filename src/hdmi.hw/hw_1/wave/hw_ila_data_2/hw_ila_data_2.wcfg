@@ -3,17 +3,20 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="W:/ece532/integration_Copy2/hdmi.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+      <db_ref path="W:/ece532/src/hdmi.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
          <top_modules>
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="6041fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="1257905fs"></ZoomStartTime>
+      <ZoomEndTime time="1295115fs"></ZoomEndTime>
+      <Cursor1Time time="1279000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="4" />
+   <wave_markers>
+      <marker time="1280000" label="" />
+   </wave_markers>
    <wvobject fp_name="hdmi_i/led_detect_0_M00_AXIS_TREADY" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
@@ -28,27 +31,6 @@
       <obj_property name="ObjectShortName">led_detect_0_M00_AXIS_TDATA[23:0]</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
-   <wvobject fp_name="hdmi_i/n_0_183" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">hdmi_i/n_0_183</obj_property>
-      <obj_property name="ObjectShortName">n_0_183</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="hdmi_i/n_0_182" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">hdmi_i/n_0_182</obj_property>
-      <obj_property name="ObjectShortName">n_0_182</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="hdmi_i/n_0_181" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">hdmi_i/n_0_181</obj_property>
-      <obj_property name="ObjectShortName">n_0_181</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
    <wvobject fp_name="hdmi_i/led_detect_0_M00_AXIS_TVALID" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
@@ -61,48 +43,6 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="ElementShortName">hdmi_i/led_detect_0_M00_AXIS_TLAST</obj_property>
       <obj_property name="ObjectShortName">led_detect_0_M00_AXIS_TLAST</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="hdmi_i/n_0_187" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">hdmi_i/n_0_187</obj_property>
-      <obj_property name="ObjectShortName">n_0_187</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="hdmi_i/n_0_225" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">hdmi_i/n_0_225</obj_property>
-      <obj_property name="ObjectShortName">n_0_225</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="hdmi_i/n_0_224" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">hdmi_i/n_0_224</obj_property>
-      <obj_property name="ObjectShortName">n_0_224</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="hdmi_i/n_0_223" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">hdmi_i/n_0_223</obj_property>
-      <obj_property name="ObjectShortName">n_0_223</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="hdmi_i/n_0_228" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">hdmi_i/n_0_228</obj_property>
-      <obj_property name="ObjectShortName">n_0_228</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="hdmi_i/n_0_231" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="ElementShortName">hdmi_i/n_0_231</obj_property>
-      <obj_property name="ObjectShortName">n_0_231</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
    </wvobject>
 </wave_config>

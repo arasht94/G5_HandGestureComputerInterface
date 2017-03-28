@@ -4,6 +4,7 @@
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7a200tsbg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -81,6 +82,8 @@ set_property used_in_implementation false [get_files -all w:/ece532/src/hdmi.src
 set_property used_in_implementation false [get_files -all w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_0_0/hdmi_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_0_1/ila_v6_1/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_0_1/hdmi_ila_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_1_0/ila_v6_1/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_ila_1_0/hdmi_ila_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_s00_regslice_0/hdmi_s00_regslice_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_s01_regslice_0/hdmi_s01_regslice_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all w:/ece532/src/hdmi.srcs/sources_1/bd/hdmi/ip/hdmi_s02_regslice_0/hdmi_s02_regslice_0_ooc.xdc]

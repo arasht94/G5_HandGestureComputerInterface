@@ -1,4 +1,4 @@
-15:46:22 **** Auto Build of project standalone_bsp_1 ****
+19:42:02 **** Auto Build of project standalone_bsp_1 ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/axivdma_v6_1/src"
 make -C microblaze_0/libsrc/axivdma_v6_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
@@ -53,5 +53,5 @@ make -C microblaze_0/libsrc/vtc_v7_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" 
 "Compiling video timing controller"
 'Finished building libraries'
 
-15:46:33 Build Finished (took 11s.496ms)
+19:42:11 Build Finished (took 8s.989ms)
 

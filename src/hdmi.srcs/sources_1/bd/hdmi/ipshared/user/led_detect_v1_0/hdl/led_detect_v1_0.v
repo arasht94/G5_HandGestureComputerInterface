@@ -71,14 +71,18 @@
 		input wire [AXIS_TDATA_WIDTH-1 : 0] s00_axis_tdata,
 		input wire [(AXIS_TDATA_WIDTH/8)-1 : 0] s00_axis_tstrb,
 		input wire  s00_axis_tlast,
-		input wire  s00_axis_tvalid
+		input wire  s00_axis_tvalid,
+		
+		output wire [FIFO_BITS-1:0] write_pointer,
+		output wire[15:0] y_coord,
+		output wire [31:0] ledr_xy
 	);
 	
 //	wire [31:0] ledr_xy;
 //	wire [31:0] ledg_xy;
 	
 	wire [AXIS_TDATA_WIDTH-1:0] in_data_stream;
-	wire [FIFO_BITS-1:0] write_pointer;
+//	wire [FIFO_BITS-1:0] write_pointer;
 	wire [FIFO_BITS-1:0] read_pointer;
 	
 	wire [AXIS_TDATA_WIDTH-1:0] out_data_stream;
@@ -86,7 +90,7 @@
 	wire fifo_wren;
 	wire stream_from_fifo;
 	
-	
+
 // Instantiation of Axi Bus Interface S00_AXI
 	led_detect_v1_0_S00_AXI # ( 
 	  .AXIS_TDATA_WIDTH(AXIS_TDATA_WIDTH),
@@ -104,6 +108,8 @@
 		.write_pointer(write_pointer),
 		.read_pointer(read_pointer),
 		.stream_from_fifo(stream_from_fifo),
+		.y_coord(y_coord),
+		.ledr_xy(ledr_xy),
 		
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),

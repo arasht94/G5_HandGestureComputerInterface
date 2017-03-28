@@ -500,6 +500,11 @@
   "../../../bd/hdmi/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" \
   "../../../bd/hdmi/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" \
   "../../../bd/hdmi/ip/hdmi_led_detect_0_1/sim/hdmi_led_detect_0_1.v" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/hdmi/ip/hdmi_ila_1_0/sim/hdmi_ila_1_0.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
   "../../../bd/hdmi/ip/hdmi_s00_regslice_0/sim/hdmi_s00_regslice_0.v" \
   "../../../bd/hdmi/ip/hdmi_s01_regslice_0/sim/hdmi_s01_regslice_0.v" \
   "../../../bd/hdmi/ip/hdmi_s02_regslice_0/sim/hdmi_s02_regslice_0.v" \

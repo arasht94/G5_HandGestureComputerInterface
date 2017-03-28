@@ -8149,3 +8149,2567 @@ mb-size videodemo.elf  |tee "videodemo.elf.size"
 16:28:51 **** Incremental Build of configuration Debug for project videodemo ****
 make all 
 make: Nothing to be done for `all'.
+12:52:40 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+14:29:38 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+15:05:33 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:237:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:235:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:452:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:741:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65270	    684	18670956	18736910	11de70e	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:06:54 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+15:12:51 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:237:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:235:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:453:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:742:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65270	    684	18670956	18736910	11de70e	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:12:55 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+15:15:07 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:237:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:235:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:452:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:741:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65270	    684	18670956	18736910	11de70e	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:15:15 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+15:21:47 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:299:7: warning: unused variable 'gesture' [-Wunused-variable]
+   int gesture = scroll_detect();
+       ^
+../src/video_demo.c:237:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:235:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:461:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:750:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65186	    684	18670962	18736832	11de6c0	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:26:02 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:310:7: warning: unused variable 'gesture' [-Wunused-variable]
+   int gesture = scroll_detect();
+       ^
+../src/video_demo.c:248:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:246:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:472:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:761:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65186	    684	18670962	18736832	11de6c0	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:26:33 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:310:7: warning: unused variable 'gesture' [-Wunused-variable]
+   int gesture = scroll_detect();
+       ^
+../src/video_demo.c:248:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:246:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:472:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:761:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65186	    684	18670962	18736832	11de6c0	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:27:18 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:310:11: warning: unused variable 'detected_gesture' [-Wunused-variable]
+   gesture detected_gesture = scroll_detect();
+           ^
+../src/video_demo.c:248:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:246:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:472:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:761:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65186	    684	18670962	18736832	11de6c0	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:28:51 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:311:11: warning: unused variable 'detected_gesture' [-Wunused-variable]
+   Gesture detected_gesture = scroll_detect();
+           ^
+../src/video_demo.c:249:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:247:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:388:9: error: conflicting types for 'scroll_detect'
+ Gesture scroll_detect(){
+         ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:65:5: note: previous declaration of 'scroll_detect' was here
+ int scroll_detect();
+     ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:473:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:762:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+15:29:16 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:65:1: error: unknown type name 'Gesture'
+ Gesture scroll_detect();
+ ^
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:311:11: warning: unused variable 'detected_gesture' [-Wunused-variable]
+   Gesture detected_gesture = scroll_detect();
+           ^
+../src/video_demo.c:249:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:247:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:388:9: error: conflicting types for 'scroll_detect'
+ Gesture scroll_detect(){
+         ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:65:9: note: previous declaration of 'scroll_detect' was here
+ Gesture scroll_detect();
+         ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:473:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:762:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+15:30:15 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c:104:2: error: redeclaration of enumerator 'NONE'
+  NONE,
+  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:53:2: note: previous definition of 'NONE' was here
+  NONE,
+  ^
+../src/video_demo.c:105:2: error: redeclaration of enumerator 'SCROLL_DOWN'
+  SCROLL_DOWN,
+  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:54:2: note: previous definition of 'SCROLL_DOWN' was here
+  SCROLL_DOWN,
+  ^
+../src/video_demo.c:106:2: error: redeclaration of enumerator 'SCROLL_UP'
+  SCROLL_UP,
+  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:55:2: note: previous definition of 'SCROLL_UP' was here
+  SCROLL_UP,
+  ^
+../src/video_demo.c:107:2: error: redeclaration of enumerator 'SCROLL_LEFT'
+  SCROLL_LEFT,
+  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:56:2: note: previous definition of 'SCROLL_LEFT' was here
+  SCROLL_LEFT,
+  ^
+../src/video_demo.c:108:2: error: redeclaration of enumerator 'SCROLL_RIGHT'
+  SCROLL_RIGHT,
+  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:57:2: note: previous definition of 'SCROLL_RIGHT' was here
+  SCROLL_RIGHT,
+  ^
+../src/video_demo.c:109:2: error: redeclaration of enumerator 'ZOOM_IN'
+  ZOOM_IN,
+  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:58:2: note: previous definition of 'ZOOM_IN' was here
+  ZOOM_IN,
+  ^
+../src/video_demo.c:110:2: error: redeclaration of enumerator 'ZOOM_OUT'
+  ZOOM_OUT
+  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:59:2: note: previous definition of 'ZOOM_OUT' was here
+  ZOOM_OUT
+  ^
+../src/video_demo.c:111:3: error: conflicting types for 'Gesture'
+ } Gesture;
+   ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:60:3: note: previous declaration of 'Gesture' was here
+ } Gesture;
+   ^
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:311:11: warning: unused variable 'detected_gesture' [-Wunused-variable]
+   Gesture detected_gesture = scroll_detect();
+           ^
+../src/video_demo.c:249:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:247:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:388:9: error: conflicting types for 'scroll_detect'
+ Gesture scroll_detect(){
+         ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:78:9: note: previous declaration of 'scroll_detect' was here
+ Gesture scroll_detect();
+         ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:473:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:762:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+15:30:20 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:298:11: warning: unused variable 'detected_gesture' [-Wunused-variable]
+   Gesture detected_gesture = scroll_detect();
+           ^
+../src/video_demo.c:236:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:234:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:460:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:749:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65186	    684	18670962	18736832	11de6c0	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:30:28 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:296:11: warning: unused variable 'detected_gesture' [-Wunused-variable]
+   Gesture detected_gesture = scroll_detect();
+           ^
+../src/video_demo.c:234:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:232:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:458:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:747:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65186	    684	18670962	18736832	11de6c0	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:32:12 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:234:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:232:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:461:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:750:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65230	    684	18670956	18736870	11de6e6	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:53:41 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:234:8: warning: unused variable 'j' [-Wunused-variable]
+  int i,j;
+        ^
+../src/video_demo.c:232:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:482:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:771:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65102	    684	18670956	18736742	11de666	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:54:27 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:232:6: warning: variable 'locked' set but not used [-Wunused-but-set-variable]
+  u32 locked;
+      ^
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:482:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:771:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65102	    684	18670956	18736742	11de666	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:54:47 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:481:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:770:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65098	    684	18670962	18736744	11de668	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+15:55:26 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+16:00:08 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:482:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:771:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65114	    684	18670962	18736760	11de678	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+16:00:11 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+16:05:09 **** Auto Build of project standalone_bsp_1 ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/axivdma_v6_1/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/axivdma_v6_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/cpu_v2_5/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/gpio_v4_1/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/intc_v3_5/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/led_detect_v1_0/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/led_detect_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/standalone_v5_5/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v5_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_1/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/vtc_v7_1/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/vtc_v7_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in microblaze_0/libsrc/axivdma_v6_1/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/axivdma_v6_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_5/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/cpu_v2_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_1/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/gpio_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_5/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/intc_v3_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/led_detect_v1_0/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/led_detect_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling led_detect..."
+"Running Make libs in microblaze_0/libsrc/standalone_v5_5/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/standalone_v5_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_1/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/tmrctr_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartlite"
+"Running Make libs in microblaze_0/libsrc/vtc_v7_1/src"
+C:/Xilinx/SDK/2016.2/gnuwin/bin/make -C microblaze_0/libsrc/vtc_v7_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
+'Finished building libraries'
+16:05:19 **** Clean-only build of configuration Debug for project videodemo ****
+make clean 
+rm -rf  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o  ./src/video_capture/video_capture.d  ./src/vdma/vdma.d  ./src/timer_ps/timer_ps.d  ./src/intc/intc.d  ./src/dynclk/dynclk.d  ./src/display_ctrl/display_ctrl.d  ./src/video_demo.d  videodemo.elf.size  videodemo.elf
+ 
+16:05:19 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_capture/video_capture.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+Finished building: ../src/video_capture/video_capture.c
+ 
+Building file: ../src/vdma/vdma.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vdma/vdma.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/vdma/vdma.d" -MT"src/vdma/vdma.o" -o "src/vdma/vdma.o" "../src/vdma/vdma.c"
+In file included from W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'read_config':
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:60:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^
+../src/vdma/vdma.c: In function 'dma_read_from_memory':
+../src/vdma/vdma.c:70:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+In file included from W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'write_config':
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:176:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^
+../src/vdma/vdma.c: In function 'dma_write_to_memory':
+../src/vdma/vdma.c:186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/vdma/vdma.c: In function 'reset_dma_write':
+../src/vdma/vdma.c:327:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/vdma/vdma.c: In function 'reset_dma_read':
+../src/vdma/vdma.c:331:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/vdma/vdma.c
+ 
+Building file: ../src/timer_ps/timer_ps.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+Finished building: ../src/timer_ps/timer_ps.c
+ 
+Building file: ../src/intc/intc.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+Finished building: ../src/intc/intc.c
+ 
+Building file: ../src/dynclk/dynclk.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+Finished building: ../src/dynclk/dynclk.c
+ 
+Building file: ../src/display_ctrl/display_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+Finished building: ../src/display_ctrl/display_ctrl.c
+ 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:482:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:771:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65114	    684	18670962	18736760	11de678	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+16:05:48 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:482:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:771:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65142	    684	18670956	18736782	11de68e	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+16:05:53 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+16:26:19 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:483:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:772:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65142	    684	18670956	18736782	11de68e	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+16:26:21 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+16:26:28 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+16:28:00 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+16:47:23 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:408:3: warning: implicit declaration of function 'DemoCRMenu' [-Wimplicit-function-declaration]
+   DemoCRMenu();
+   ^
+../src/video_demo.c:456:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:631:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/video_demo.o: In function `DemoChangeRes':
+W:\ece532\src\hdmi.sdk\videodemo\Debug/../src/video_demo.c:408: undefined reference to `DemoCRMenu'
+collect2.exe: error: ld returned 1 exit status
+make: *** [videodemo.elf] Error 1
+16:48:04 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoChangeRes':
+../src/video_demo.c:408:3: warning: implicit declaration of function 'DemoCRMenu' [-Wimplicit-function-declaration]
+   DemoCRMenu();
+   ^
+../src/video_demo.c:456:4: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+    MB_Sleep(50);
+    ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:631:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/video_demo.o: In function `DemoChangeRes':
+W:\ece532\src\hdmi.sdk\videodemo\Debug/../src/video_demo.c:408: undefined reference to `DemoCRMenu'
+collect2.exe: error: ld returned 1 exit status
+make: *** [videodemo.elf] Error 1
+16:48:06 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/video_demo.o: In function `DemoChangeRes':
+W:\ece532\src\hdmi.sdk\videodemo\Debug/../src/video_demo.c:408: undefined reference to `DemoCRMenu'
+collect2.exe: error: ld returned 1 exit status
+make: *** [videodemo.elf] Error 1
+16:48:21 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:560:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  58834	    684	18670962	18730480	11dcdf0	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+16:49:05 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+17:27:50 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:568:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  58910	    684	18670956	18730550	11dce36	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+17:33:23 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:295:3: error: too many arguments to function 'update_buffers'
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+   ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: declared here
+ void update_buffers (int x, int y);
+      ^
+../src/video_demo.c:296:3: error: too many arguments to function 'update_buffers'
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+   ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: declared here
+ void update_buffers (int x, int y);
+      ^
+../src/video_demo.c: In function 'reset_buffers':
+../src/video_demo.c:326:3: error: 'xbuffer' undeclared (first use in this function)
+   xbuffer[i]= 0;
+   ^
+../src/video_demo.c:326:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:327:3: error: 'ybuffer' undeclared (first use in this function)
+   ybuffer[i]= 0;
+   ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:335:6: error: conflicting types for 'update_buffers'
+ void update_buffers(int x, int y, int * xbuffer, int * ybuffer){
+      ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: previous declaration of 'update_buffers' was here
+ void update_buffers (int x, int y);
+      ^
+../src/video_demo.c: In function 'scroll_detect':
+../src/video_demo.c:361:8: error: 'xbuffer' undeclared (first use in this function)
+   dx = xbuffer[i] - xbuffer[i-1];
+        ^
+../src/video_demo.c:362:8: error: 'ybuffer' undeclared (first use in this function)
+   dy = ybuffer[i] - ybuffer[i-1];
+        ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:570:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+17:34:11 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:295:3: error: too many arguments to function 'update_buffers'
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+   ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: declared here
+ void update_buffers (int x, int y);
+      ^
+../src/video_demo.c:296:3: error: too many arguments to function 'update_buffers'
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+   ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: declared here
+ void update_buffers (int x, int y);
+      ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:335:6: error: conflicting types for 'update_buffers'
+ void update_buffers(int x, int y, int* xbuffer, int* ybuffer){
+      ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: previous declaration of 'update_buffers' was here
+ void update_buffers (int x, int y);
+      ^
+../src/video_demo.c: In function 'scroll_detect':
+../src/video_demo.c:361:8: error: 'xbuffer' undeclared (first use in this function)
+   dx = xbuffer[i] - xbuffer[i-1];
+        ^
+../src/video_demo.c:361:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:362:8: error: 'ybuffer' undeclared (first use in this function)
+   dy = ybuffer[i] - ybuffer[i-1];
+        ^
+../src/video_demo.c:367:4: error: too few arguments to function 'reset_buffers'
+    reset_buffers();
+    ^
+../src/video_demo.c:322:6: note: declared here
+ void reset_buffers (int* xbuffer,int* ybuffer){
+      ^
+../src/video_demo.c:371:4: error: too few arguments to function 'reset_buffers'
+    reset_buffers();
+    ^
+../src/video_demo.c:322:6: note: declared here
+ void reset_buffers (int* xbuffer,int* ybuffer){
+      ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:570:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+17:34:14 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:295:24: warning: passing argument 3 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+                        ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:295:34: warning: passing argument 4 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+                                  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:296:24: warning: passing argument 3 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+                        ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:296:34: warning: passing argument 4 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+                                  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c: In function 'scroll_detect':
+../src/video_demo.c:361:8: error: 'xbuffer' undeclared (first use in this function)
+   dx = xbuffer[i] - xbuffer[i-1];
+        ^
+../src/video_demo.c:361:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:362:8: error: 'ybuffer' undeclared (first use in this function)
+   dy = ybuffer[i] - ybuffer[i-1];
+        ^
+../src/video_demo.c:367:4: error: too few arguments to function 'reset_buffers'
+    reset_buffers();
+    ^
+../src/video_demo.c:322:6: note: declared here
+ void reset_buffers (int* xbuffer,int* ybuffer){
+      ^
+../src/video_demo.c:371:4: error: too few arguments to function 'reset_buffers'
+    reset_buffers();
+    ^
+../src/video_demo.c:322:6: note: declared here
+ void reset_buffers (int* xbuffer,int* ybuffer){
+      ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:570:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+17:34:39 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:295:24: warning: passing argument 3 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+                        ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:295:34: warning: passing argument 4 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+                                  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:296:24: warning: passing argument 3 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+                        ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:296:34: warning: passing argument 4 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+                                  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c: In function 'scroll_detect':
+../src/video_demo.c:367:4: error: too few arguments to function 'reset_buffers'
+    reset_buffers();
+    ^
+../src/video_demo.c:322:6: note: declared here
+ void reset_buffers (int* xbuffer,int* ybuffer){
+      ^
+../src/video_demo.c:371:4: error: too few arguments to function 'reset_buffers'
+    reset_buffers();
+    ^
+../src/video_demo.c:322:6: note: declared here
+ void reset_buffers (int* xbuffer,int* ybuffer){
+      ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:570:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+17:35:12 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoInitialize':
+../src/video_demo.c:217:2: error: too few arguments to function 'reset_buffers'
+  reset_buffers();
+  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:71:6: note: declared here
+ void reset_buffers (int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:295:24: warning: passing argument 3 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+                        ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:295:34: warning: passing argument 4 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+                                  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:296:24: warning: passing argument 3 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+                        ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:296:34: warning: passing argument 4 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+                                  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:299:30: error: too few arguments to function 'scroll_detect'
+   Gesture detected_gesture = scroll_detect();
+                              ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:73:9: note: declared here
+ Gesture scroll_detect(int* xbuffer,int* ybuffer);
+         ^
+../src/video_demo.c: In function 'scroll_detect':
+../src/video_demo.c:367:4: error: too few arguments to function 'reset_buffers'
+    reset_buffers();
+    ^
+../src/video_demo.c:322:6: note: declared here
+ void reset_buffers (int* xbuffer,int* ybuffer){
+      ^
+../src/video_demo.c:371:4: error: too few arguments to function 'reset_buffers'
+    reset_buffers();
+    ^
+../src/video_demo.c:322:6: note: declared here
+ void reset_buffers (int* xbuffer,int* ybuffer){
+      ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:570:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+17:35:21 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoInitialize':
+../src/video_demo.c:217:2: error: too few arguments to function 'reset_buffers'
+  reset_buffers();
+  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:71:6: note: declared here
+ void reset_buffers (int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:295:24: warning: passing argument 3 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+                        ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:295:34: warning: passing argument 4 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+                                  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:296:24: warning: passing argument 3 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+                        ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:296:34: warning: passing argument 4 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+                                  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:299:30: error: too few arguments to function 'scroll_detect'
+   Gesture detected_gesture = scroll_detect();
+                              ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:73:9: note: declared here
+ Gesture scroll_detect(int* xbuffer,int* ybuffer);
+         ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:570:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+17:35:57 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:296:24: warning: passing argument 3 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+                        ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:296:34: warning: passing argument 4 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(rx,ry,&rxbuffer,&rybuffer);
+                                  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:297:24: warning: passing argument 3 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+                        ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:297:34: warning: passing argument 4 of 'update_buffers' from incompatible pointer type [-Wincompatible-pointer-types]
+   update_buffers(gx,gy,&gxbuffer,&gybuffer);
+                                  ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:72:6: note: expected 'int *' but argument is of type 'int (*)[50]'
+ void update_buffers (int x, int y,int* xbuffer,int* ybuffer);
+      ^
+../src/video_demo.c:300:30: error: too few arguments to function 'scroll_detect'
+   Gesture detected_gesture = scroll_detect();
+                              ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:73:9: note: declared here
+ Gesture scroll_detect(int* xbuffer,int* ybuffer);
+         ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:571:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+17:39:21 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:300:30: error: too few arguments to function 'scroll_detect'
+   Gesture detected_gesture = scroll_detect();
+                              ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:73:9: note: declared here
+ Gesture scroll_detect(int* xbuffer,int* ybuffer);
+         ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:571:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+17:39:23 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:300:30: error: too few arguments to function 'scroll_detect'
+   Gesture detected_gesture = scroll_detect();
+                              ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:73:9: note: declared here
+ Gesture scroll_detect(int xbuffer[],int ybuffer[]);
+         ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:571:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+make: *** [src/video_demo.o] Error 1
+17:39:32 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:571:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59050	    684	18671386	18731120	11dd070	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+17:41:41 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+17:43:59 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:572:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59070	    684	18671380	18731134	11dd07e	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+17:44:05 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+17:45:41 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:572:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59178	    684	18671386	18731248	11dd0f0	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+17:45:48 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+17:47:12 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:569:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59158	    684	18671380	18731222	11dd0d6	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+18:05:37 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:298:30: warning: implicit declaration of function 'gesture_detect' [-Wimplicit-function-declaration]
+   Gesture detected_gesture = gesture_detect(rxbuffer,rybuffer);
+                              ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:385:9: error: conflicting types for 'gesture_detect'
+ Gesture gesture_detect(){
+         ^
+../src/video_demo.c:298:30: note: previous implicit declaration of 'gesture_detect' was here
+   Gesture detected_gesture = gesture_detect(rxbuffer,rybuffer);
+                              ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:585:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:394:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/video_demo.o] Error 1
+18:06:28 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:298:30: warning: implicit declaration of function 'gesture_detect' [-Wimplicit-function-declaration]
+   Gesture detected_gesture = gesture_detect();
+                              ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:385:9: error: conflicting types for 'gesture_detect'
+ Gesture gesture_detect(){
+         ^
+../src/video_demo.c:298:30: note: previous implicit declaration of 'gesture_detect' was here
+   Gesture detected_gesture = gesture_detect();
+                              ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:585:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:394:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/video_demo.o] Error 1
+18:06:43 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:298:30: warning: implicit declaration of function 'gesture_detect' [-Wimplicit-function-declaration]
+   Gesture detected_gesture = gesture_detect();
+                              ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:385:9: error: conflicting types for 'gesture_detect'
+ Gesture gesture_detect(){
+         ^
+../src/video_demo.c:298:30: note: previous implicit declaration of 'gesture_detect' was here
+   Gesture detected_gesture = gesture_detect();
+                              ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:585:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:394:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/video_demo.o] Error 1
+18:07:05 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:298:30: warning: implicit declaration of function 'gesture_detect' [-Wimplicit-function-declaration]
+   Gesture detected_gesture = gesture_detect();
+                              ^
+../src/video_demo.c: At top level:
+../src/video_demo.c:385:9: error: conflicting types for 'gesture_detect'
+ Gesture gesture_detect(){
+         ^
+../src/video_demo.c:298:30: note: previous implicit declaration of 'gesture_detect' was here
+   Gesture detected_gesture = gesture_detect();
+                              ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:585:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:394:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/video_demo.o] Error 1
+18:07:21 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:585:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:394:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59154	    684	18671386	18731224	11dd0d8	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+18:07:50 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:587:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:396:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59154	    684	18671386	18731224	11dd0d8	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+18:12:25 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:298:30: error: too few arguments to function 'gesture_detect'
+   Gesture detected_gesture = gesture_detect();
+                              ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:74:9: note: declared here
+ Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[]);
+         ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:385:1: error: number of arguments doesn't match prototype
+ Gesture gesture_detect(){
+ ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:74:9: error: prototype declaration
+ Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[]);
+         ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:587:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:396:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/video_demo.o] Error 1
+18:12:25 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:296:30: error: too few arguments to function 'gesture_detect'
+   Gesture detected_gesture = gesture_detect();
+                              ^
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:74:9: note: declared here
+ Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[]);
+         ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:588:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:397:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/video_demo.o] Error 1
+18:13:07 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:586:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:395:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59202	    684	18671386	18731272	11dd108	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+18:15:21 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:583:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:392:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59202	    684	18671386	18731272	11dd108	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+18:15:28 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:21:55 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:583:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:392:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59258	    684	18671386	18731328	11dd140	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+18:22:02 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:30:50 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+Building file: ../src/video_demo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:583:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:392:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/video_demo.c
+ 
+Building target: videodemo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: videodemo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59298	    684	18671386	18731368	11dd168	videodemo.elf
+Finished building: videodemo.elf.size
+ 
+18:30:52 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:36:26 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:39:52 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:41:25 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:46:35 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:583:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:392:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59298	    684	18671386	18731368	11dd168	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+18:46:39 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:51:47 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:581:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:390:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59290	    684	18671386	18731360	11dd160	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+18:51:51 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:52:32 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:53:53 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:55:21 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+18:59:16 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:01:25 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:581:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:390:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59190	    684	18671380	18731254	11dd0f6	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+19:01:35 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:02:22 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:02:55 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:06:45 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:08:32 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:581:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:390:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59170	    684	18671386	18731240	11dd0e8	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+19:08:35 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:10:46 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:581:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:390:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59298	    684	18671386	18731368	11dd168	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+19:22:44 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoInitialize':
+../src/video_demo.c:227:2: error: too few arguments to function 'XGpio_Initialize'
+  XGpio_Initialize(gpio_out);
+  ^
+In file included from ../src/video_capture/video_capture.h:77:0,
+                 from ../src/video_demo.c:29:
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xgpio.h:161:5: note: declared here
+ int XGpio_Initialize(XGpio *InstancePtr, u16 DeviceId);
+     ^
+../src/video_demo.c:229:45: error: expected expression before 'u32'
+  XGpio_CfgInitialize(gpio_out, gpio_config, u32 EffectiveAddr);
+                                             ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:589:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:398:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/video_demo.o] Error 1
+19:23:02 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoInitialize':
+../src/video_demo.c:229:44: error: expected expression before ')' token
+  XGpio_CfgInitialize(gpio_out, gpio_config,);
+                                            ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:589:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:398:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/video_demo.o] Error 1
+19:24:17 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoInitialize':
+../src/video_demo.c:229:44: error: expected expression before ')' token
+  XGpio_CfgInitialize(gpio_out, gpio_config,);
+                                            ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:589:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:398:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/video_demo.o] Error 1
+19:25:39 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoInitialize':
+../src/video_demo.c:231:44: error: expected expression before ')' token
+  XGpio_CfgInitialize(gpio_out, gpio_config,);
+                                            ^
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:591:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:400:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/video_demo.o] Error 1
+19:27:09 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:590:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:399:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/video_demo.c: In function 'DemoInitialize':
+../src/video_demo.c:228:2: warning: 'gpio_out' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  XGpio_Initialize(gpio_out,GPIO_OUT_ID);
+  ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59414	    684	18671380	18731478	11dd1d6	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+19:29:40 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:590:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:399:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59446	    684	18671380	18731510	11dd1f6	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+19:29:51 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:30:37 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:31:32 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:31:58 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:32:59 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:590:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:399:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59298	    684	18671386	18731368	11dd168	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+19:33:02 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+19:41:35 **** Auto Build of project standalone_bsp_1 ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/axivdma_v6_1/src"
+make -C microblaze_0/libsrc/axivdma_v6_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/cpu_v2_5/src"
+make -C microblaze_0/libsrc/cpu_v2_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/gpio_v4_1/src"
+make -C microblaze_0/libsrc/gpio_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/intc_v3_5/src"
+make -C microblaze_0/libsrc/intc_v3_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/led_detect_v1_0/src"
+make -C microblaze_0/libsrc/led_detect_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/standalone_v5_5/src"
+make -C microblaze_0/libsrc/standalone_v5_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_1/src"
+make -C microblaze_0/libsrc/tmrctr_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/vtc_v7_1/src"
+make -C microblaze_0/libsrc/vtc_v7_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in microblaze_0/libsrc/axivdma_v6_1/src"
+make -C microblaze_0/libsrc/axivdma_v6_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_5/src"
+make -C microblaze_0/libsrc/cpu_v2_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_1/src"
+make -C microblaze_0/libsrc/gpio_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_5/src"
+make -C microblaze_0/libsrc/intc_v3_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/led_detect_v1_0/src"
+make -C microblaze_0/libsrc/led_detect_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling led_detect..."
+"Running Make libs in microblaze_0/libsrc/standalone_v5_5/src"
+make -C microblaze_0/libsrc/standalone_v5_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_1/src"
+make -C microblaze_0/libsrc/tmrctr_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartlite"
+"Running Make libs in microblaze_0/libsrc/vtc_v7_1/src"
+make -C microblaze_0/libsrc/vtc_v7_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
+'Finished building libraries'
+19:41:44 **** Clean-only build of configuration Debug for project videodemo ****
+make clean 
+rm -rf  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o  ./src/video_capture/video_capture.d  ./src/vdma/vdma.d  ./src/timer_ps/timer_ps.d  ./src/intc/intc.d  ./src/dynclk/dynclk.d  ./src/display_ctrl/display_ctrl.d  ./src/video_demo.d  videodemo.elf.size  videodemo.elf
+' '
+19:41:45 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_capture/video_capture.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+'Finished building: ../src/video_capture/video_capture.c'
+' '
+'Building file: ../src/vdma/vdma.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vdma/vdma.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/vdma/vdma.d" -MT"src/vdma/vdma.o" -o "src/vdma/vdma.o" "../src/vdma/vdma.c"
+In file included from W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'read_config':
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:60:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^
+../src/vdma/vdma.c: In function 'dma_read_from_memory':
+../src/vdma/vdma.c:70:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+In file included from W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'write_config':
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:176:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^
+../src/vdma/vdma.c: In function 'dma_write_to_memory':
+../src/vdma/vdma.c:186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/vdma/vdma.c: In function 'reset_dma_write':
+../src/vdma/vdma.c:327:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/vdma/vdma.c: In function 'reset_dma_read':
+../src/vdma/vdma.c:331:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/vdma/vdma.c'
+' '
+'Building file: ../src/timer_ps/timer_ps.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+'Finished building: ../src/timer_ps/timer_ps.c'
+' '
+'Building file: ../src/intc/intc.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+'Finished building: ../src/intc/intc.c'
+' '
+'Building file: ../src/dynclk/dynclk.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+'Finished building: ../src/dynclk/dynclk.c'
+' '
+'Building file: ../src/display_ctrl/display_ctrl.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+'Finished building: ../src/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:590:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:399:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59298	    684	18671386	18731368	11dd168	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+19:42:02 **** Auto Build of project standalone_bsp_1 ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/axivdma_v6_1/src"
+make -C microblaze_0/libsrc/axivdma_v6_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/cpu_v2_5/src"
+make -C microblaze_0/libsrc/cpu_v2_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/gpio_v4_1/src"
+make -C microblaze_0/libsrc/gpio_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/intc_v3_5/src"
+make -C microblaze_0/libsrc/intc_v3_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/led_detect_v1_0/src"
+make -C microblaze_0/libsrc/led_detect_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/standalone_v5_5/src"
+make -C microblaze_0/libsrc/standalone_v5_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_1/src"
+make -C microblaze_0/libsrc/tmrctr_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/vtc_v7_1/src"
+make -C microblaze_0/libsrc/vtc_v7_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in microblaze_0/libsrc/axivdma_v6_1/src"
+make -C microblaze_0/libsrc/axivdma_v6_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_5/src"
+make -C microblaze_0/libsrc/cpu_v2_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_1/src"
+make -C microblaze_0/libsrc/gpio_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_5/src"
+make -C microblaze_0/libsrc/intc_v3_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/led_detect_v1_0/src"
+make -C microblaze_0/libsrc/led_detect_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling led_detect..."
+"Running Make libs in microblaze_0/libsrc/standalone_v5_5/src"
+make -C microblaze_0/libsrc/standalone_v5_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_1/src"
+make -C microblaze_0/libsrc/tmrctr_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartlite"
+"Running Make libs in microblaze_0/libsrc/vtc_v7_1/src"
+make -C microblaze_0/libsrc/vtc_v7_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.6 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-float-convert -mxl-float-sqrt -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
+'Finished building libraries'
+19:42:11 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/video_capture/video_capture.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+'Finished building: ../src/video_capture/video_capture.c'
+' '
+'Building file: ../src/vdma/vdma.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vdma/vdma.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/vdma/vdma.d" -MT"src/vdma/vdma.o" -o "src/vdma/vdma.o" "../src/vdma/vdma.c"
+In file included from W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'read_config':
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:60:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^
+../src/vdma/vdma.c: In function 'dma_read_from_memory':
+../src/vdma/vdma.c:70:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+In file included from W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'write_config':
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:176:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^
+../src/vdma/vdma.c: In function 'dma_write_to_memory':
+../src/vdma/vdma.c:186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/vdma/vdma.c: In function 'reset_dma_write':
+../src/vdma/vdma.c:327:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/vdma/vdma.c: In function 'reset_dma_read':
+../src/vdma/vdma.c:331:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/vdma/vdma.c'
+' '
+'Building file: ../src/intc/intc.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+'Finished building: ../src/intc/intc.c'
+' '
+'Building file: ../src/dynclk/dynclk.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+'Finished building: ../src/dynclk/dynclk.c'
+' '
+'Building file: ../src/display_ctrl/display_ctrl.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+'Finished building: ../src/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'start_frame_read':
+../src/video_demo.c:590:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/video_demo.c: In function 'gesture_detect':
+../src/video_demo.c:399:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59298	    684	18671386	18731368	11dd168	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+19:42:20 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+20:26:53 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+20:37:22 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/vdma/vdma.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vdma/vdma.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/vdma/vdma.d" -MT"src/vdma/vdma.o" -o "src/vdma/vdma.o" "../src/vdma/vdma.c"
+In file included from W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'read_config':
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:60:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^
+../src/vdma/vdma.c: In function 'dma_read_from_memory':
+../src/vdma/vdma.c:70:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+In file included from W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'write_config':
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:176:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^
+../src/vdma/vdma.c: In function 'dma_write_to_memory':
+../src/vdma/vdma.c:186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/vdma/vdma.c: In function 'reset_dma_write':
+../src/vdma/vdma.c:327:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/vdma/vdma.c: In function 'reset_dma_read':
+../src/vdma/vdma.c:331:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/vdma/vdma.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.6 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59298	    684	18671386	18731368	11dd168	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+20:37:35 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+20:37:50 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+20:37:51 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+20:37:51 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+20:37:52 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+20:38:17 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.
+20:39:51 **** Auto Build of configuration Debug for project videodemo ****
+make all 
+'Building file: ../src/vdma/vdma.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vdma/vdma.o" -IW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -MMD -MP -MF"src/vdma/vdma.d" -MT"src/vdma/vdma.o" -o "src/vdma/vdma.o" "../src/vdma/vdma.c"
+In file included from W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'read_config':
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:60:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^
+../src/vdma/vdma.c: In function 'dma_read_from_memory':
+../src/vdma/vdma.c:70:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+In file included from W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xaxivdma.h:307:0,
+                 from ../src/vdma/vdma.h:16,
+                 from ../src/vdma/vdma.c:11:
+../src/vdma/vdma.c: In function 'write_config':
+W:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/include/xstatus.h:60:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/vdma/vdma.c:176:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^
+../src/vdma/vdma.c: In function 'dma_write_to_memory':
+../src/vdma/vdma.c:186:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/vdma/vdma.c: In function 'reset_dma_write':
+../src/vdma/vdma.c:327:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/vdma/vdma.c: In function 'reset_dma_read':
+../src/vdma/vdma.c:331:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/vdma/vdma.c'
+' '
+'Building target: videodemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LW:/ece532/src/hdmi.sdk/standalone_bsp_1/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v9.5 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -o "videodemo.elf"  ./src/video_capture/video_capture.o  ./src/vdma/vdma.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: videodemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size videodemo.elf  |tee "videodemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59298	    684	18671386	18731368	11dd168	videodemo.elf
+'Finished building: videodemo.elf.size'
+' '
+20:39:54 **** Incremental Build of configuration Debug for project videodemo ****
+make all 
+make: Nothing to be done for `all'.

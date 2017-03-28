@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user:user:led_detect:1.0
-// IP Revision: 9
+// IP Revision: 12
 
 `timescale 1ns/1ps
 
@@ -86,6 +86,9 @@ module hdmi_led_detect_0_1 (
   s00_axis_tstrb,
   s00_axis_tlast,
   s00_axis_tvalid,
+  write_pointer,
+  y_coord,
+  ledr_xy,
   s00_axis_tready,
   s00_axis_aclk,
   s00_axis_aresetn
@@ -155,6 +158,9 @@ input wire [2 : 0] s00_axis_tstrb;
 input wire s00_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TVALID" *)
 input wire s00_axis_tvalid;
+output wire [10 : 0] write_pointer;
+output wire [15 : 0] y_coord;
+output wire [31 : 0] ledr_xy;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TREADY" *)
 output wire s00_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXIS_CLK CLK" *)
@@ -204,6 +210,9 @@ input wire s00_axis_aresetn;
     .s00_axis_tstrb(s00_axis_tstrb),
     .s00_axis_tlast(s00_axis_tlast),
     .s00_axis_tvalid(s00_axis_tvalid),
+    .write_pointer(write_pointer),
+    .y_coord(y_coord),
+    .ledr_xy(ledr_xy),
     .s00_axis_tready(s00_axis_tready),
     .s00_axis_aclk(s00_axis_aclk),
     .s00_axis_aresetn(s00_axis_aresetn)

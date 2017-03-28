@@ -46,23 +46,32 @@
  */
 #define DEMO_START_ON_DET 1
 
+/**
+ * Enum definition for gestures
+ */
+typedef enum {
+	NONE,
+	SCROLL_DOWN,
+	SCROLL_UP,
+	SCROLL_LEFT,
+	SCROLL_RIGHT,
+	ZOOM_IN,
+	ZOOM_OUT
+} Gesture;
+
 /* ------------------------------------------------------------ */
 /*					Procedure Declarations						*/
 /* ------------------------------------------------------------ */
 
 void DemoInitialize();
 void DemoRun();
-void DemoPrintMenu();
-void DemoChangeRes();
-void DemoCRMenu();
-void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride);
 void DemoPrintTest(u8 *frame, u32 width, u32 height, u32 stride, int pattern);
-void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride);
 void DemoISR(void *callBackRef, void *pVideo);
 void split_coordinates(int xy, int* x, int* y );
-void update_buffers (int x, int y);
-void reset_buffers ();
-int scroll_detect();
+void reset_buffers (int xbuffer[],int ybuffer[]);
+void update_buffers (int x, int y,int xbuffer[],int ybuffer[]);
+Gesture scroll_detect(int xbuffer[],int ybuffer[]);
+Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[]);
 
 /* ------------------------------------------------------------ */
 

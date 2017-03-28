@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="transfer failed" key="selection"/>
+		<item value="XGpio_LookupConfig" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="transfer failed"/>
+			<item value="XGpio_LookupConfig"/>
+			<item value="XGpio_Initialize"/>
 			<item value="gpio"/>
-			<item value="GPIO"/>
-			<item value="XPAR_INTC_0_GPIO_1_VEC_ID"/>
-			<item value="XPAR_AXI_GPIO_VIDEO_DEVICE_ID"/>
-			<item value="XPAR_INTC_0_GPIO_0_VEC_ID"/>
-			<item value="GPIO_1_IRPT_ID"/>
-			<item value="VID_GPIO"/>
+			<item value="gesture_detect"/>
+			<item value="DemoChangeRes"/>
+			<item value="DemoScaleFrame"/>
+			<item value="DemoInvertFrame"/>
+			<item value="DemoPrintMenu"/>
 		</list>
 		<list key="replacehistory">
 			<item value="xil_printf"/>

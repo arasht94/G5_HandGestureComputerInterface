@@ -573,6 +573,11 @@ vlog -work xil_defaultlib -64 "+incdir+../../../ipstatic/axi_infrastructure_v1_1
 "../../../bd/hdmi/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0_S00_AXIS.v" \
 "../../../bd/hdmi/ipshared/user/led_detect_v1_0/hdl/led_detect_v1_0.v" \
 "../../../bd/hdmi/ip/hdmi_led_detect_0_1/sim/hdmi_led_detect_0_1.v" \
+
+vcom -work xil_defaultlib -64 \
+"../../../bd/hdmi/ip/hdmi_ila_1_0/sim/hdmi_ila_1_0.vhd" \
+
+vlog -work xil_defaultlib -64 "+incdir+../../../ipstatic/axi_infrastructure_v1_1/hdl/verilog" "+incdir+../../../ipstatic/axi_vdma_v6_2/hdl/src/verilog" "+incdir+../../../../hdmi.srcs/sources_1/bd/hdmi/ipshared/xilinx.com/ila_v6_1/hdl/verilog" "+incdir+../../../../hdmi.srcs/sources_1/bd/hdmi/ipshared/xilinx.com/ltlib_v1_0/hdl/verilog" "+incdir+../../../../hdmi.srcs/sources_1/bd/hdmi/ipshared/xilinx.com/xsdbm_v1_1/hdl/verilog" "+incdir+../../../../hdmi.srcs/sources_1/bd/hdmi/ipshared/xilinx.com/xsdbs_v1_0/hdl/verilog" "+incdir+../../../ipstatic/axi_infrastructure_v1_1/hdl/verilog" "+incdir+../../../ipstatic/axi_vdma_v6_2/hdl/src/verilog" "+incdir+../../../../hdmi.srcs/sources_1/bd/hdmi/ipshared/xilinx.com/ila_v6_1/hdl/verilog" "+incdir+../../../../hdmi.srcs/sources_1/bd/hdmi/ipshared/xilinx.com/ltlib_v1_0/hdl/verilog" "+incdir+../../../../hdmi.srcs/sources_1/bd/hdmi/ipshared/xilinx.com/xsdbm_v1_1/hdl/verilog" "+incdir+../../../../hdmi.srcs/sources_1/bd/hdmi/ipshared/xilinx.com/xsdbs_v1_0/hdl/verilog" \
 "../../../bd/hdmi/ip/hdmi_s00_regslice_0/sim/hdmi_s00_regslice_0.v" \
 "../../../bd/hdmi/ip/hdmi_s01_regslice_0/sim/hdmi_s01_regslice_0.v" \
 "../../../bd/hdmi/ip/hdmi_s02_regslice_0/sim/hdmi_s02_regslice_0.v" \
