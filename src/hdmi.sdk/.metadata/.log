@@ -25140,3 +25140,45 @@ java.lang.RuntimeException: No Active System
 	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:32)
 	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:225)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:01.956
+!MESSAGE XSDB Command: [::hsi::utils::get_bram_blocks W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:01.988
+!MESSAGE XSDB command with result: [::hsi::utils::get_bram_blocks W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:22.185
+!MESSAGE XSDB Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:22.186
+!MESSAGE XSDB command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:22.217
+!MESSAGE XSDB Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:22.233
+!MESSAGE XSDB command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Nexys Video 210276690173B]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:22.248
+!MESSAGE XSDB Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:22.280
+!MESSAGE XSDB command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==1}], Result: [null,      2  xc7a200t (idcode 13636093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:22.295
+!MESSAGE XSDB Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:22.326
+!MESSAGE XSDB command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:22.326
+!MESSAGE XSDB Command: [fpga -file W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:27.899
+!MESSAGE XSDB command with result: [fpga -file W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:28.726
+!MESSAGE XSDB Command: [::hsi::utils::get_bram_blocks W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-03-28 20:26:28.741
+!MESSAGE XSDB command with result: [::hsi::utils::get_bram_blocks W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext

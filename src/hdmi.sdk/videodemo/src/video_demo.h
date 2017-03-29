@@ -71,8 +71,9 @@ void split_coordinates(int xy, int* x, int* y );
 void reset_buffers (int xbuffer[],int ybuffer[]);
 void update_buffers (int x, int y,int xbuffer[],int ybuffer[]);
 Gesture scroll_detect(int xbuffer[],int ybuffer[]);
-Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[]);
-
+Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[], int zoombuffer[]);
+const char* get_gesture_string(Gesture gesture);
+void update_zoom_buffers(int rx, int ry, int gx, int gy, int zoombuffer[]);
 /* ------------------------------------------------------------ */
 
 /************************************************************************/

@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="XGpio_LookupConfig" key="selection"/>
+		<item value="update_zoom_buffers" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="update_zoom_buffers"/>
 			<item value="XGpio_LookupConfig"/>
 			<item value="XGpio_Initialize"/>
 			<item value="gpio"/>
@@ -15,7 +16,6 @@
 			<item value="DemoChangeRes"/>
 			<item value="DemoScaleFrame"/>
 			<item value="DemoInvertFrame"/>
-			<item value="DemoPrintMenu"/>
 		</list>
 		<list key="replacehistory">
 			<item value="xil_printf"/>

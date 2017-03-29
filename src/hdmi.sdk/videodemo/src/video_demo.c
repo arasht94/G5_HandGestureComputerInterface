@@ -62,12 +62,15 @@
 /* ------------------------------------------------------------ */
 
 #define GESTURE_CHECK_DURATION 50
-#define SCROLL_X_THRESHOLD 300
-#define SCROLL_Y_THRESHOLD 300
+#define SCROLL_SMALL_THRESHOLD 50
+#define SCROLL_LARGE_THRESHOLD 300
 int rxbuffer [GESTURE_CHECK_DURATION];
 int rybuffer [GESTURE_CHECK_DURATION];
 int gxbuffer [GESTURE_CHECK_DURATION];
 int gybuffer [GESTURE_CHECK_DURATION];
+
+#define ZOOM_CHECK_DURATION 50
+int zoombuffer [ZOOM_CHECK_DURATION];
 
 /*
  * Display and Video Driver structs
@@ -298,17 +301,17 @@ void DemoRun()
 		gxy = LED_DETECT_mReadReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG2_OFFSET);
 		split_coordinates(rxy,&rx,&ry);
 		split_coordinates(gxy,&gx,&gy);
-		xil_printf("RED:(%d,%d) GREEN:(%d,%d) rxy:%x gxy:%x\n",rx,ry,gx,gy,rxy,gxy);
+		//xil_printf("RED:(%d,%d) GREEN:(%d,%d) rxy:%x gxy:%x\n",rx,ry,gx,gy,rxy,gxy);
 
 		//disable IP to reset to ycoord
 		LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG0_OFFSET, 0);
 
 		//perform gesture detection
-		//Gesture detected_gesture = gesture_detect(rx,ry,rxbuffer,rybuffer,gx,gy,gxbuffer,gybuffer);
+		Gesture detected_gesture = gesture_detect(rx,ry,rxbuffer,rybuffer,gx,gy,gxbuffer,gybuffer,zoombuffer);
 
-		//if(detected_gesture != NONE){
-		//	xil_printf("Gesture:%d\n",detected_gesture);
-		//}
+		if(detected_gesture != NONE){
+			xil_printf("Gesture:%s\n",get_gesture_string(detected_gesture));
+		}
 	}
 
 
@@ -329,11 +332,30 @@ void split_coordinates(int xy, int* x, int* y ){
  */
 void reset_buffers (int xbuffer[],int ybuffer[]){
 	int i;
-	for (i=0; i<GESTURE_CHECK_DURATION; i++)
-	{
+	for (i=0; i<GESTURE_CHECK_DURATION; i++){
 		xbuffer[i]= 0;
 		ybuffer[i]= 0;
 	}
+	for (i=0; i<ZOOM_CHECK_DURATION; i++){
+		zoombuffer[i]= 0;
+	}
+
+}
+
+/**
+ * Shift the buffers over and insert the new
+ * coordinate into the LSB position
+ */
+void update_zoom_buffers(int rx, int ry, int gx, int gy, int zoombuffer[]){
+	//shift the buffers
+	int i;
+	for (i=ZOOM_CHECK_DURATION-1; i>0; i--){
+		zoombuffer[i]= zoombuffer[i-1];
+		zoombuffer[i]= zoombuffer[i-1];
+	}
+
+	zoombuffer[0] = (rx - gx)*(rx - gx) + (ry - gy)*(ry - gy);
+
 }
 
 /**
@@ -349,10 +371,9 @@ void update_buffers(int x, int y, int xbuffer[], int ybuffer[]){
 	}
 
 	//insert coordinate into LSB positions
-	xbuffer[i]=x;
-	ybuffer[i]=y;
+	xbuffer[0]=x;
+	ybuffer[0]=y;
 }
-
 /**
  * Detect the scrolling int the x and y directions
  * and output the gesture detected
@@ -368,15 +389,17 @@ Gesture scroll_detect(int xbuffer[],int ybuffer[]){
 		total_dx += xbuffer[i] - xbuffer[i-1];
 		total_dy += ybuffer[i] - ybuffer[i-1];
 
-		if(i>=2){// b/c using i-2
-			if(total_dx > SCROLL_X_THRESHOLD && xbuffer[i] < xbuffer[i-2] ){ // && total_dy < SCROLL_Y_THRESHOLD
-				reset_buffers(xbuffer,ybuffer);
-				return SCROLL_LEFT;
-			}
-			else if(total_dx > SCROLL_X_THRESHOLD && xbuffer[i] > xbuffer[i-2]){ // && total_dy < SCROLL_Y_THRESHOLD
-				reset_buffers(xbuffer,ybuffer);
-				return SCROLL_RIGHT;
-			}
+		if(total_dy > SCROLL_LARGE_THRESHOLD && (total_dx < SCROLL_SMALL_THRESHOLD && total_dx > SCROLL_SMALL_THRESHOLD*(-1) )){
+			return SCROLL_UP;
+		}
+		else if(total_dy < SCROLL_LARGE_THRESHOLD*(-1) && (total_dx < SCROLL_SMALL_THRESHOLD && total_dx > SCROLL_SMALL_THRESHOLD*(-1) )){
+			return SCROLL_DOWN;
+		}
+		else if(total_dx < SCROLL_LARGE_THRESHOLD*(-1) && (total_dy < SCROLL_SMALL_THRESHOLD && total_dy > SCROLL_SMALL_THRESHOLD*(-1) )){ // && total_dy < SCROLL_Y_THRESHOLD
+			return SCROLL_LEFT;
+		}
+		else if(total_dx > SCROLL_LARGE_THRESHOLD && (total_dy < SCROLL_SMALL_THRESHOLD && total_dy > SCROLL_SMALL_THRESHOLD*(-1))){ // && total_dy < SCROLL_Y_THRESHOLD
+			return SCROLL_RIGHT;
 		}
 	}
 
@@ -385,25 +408,57 @@ Gesture scroll_detect(int xbuffer[],int ybuffer[]){
 }
 
 /**
+ * Detect a zooming motion
+ */
+Gesture zoom_detect(int rx, int ry, int gx, int gy, int zoombuffer[]){
+	int i;
+	int total_delta = 0;
+
+	for (i=1; i<ZOOM_CHECK_DURATION; i++){
+		total_delta += zoombuffer[i] - zoombuffer[i-1];
+	}
+
+
+
+	return NONE;
+}
+
+/**
  * Function that calls all other gesture detect function
  * This function prioritizes certain gestures over others.
  * Scrolling is prioritized over zooming.
  */
-Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[]){
+Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[], int zoombuffer[]){
 	//place x and y values into the buffers
 	update_buffers(rx,ry,rxbuffer,rybuffer);
 	update_buffers(gx,gy,gxbuffer,gybuffer);
 
 	//scroll detection
 	Gesture r_scroll = scroll_detect(rxbuffer,rybuffer);
-	Gesture g_scroll = scroll_detect(gxbuffer,gybuffer);
-	if(r_scroll == g_scroll){
+	if(r_scroll){
+		reset_buffers(rxbuffer,rybuffer);
 		return r_scroll;
 	}
 
 	//zoom detect
+	update_zoom_buffers(rx,ry,gx,gy,zoombuffer);
 
+	return NONE;
 }
+
+const char* get_gesture_string(Gesture gesture){
+   switch (gesture){
+	   case NONE: return "NONE";
+	   case SCROLL_DOWN: return "SCROLL_DOWN";
+	   case SCROLL_UP: return "SCROLL_UP";
+	   case SCROLL_LEFT: return "SCROLL_LEFT";
+	   case SCROLL_RIGHT: return "SCROLL_RIGHT";
+	   case ZOOM_IN: return "ZOOM_IN";
+	   case ZOOM_OUT: return "ZOOM_OUT";
+   }
+   return "NONE";
+}
+
 /* Armin's old function
 Gesture scroll_detect(){
 	int i;

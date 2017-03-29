@@ -1499,3 +1499,27 @@ java.lang.RuntimeException: No active Target 0
 18:55:14 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
 18:55:15 INFO  : Processor reset is completed for microblaze_0
 18:57:27 INFO  : Processor reset is completed for microblaze_0
+19:28:02 INFO  : Processor reset is completed for microblaze_0
+19:45:32 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:45:34 INFO  : Processor reset is completed for microblaze_0
+19:52:12 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:52:13 INFO  : Processor reset is completed for microblaze_0
+19:58:29 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:58:31 INFO  : Processor reset is completed for microblaze_0
+20:03:04 INFO  : Processor reset is completed for microblaze_0
+20:06:16 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:06:21 INFO  : Processor reset is completed for microblaze_0
+20:12:22 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:12:23 INFO  : Processor reset is completed for microblaze_0
+20:24:28 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:24:29 INFO  : Processor reset is completed for microblaze_0
+20:25:10 INFO  : Processor reset is completed for microblaze_0
+20:25:42 INFO  : Processor reset is completed for microblaze_0
+20:26:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:26:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+20:26:27 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+20:26:38 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:26:40 INFO  : Processor reset is completed for microblaze_0
+20:31:17 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:31:18 INFO  : Processor reset is completed for microblaze_0
+21:14:10 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
