@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Mar 28 17:08:50 2017
+# Process ID: 6912
+# Current directory: W:/ece532/src
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6672 W:\ece532\src\hdmi.xpr
+# Log file: W:/ece532/src/vivado.log
+# Journal file: W:/ece532/src\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project W:/ece532/src/hdmi.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace W:/ece532/src/hdmi.sdk -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf
+launch_sdk -workspace W:/ece532/src/hdmi.sdk -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf
+launch_sdk -workspace W:/ece532/src/hdmi.sdk -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf
+launch_sdk -workspace W:/ece532/src/hdmi.sdk -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {W:/ece532/src/hdmi.runs/impl_1/hdmi_wrapper.bit} [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {W:/ece532/src/hdmi.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_1"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a200t_0] -filter {CELL_NAME=~"hdmi_i/ila_2"}]]

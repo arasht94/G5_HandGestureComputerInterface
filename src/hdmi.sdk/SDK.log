@@ -1523,3 +1523,85 @@ java.lang.RuntimeException: No active Target 0
 20:31:17 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
 20:31:18 INFO  : Processor reset is completed for microblaze_0
 21:14:10 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:38:11 INFO  : Launching XSDB server: xsdb.bat -interactive W:\ece532\src\hdmi.sdk\temp_xsdb_launch_script.tcl
+11:38:13 INFO  : XSDB server has started successfully.
+11:38:15 INFO  : Processing command line option -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+11:38:15 INFO  : Checking for hwspec changes in the project hdmi_wrapper_hw_platform_6.
+12:23:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:23:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+12:23:35 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+12:24:08 INFO  : Processor reset is completed for microblaze_0
+12:30:11 INFO  : Processor reset is completed for microblaze_0
+12:32:03 INFO  : Processor reset is completed for microblaze_0
+12:32:37 INFO  : Processor reset is completed for microblaze_0
+12:55:47 INFO  : Processor reset is completed for microblaze_0
+12:56:50 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:56:52 INFO  : Processor reset is completed for microblaze_0
+14:43:39 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:43:43 INFO  : Processor reset is completed for microblaze_0
+14:44:15 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:44:16 INFO  : Processor reset is completed for microblaze_0
+14:44:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:44:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+14:44:57 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+14:45:01 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:45:03 INFO  : Processor reset is completed for microblaze_0
+14:46:06 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:46:07 INFO  : Processor reset is completed for microblaze_0
+14:47:00 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:47:12 INFO  : Launching XSDB server: xsdb.bat -interactive W:\ece532\src\hdmi.sdk\temp_xsdb_launch_script.tcl
+14:47:13 INFO  : XSDB server has started successfully.
+14:47:13 INFO  : Processing command line option -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+14:47:13 INFO  : Checking for hwspec changes in the project hdmi_wrapper_hw_platform_6.
+14:47:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:47:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+14:48:01 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+14:48:16 INFO  : Processor reset is completed for microblaze_0
+14:48:53 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:48:54 INFO  : Processor reset is completed for microblaze_0
+18:04:36 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1490825056338,  Project:1490657842473
+18:04:36 INFO  : Project hdmi_wrapper_hw_platform_6's source hardware specification located at W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+18:04:41 INFO  : Copied contents of W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf into \hdmi_wrapper_hw_platform_6\system.hdf.
+18:04:44 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:04:58 INFO  : 
+18:04:59 INFO  : Updating hardware inferred compiler options for videodemo.
+18:04:59 INFO  : Clearing existing target manager status.
+18:08:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:08:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+18:08:22 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+18:09:17 INFO  : Inferring section assignments and sizes from elf file: W:\ece532\src\hdmi.sdk\videodemo\Debug\videodemo.elf
+18:10:13 INFO  : Processor reset is completed for microblaze_0
+18:18:04 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:18:05 INFO  : Processor reset is completed for microblaze_0
+18:21:39 INFO  : Processor reset is completed for microblaze_0
+18:33:07 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:33:16 INFO  : Processor reset is completed for microblaze_0
+18:36:13 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:36:14 INFO  : Processor reset is completed for microblaze_0
+18:48:30 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:48:31 INFO  : Processor reset is completed for microblaze_0
+18:53:18 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:53:19 INFO  : Processor reset is completed for microblaze_0
+19:07:28 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:07:29 INFO  : Processor reset is completed for microblaze_0
+19:36:33 INFO  : Processor reset is completed for microblaze_0
+19:41:00 INFO  : Processor reset is completed for microblaze_0
+19:43:25 INFO  : Processor reset is completed for microblaze_0
+19:56:08 INFO  : Processor reset is completed for microblaze_0
+19:57:55 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:58:01 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:58:02 INFO  : Processor reset is completed for microblaze_0
+20:05:55 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1490832274970,  Project:1490825056338
+20:05:55 INFO  : Project hdmi_wrapper_hw_platform_6's source hardware specification located at W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+20:06:08 INFO  : Copied contents of W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf into \hdmi_wrapper_hw_platform_6\system.hdf.
+20:06:12 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:06:23 INFO  : 
+20:06:24 INFO  : Updating hardware inferred compiler options for videodemo.
+20:06:24 INFO  : Clearing existing target manager status.
+20:07:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:07:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+20:07:34 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+20:21:45 INFO  : Processor reset is completed for microblaze_0
+20:32:24 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

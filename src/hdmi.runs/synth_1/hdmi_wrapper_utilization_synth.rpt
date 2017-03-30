@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Mon Mar 27 19:16:01 2017
-| Host         : SFB520WS35 running 64-bit Service Pack 1  (build 7601)
+| Date         : Wed Mar 29 19:51:52 2017
+| Host         : SFB520WS23 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file hdmi_wrapper_utilization_synth.rpt -pb hdmi_wrapper_utilization_synth.pb
 | Design       : hdmi_wrapper
 | Device       : 7a200tsbg484-1
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 47129 |     0 |    134600 | 35.01 |
-|   LUT as Logic             | 43077 |     0 |    134600 | 32.00 |
+| Slice LUTs*                | 47142 |     0 |    134600 | 35.02 |
+|   LUT as Logic             | 43090 |     0 |    134600 | 32.01 |
 |   LUT as Memory            |  4052 |     0 |     46200 |  8.77 |
 |     LUT as Distributed RAM |  1732 |     0 |           |       |
 |     LUT as Shift Register  |  2320 |     0 |           |       |
-| Slice Registers            | 56659 |     0 |    269200 | 21.05 |
-|   Register as Flip Flop    | 56656 |     0 |    269200 | 21.05 |
+| Slice Registers            | 56667 |     0 |    269200 | 21.05 |
+|   Register as Flip Flop    | 56664 |     0 |    269200 | 21.05 |
 |   Register as Latch        |     0 |     0 |    269200 |  0.00 |
 |   Register as AND/OR       |     3 |     0 |    269200 | <0.01 |
 | F7 Muxes                   |  1135 |     0 |     67300 |  1.69 |
@@ -59,8 +59,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 299   |          Yes |           - |          Set |
 | 599   |          Yes |           - |        Reset |
-| 1341  |          Yes |         Set |            - |
-| 54417 |          Yes |       Reset |            - |
+| 1342  |          Yes |         Set |            - |
+| 54424 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -97,7 +97,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   72 |     0 |       285 | 25.26 |
+| Bonded IOB                  |   79 |     0 |       285 | 27.72 |
 | Bonded IPADs                |    0 |     0 |        14 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         8 |  0.00 |
 | PHY_CONTROL                 |    1 |     0 |        10 | 10.00 |
@@ -164,17 +164,17 @@ Table of Contents
 +--------------------------+-------+---------------------+
 |         Ref Name         |  Used | Functional Category |
 +--------------------------+-------+---------------------+
-| FDRE                     | 54417 |        Flop & Latch |
-| LUT6                     | 14295 |                 LUT |
-| LUT3                     |  9403 |                 LUT |
-| LUT5                     |  7277 |                 LUT |
-| LUT4                     |  6253 |                 LUT |
+| FDRE                     | 54424 |        Flop & Latch |
+| LUT6                     | 14297 |                 LUT |
+| LUT3                     |  9410 |                 LUT |
+| LUT5                     |  7284 |                 LUT |
+| LUT4                     |  6250 |                 LUT |
 | LUT2                     |  4759 |                 LUT |
 | SRL16E                   |  1821 |  Distributed Memory |
 | SRLC32E                  |  1694 |  Distributed Memory |
 | LUT1                     |  1688 |                 LUT |
 | CARRY4                   |  1624 |          CarryLogic |
-| FDSE                     |  1341 |        Flop & Latch |
+| FDSE                     |  1342 |        Flop & Latch |
 | RAMD32                   |  1222 |  Distributed Memory |
 | MUXF7                    |  1135 |               MuxFx |
 | RAMS32                   |   898 |  Distributed Memory |
@@ -184,7 +184,7 @@ Table of Contents
 | MUXF8                    |    71 |               MuxFx |
 | RAMB36E1                 |    68 |        Block Memory |
 | OSERDESE2                |    51 |                  IO |
-| OBUF                     |    27 |                  IO |
+| OBUF                     |    33 |                  IO |
 | ISERDESE2                |    22 |                  IO |
 | OBUFT                    |    20 |                  IO |
 | IDELAYE2                 |    19 |                  IO |
@@ -195,8 +195,8 @@ Table of Contents
 | BUFG                     |    10 |               Clock |
 | DSP48E1                  |     9 |    Block Arithmetic |
 | OBUFDS                   |     6 |                  IO |
+| IBUF                     |     6 |                  IO |
 | ODDR                     |     5 |                  IO |
-| IBUF                     |     5 |                  IO |
 | PHASER_OUT_PHY           |     4 |                  IO |
 | OUT_FIFO                 |     4 |                  IO |
 | OBUFTDS                  |     4 |                  IO |

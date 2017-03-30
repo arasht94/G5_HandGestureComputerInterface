@@ -1,8 +1,8 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
---Date        : Mon Mar 27 18:49:21 2017
---Host        : SFB520WS35 running 64-bit Service Pack 1  (build 7601)
+--Date        : Wed Mar 29 19:24:50 2017
+--Host        : SFB520WS23 running 64-bit Service Pack 1  (build 7601)
 --Command     : generate_target hdmi.bd
 --Design      : hdmi
 --Purpose     : IP block netlist
@@ -2135,10 +2135,10 @@ architecture STRUCTURE of microblaze_0_local_memory_imp_RJJ05W is
   signal microblaze_0_ilmb_cntlr_WE : STD_LOGIC_VECTOR ( 0 to 3 );
   signal NLW_dlmb_v10_LMB_Rst_UNCONNECTED : STD_LOGIC;
   signal NLW_ilmb_v10_LMB_Rst_UNCONNECTED : STD_LOGIC;
-  attribute BMM_INFO_ADDRESS_SPACE : string;
-  attribute BMM_INFO_ADDRESS_SPACE of dlmb_bram_if_cntlr : label is "byte  0x00000000 32 > hdmi microblaze_0_local_memory/lmb_bram";
   attribute KEEP_HIERARCHY : string;
   attribute KEEP_HIERARCHY of dlmb_bram_if_cntlr : label is "yes";
+  attribute bmm_info_address_space : string;
+  attribute bmm_info_address_space of dlmb_bram_if_cntlr : label is "byte  0x00000000 32 > hdmi microblaze_0_local_memory/lmb_bram";
 begin
   DLMB_ce <= microblaze_0_dlmb_CE;
   DLMB_readdbus(0 to 31) <= microblaze_0_dlmb_READDBUS(0 to 31);
@@ -7717,7 +7717,6 @@ entity hdmi is
     DDR3_ras_n : out STD_LOGIC;
     DDR3_reset_n : out STD_LOGIC;
     DDR3_we_n : out STD_LOGIC;
-    GPIO_tri_o : out STD_LOGIC_VECTOR ( 5 downto 0 );
     TMDS_IN_clk_n : in STD_LOGIC;
     TMDS_IN_clk_p : in STD_LOGIC;
     TMDS_IN_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -7726,6 +7725,8 @@ entity hdmi is
     TMDS_OUT_clk_p : out STD_LOGIC;
     TMDS_OUT_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
     TMDS_OUT_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    gpio2_io_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    gpio_io_o : out STD_LOGIC_VECTOR ( 5 downto 0 );
     hdmi_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
     hdmi_rx_txen : out STD_LOGIC_VECTOR ( 0 to 0 );
     reset : in STD_LOGIC;
@@ -7733,10 +7734,10 @@ entity hdmi is
     usb_uart_rxd : in STD_LOGIC;
     usb_uart_txd : out STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=72,numReposBlks=50,numNonXlnxBlks=4,numHierBlks=22,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,synth_mode=Global}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of hdmi : entity is "hdmi.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of hdmi : entity is "hdmi,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=hdmi,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=72,numReposBlks=50,numNonXlnxBlks=4,numHierBlks=22,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=14,da_board_cnt=1,synth_mode=Global}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of hdmi : entity is "hdmi.hwdef";
 end hdmi;
 
 architecture STRUCTURE of hdmi is
@@ -8455,30 +8456,6 @@ architecture STRUCTURE of hdmi is
     s2mm_introut : out STD_LOGIC
   );
   end component hdmi_axi_vdma_0_1;
-  component hdmi_axi_gpio_0_0 is
-  port (
-    s_axi_aclk : in STD_LOGIC;
-    s_axi_aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    s_axi_awvalid : in STD_LOGIC;
-    s_axi_awready : out STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_wvalid : in STD_LOGIC;
-    s_axi_wready : out STD_LOGIC;
-    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_bvalid : out STD_LOGIC;
-    s_axi_bready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    s_axi_arvalid : in STD_LOGIC;
-    s_axi_arready : out STD_LOGIC;
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_rvalid : out STD_LOGIC;
-    s_axi_rready : in STD_LOGIC;
-    gpio_io_o : out STD_LOGIC_VECTOR ( 5 downto 0 )
-  );
-  end component hdmi_axi_gpio_0_0;
   component hdmi_ila_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -8557,6 +8534,31 @@ architecture STRUCTURE of hdmi is
     s00_axis_aresetn : in STD_LOGIC
   );
   end component hdmi_led_detect_0_1;
+  component hdmi_axi_gpio_0_3 is
+  port (
+    s_axi_aclk : in STD_LOGIC;
+    s_axi_aresetn : in STD_LOGIC;
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    s_axi_awvalid : in STD_LOGIC;
+    s_axi_awready : out STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_wvalid : in STD_LOGIC;
+    s_axi_wready : out STD_LOGIC;
+    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_bvalid : out STD_LOGIC;
+    s_axi_bready : in STD_LOGIC;
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    s_axi_arvalid : in STD_LOGIC;
+    s_axi_arready : out STD_LOGIC;
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_rvalid : out STD_LOGIC;
+    s_axi_rready : in STD_LOGIC;
+    gpio_io_o : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    gpio2_io_i : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component hdmi_axi_gpio_0_3;
   signal SYS_Rst_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal TMDS_IN_1_CLK_N : STD_LOGIC;
   signal TMDS_IN_1_CLK_P : STD_LOGIC;
@@ -8564,7 +8566,7 @@ architecture STRUCTURE of hdmi is
   signal TMDS_IN_1_DATA_P : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal axi_dynclk_0_PXL_CLK_5X_O : STD_LOGIC;
   signal axi_dynclk_0_PXL_CLK_O : STD_LOGIC;
-  signal axi_gpio_0_GPIO_TRI_O : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal axi_gpio_video_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_video_ip2intc_irpt : STD_LOGIC;
   signal axi_mem_intercon_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 28 downto 0 );
@@ -8686,6 +8688,7 @@ architecture STRUCTURE of hdmi is
   signal dvi2rgb_0_RGB_HSYNC : STD_LOGIC;
   signal dvi2rgb_0_RGB_VSYNC : STD_LOGIC;
   signal dvi2rgb_0_aPixelClkLckd : STD_LOGIC;
+  signal gpio2_io_i_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal led_detect_0_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal led_detect_0_M00_AXIS_TLAST : STD_LOGIC;
   signal led_detect_0_M00_AXIS_TREADY : STD_LOGIC;
@@ -9088,10 +9091,10 @@ architecture STRUCTURE of hdmi is
   signal NLW_v_vid_in_axi4s_0_vtd_field_id_UNCONNECTED : STD_LOGIC;
   signal NLW_v_vid_in_axi4s_0_vtd_hblank_UNCONNECTED : STD_LOGIC;
   signal NLW_v_vid_in_axi4s_0_vtd_vblank_UNCONNECTED : STD_LOGIC;
-  attribute BMM_INFO_PROCESSOR : string;
-  attribute BMM_INFO_PROCESSOR of microblaze_0 : label is "microblaze-le > hdmi microblaze_0_local_memory/dlmb_bram_if_cntlr";
   attribute KEEP_HIERARCHY : string;
   attribute KEEP_HIERARCHY of microblaze_0 : label is "yes";
+  attribute bmm_info_processor : string;
+  attribute bmm_info_processor of microblaze_0 : label is "microblaze-le > hdmi microblaze_0_local_memory/dlmb_bram_if_cntlr";
 begin
   DDC_scl_o <= dvi2rgb_0_DDC_SCL_O;
   DDC_scl_t <= dvi2rgb_0_DDC_SCL_T;
@@ -9108,7 +9111,6 @@ begin
   DDR3_ras_n <= mig_7series_0_DDR3_RAS_N;
   DDR3_reset_n <= mig_7series_0_DDR3_RESET_N;
   DDR3_we_n <= mig_7series_0_DDR3_WE_N;
-  GPIO_tri_o(5 downto 0) <= axi_gpio_0_GPIO_TRI_O(5 downto 0);
   TMDS_IN_1_CLK_N <= TMDS_IN_clk_n;
   TMDS_IN_1_CLK_P <= TMDS_IN_clk_p;
   TMDS_IN_1_DATA_N(2 downto 0) <= TMDS_IN_data_n(2 downto 0);
@@ -9120,6 +9122,8 @@ begin
   axi_uartlite_0_UART_RxD <= usb_uart_rxd;
   dvi2rgb_0_DDC_SCL_I <= DDC_scl_i;
   dvi2rgb_0_DDC_SDA_I <= DDC_sda_i;
+  gpio2_io_i_1(0) <= gpio2_io_i(0);
+  gpio_io_o(5 downto 0) <= axi_gpio_0_gpio_io_o(5 downto 0);
   hdmi_hpd(0) <= axi_gpio_video_gpio_io_o(0);
   hdmi_rx_txen(0) <= xlconstant_0_dout(0);
   reset_1 <= reset;
@@ -9153,9 +9157,10 @@ axi_dynclk_0: component hdmi_axi_dynclk_0_0
       s00_axi_wstrb(3 downto 0) => microblaze_0_axi_periph_M04_AXI_WSTRB(3 downto 0),
       s00_axi_wvalid => microblaze_0_axi_periph_M04_AXI_WVALID(0)
     );
-axi_gpio_0: component hdmi_axi_gpio_0_0
+axi_gpio_0: component hdmi_axi_gpio_0_3
      port map (
-      gpio_io_o(5 downto 0) => axi_gpio_0_GPIO_TRI_O(5 downto 0),
+      gpio2_io_i(0) => gpio2_io_i_1(0),
+      gpio_io_o(5 downto 0) => axi_gpio_0_gpio_io_o(5 downto 0),
       s_axi_aclk => mig_7series_0_ui_clk,
       s_axi_araddr(8 downto 0) => microblaze_0_axi_periph_M10_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_mig_7series_0_100M_peripheral_aresetn(0),

@@ -68,12 +68,15 @@ void DemoRun();
 void DemoPrintTest(u8 *frame, u32 width, u32 height, u32 stride, int pattern);
 void DemoISR(void *callBackRef, void *pVideo);
 void split_coordinates(int xy, int* x, int* y );
-void reset_buffers (int xbuffer[],int ybuffer[]);
+void reset_buffers ();
 void update_buffers (int x, int y,int xbuffer[],int ybuffer[]);
 Gesture scroll_detect(int xbuffer[],int ybuffer[]);
-Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[], int zoombuffer[]);
+Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[], double zoombuffer[]);
 const char* get_gesture_string(Gesture gesture);
-void update_zoom_buffers(int rx, int ry, int gx, int gy, int zoombuffer[]);
+void update_zoom_buffers(int rx, int ry, int gx, int gy, double zoombuffer[]);
+Gesture zoom_detect(double zoombuffer[]);
+double sqroot(double square);
+void handshake_send(Gesture gesture);
 /* ------------------------------------------------------------ */
 
 /************************************************************************/

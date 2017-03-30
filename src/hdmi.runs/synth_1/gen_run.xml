@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1490655049">
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1490829973">
   <File Type="RDS-PROPCONSTRS" Name="hdmi_wrapper_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="hdmi_wrapper.tcl"/>
   <File Type="RDS-RDS" Name="hdmi_wrapper.vds"/>
@@ -17,8 +17,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/hdmi/hdl/hdmi_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/hdl/hdmi_wrapper.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/hdmi/hdl/hdmi_wrapper.vhd"/>
         <Attr Name="ImportTime" Val="1486589450"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -37,24 +44,24 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../../NexysVideo-master_2015.3/Projects/hdmi/src/constraints/NexysVideo_Master.xdc">
+    <File Path="$PPRDIR/NexysVideo_Master.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PPRDIR/../../NexysVideo-master_2015.3/Projects/hdmi/src/constraints/NexysVideo_Master.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/NexysVideo_Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design">
-      <Option Id="RepFanoutThreshold">400</Option>
-      <Option Id="NoCombineLuts">1</Option>
       <Option Id="FsmExtraction">1</Option>
       <Option Id="ResourceSharing">2</Option>
+      <Option Id="NoCombineLuts">1</Option>
+      <Option Id="RepFanoutThreshold">400</Option>
       <Option Id="ShregMinSize">5</Option>
       <Option Id="KeepEquivalentRegisters">1</Option>
     </Step>

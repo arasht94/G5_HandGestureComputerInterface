@@ -70,7 +70,14 @@ int gxbuffer [GESTURE_CHECK_DURATION];
 int gybuffer [GESTURE_CHECK_DURATION];
 
 #define ZOOM_CHECK_DURATION 50
-int zoombuffer [ZOOM_CHECK_DURATION];
+#define ZOOM_IN_RATIO 2
+#define ZOOM_OUT_RATIO 0.5
+double zoombuffer [ZOOM_CHECK_DURATION];
+
+#define MINDIFF 2.25e-308
+
+volatile unsigned int * gpio_out = (unsigned int *)0x40010000;
+volatile unsigned int * gpio_in = (unsigned int *)0x40010000 + 6;
 
 /*
  * Display and Video Driver structs
@@ -221,23 +228,7 @@ void DemoInitialize()
 	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG5_OFFSET, 100);
 
 	//initialize the gesture detection buffers
-	reset_buffers(rxbuffer,rybuffer);
-	reset_buffers(gxbuffer,gybuffer);
-
-	/*
-	 * Initialize GPIO out to Arduino
-	 */
-	//Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR, 0x3f);
-	/*XGpio gpio_out = {0,0,0,0};
-	XGpio_Initialize(&gpio_out,GPIO_OUT_ID);
-	XGpio_Config * gpio_config = XGpio_LookupConfig(GPIO_OUT_ID);
-	XGpio_CfgInitialize(&gpio_out, gpio_config,GPIO_ADDRESS);
-	XGpio_SetDataDirection(&gpio_out,0,0x3f);
-	XGpio_DiscreteWrite(&gpio_out,0, 0x3f);*/
-
-
-	//Test the output of the monitor
-	//DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, DEMO_PATTERN_1);
+	reset_buffers();
 
 	return;
 }
@@ -309,15 +300,29 @@ void DemoRun()
 		//perform gesture detection
 		Gesture detected_gesture = gesture_detect(rx,ry,rxbuffer,rybuffer,gx,gy,gxbuffer,gybuffer,zoombuffer);
 
+		//if the Gesture is not NONE, send to Arduino
 		if(detected_gesture != NONE){
+			handshake_send(detected_gesture);
 			xil_printf("Gesture:%s\n",get_gesture_string(detected_gesture));
 		}
 	}
 
-
 	return;
 }
 
+/**
+ * Hanshake with the Arduino and then send the
+ * data
+ */
+void handshake_send(Gesture gesture){
+	//keep sending valid until Arduino sends ack
+	while(*gpio_in == 0)
+		*gpio_out = gesture;
+
+	//reset data back to zero just in case it
+	//doesn't automatically happen
+	*gpio_out = 0;
+}
 
 /**
  * Extract the x and y sections of the coordinates
@@ -330,11 +335,13 @@ void split_coordinates(int xy, int* x, int* y ){
 /**
  * Initialize the buffers to zero
  */
-void reset_buffers (int xbuffer[],int ybuffer[]){
+void reset_buffers (){
 	int i;
 	for (i=0; i<GESTURE_CHECK_DURATION; i++){
-		xbuffer[i]= 0;
-		ybuffer[i]= 0;
+		rxbuffer[i]= 0;
+		rybuffer[i]= 0;
+		gxbuffer[i]= 0;
+		gybuffer[i]= 0;
 	}
 	for (i=0; i<ZOOM_CHECK_DURATION; i++){
 		zoombuffer[i]= 0;
@@ -346,15 +353,14 @@ void reset_buffers (int xbuffer[],int ybuffer[]){
  * Shift the buffers over and insert the new
  * coordinate into the LSB position
  */
-void update_zoom_buffers(int rx, int ry, int gx, int gy, int zoombuffer[]){
+void update_zoom_buffers(int rx, int ry, int gx, int gy, double zoombuffer[]){
 	//shift the buffers
 	int i;
 	for (i=ZOOM_CHECK_DURATION-1; i>0; i--){
 		zoombuffer[i]= zoombuffer[i-1];
-		zoombuffer[i]= zoombuffer[i-1];
 	}
 
-	zoombuffer[0] = (rx - gx)*(rx - gx) + (ry - gy)*(ry - gy);
+	zoombuffer[0] = sqroot((rx - gx)*(rx - gx) + (ry - gy)*(ry - gy));
 
 }
 
@@ -410,12 +416,24 @@ Gesture scroll_detect(int xbuffer[],int ybuffer[]){
 /**
  * Detect a zooming motion
  */
-Gesture zoom_detect(int rx, int ry, int gx, int gy, int zoombuffer[]){
+Gesture zoom_detect(double zoombuffer[]){
 	int i;
-	int total_delta = 0;
+	double ratio = 0;
 
 	for (i=1; i<ZOOM_CHECK_DURATION; i++){
-		total_delta += zoombuffer[i] - zoombuffer[i-1];
+		//check for not divide by zero
+		if(zoombuffer[i] == 0)
+			ratio = 0;
+		else
+			ratio = zoombuffer[0] / zoombuffer[i];
+
+		if(ratio > ZOOM_IN_RATIO){
+			xil_printf("Ratio:%f\n",ratio);
+			return ZOOM_IN;
+		}
+		else if(ratio < ZOOM_OUT_RATIO && ratio > 0){
+			return ZOOM_OUT;
+		}
 	}
 
 
@@ -426,22 +444,27 @@ Gesture zoom_detect(int rx, int ry, int gx, int gy, int zoombuffer[]){
 /**
  * Function that calls all other gesture detect function
  * This function prioritizes certain gestures over others.
- * Scrolling is prioritized over zooming.
+ * Zooming is prioritized over scrolling.
  */
-Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[], int zoombuffer[]){
+Gesture gesture_detect(int rx,int ry,int rxbuffer[],int rybuffer[],int gx, int gy,int gxbuffer[],int gybuffer[], double zoombuffer[]){
 	//place x and y values into the buffers
 	update_buffers(rx,ry,rxbuffer,rybuffer);
 	update_buffers(gx,gy,gxbuffer,gybuffer);
+	update_zoom_buffers(rx,ry,gx,gy,zoombuffer);
+
+	//zoom detect
+	Gesture zoom = zoom_detect(zoombuffer);
+	if(zoom){
+		reset_buffers();
+		return zoom;
+	}
 
 	//scroll detection
 	Gesture r_scroll = scroll_detect(rxbuffer,rybuffer);
 	if(r_scroll){
-		reset_buffers(rxbuffer,rybuffer);
+		reset_buffers();
 		return r_scroll;
 	}
-
-	//zoom detect
-	update_zoom_buffers(rx,ry,gx,gy,zoombuffer);
 
 	return NONE;
 }
@@ -457,6 +480,17 @@ const char* get_gesture_string(Gesture gesture){
 	   case ZOOM_OUT: return "ZOOM_OUT";
    }
    return "NONE";
+}
+
+double sqroot(double square){
+    double root=square/3, last, diff=1;
+    if (square <= 0) return 0;
+    do {
+        last = root;
+        root = (root + square / root) / 2;
+        diff = root - last;
+    } while (diff > MINDIFF || diff < -MINDIFF);
+    return root;
 }
 
 /* Armin's old function

@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Mon Mar 27 18:50:50 2017
-# Process ID: 432
+# Start of session at: Wed Mar 29 19:26:14 2017
+# Process ID: 1212
 # Current directory: W:/ece532/src/hdmi.runs/synth_1
 # Command line: vivado.exe -log hdmi_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source hdmi_wrapper.tcl
 # Log file: W:/ece532/src/hdmi.runs/synth_1/hdmi_wrapper.vds
