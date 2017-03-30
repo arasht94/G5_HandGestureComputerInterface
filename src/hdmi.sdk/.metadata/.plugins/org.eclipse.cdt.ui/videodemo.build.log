@@ -1,6 +1,6 @@
-20:21:42 **** Incremental Build of configuration Debug for project videodemo ****
+14:16:53 **** Incremental Build of configuration Debug for project videodemo ****
 make all 
 make: Nothing to be done for `all'.
 
-20:21:42 Build Finished (took 210ms)
+14:16:53 Build Finished (took 212ms)
 

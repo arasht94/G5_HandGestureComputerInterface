@@ -1605,3 +1605,68 @@ java.lang.RuntimeException: No active Target 0
 20:07:34 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
 20:21:45 INFO  : Processor reset is completed for microblaze_0
 20:32:24 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:23:22 INFO  : Launching XSDB server: xsdb.bat -interactive W:\ece532\src\hdmi.sdk\temp_xsdb_launch_script.tcl
+11:23:25 INFO  : XSDB server has started successfully.
+11:23:27 INFO  : Processing command line option -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+11:23:27 INFO  : Checking for hwspec changes in the project hdmi_wrapper_hw_platform_6.
+11:42:39 INFO  : Launching XSDB server: xsdb.bat -interactive W:\ece532\src\hdmi.sdk\temp_xsdb_launch_script.tcl
+11:42:43 INFO  : XSDB server has started successfully.
+11:42:49 INFO  : Processing command line option -hwspec W:/ece532/src/hdmi.sdk/hdmi_wrapper.hdf.
+11:42:49 INFO  : Checking for hwspec changes in the project hdmi_wrapper_hw_platform_6.
+11:43:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:43:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+11:44:02 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+11:45:23 INFO  : Processor reset is completed for microblaze_0
+12:36:18 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:36:19 INFO  : Processor reset is completed for microblaze_0
+12:41:09 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:41:10 INFO  : Processor reset is completed for microblaze_0
+12:46:38 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:46:39 INFO  : Processor reset is completed for microblaze_0
+12:57:25 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:57:26 INFO  : Processor reset is completed for microblaze_0
+12:58:32 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:58:34 INFO  : Processor reset is completed for microblaze_0
+13:06:35 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:06:36 INFO  : Processor reset is completed for microblaze_0
+13:13:40 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:13:41 INFO  : Processor reset is completed for microblaze_0
+13:14:49 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:14:50 INFO  : Processor reset is completed for microblaze_0
+13:31:30 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:31:31 INFO  : Processor reset is completed for microblaze_0
+13:39:59 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:40:01 INFO  : Processor reset is completed for microblaze_0
+13:40:29 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:40:30 INFO  : Processor reset is completed for microblaze_0
+13:45:21 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:45:26 INFO  : Processor reset is completed for microblaze_0
+13:49:46 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:49:47 INFO  : Processor reset is completed for microblaze_0
+13:52:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:52:49 INFO  : Processor reset is completed for microblaze_0
+13:54:54 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:54:56 INFO  : Processor reset is completed for microblaze_0
+13:55:54 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:55:55 INFO  : Processor reset is completed for microblaze_0
+13:56:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:56:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+13:56:47 INFO  : FPGA configured successfully with bitstream "W:/ece532/src/hdmi.sdk/hdmi_wrapper_hw_platform_6/download.bit"
+13:56:54 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:56:56 INFO  : Processor reset is completed for microblaze_0
+14:01:47 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:01:48 INFO  : Processor reset is completed for microblaze_0
+14:05:54 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:05:56 INFO  : Processor reset is completed for microblaze_0
+14:07:50 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:07:51 INFO  : Processor reset is completed for microblaze_0
+14:10:08 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:10:13 INFO  : Processor reset is completed for microblaze_0
+14:11:41 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:11:42 INFO  : Processor reset is completed for microblaze_0
+14:13:54 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:13:55 INFO  : Processor reset is completed for microblaze_0
+14:15:38 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:15:39 INFO  : Processor reset is completed for microblaze_0
+14:16:53 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:16:55 INFO  : Processor reset is completed for microblaze_0

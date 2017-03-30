@@ -223,9 +223,9 @@ void DemoInitialize()
 	/*
 	 * Program thresholds and Enable IP
 	 */
-	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG3_OFFSET, 220);
-	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG4_OFFSET, 220);
-	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG5_OFFSET, 100);
+	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG3_OFFSET, 220);//red
+	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG4_OFFSET, 220);//green
+	LED_DETECT_mWriteReg(LED_DETECT_BASE_ADDR, LED_DETECT_S00_AXI_SLV_REG5_OFFSET, 100);//other
 
 	//initialize the gesture detection buffers
 	reset_buffers();
@@ -239,8 +239,6 @@ void DemoRun()
 	XGpio *GpioPtr = &videoCapt.gpio;
 	int i,j;
 
-	xil_printf("Test1\n");
-
 	/* Flush UART FIFO */
 	while (!XUartLite_IsReceiveEmpty(UART_BASEADDR))
 	{
@@ -248,7 +246,7 @@ void DemoRun()
 	}
 
 	/* ECE532 */
-	xil_printf("Test2\n");
+	xil_printf("\nStarting...\n");
 	fRefresh = 0;
 
 	videoCapt.state=VIDEO_STREAMING;
@@ -354,13 +352,21 @@ void reset_buffers (){
  * coordinate into the LSB position
  */
 void update_zoom_buffers(int rx, int ry, int gx, int gy, double zoombuffer[]){
-	//shift the buffers
+	//shift the buffer
 	int i;
 	for (i=ZOOM_CHECK_DURATION-1; i>0; i--){
 		zoombuffer[i]= zoombuffer[i-1];
 	}
 
-	zoombuffer[0] = sqroot((rx - gx)*(rx - gx) + (ry - gy)*(ry - gy));
+	int rdx = rxbuffer[0] - rxbuffer[1];
+	int rdy = rybuffer[0] - rybuffer[1];
+	int gdx = gxbuffer[0] - gxbuffer[1];
+	int gdy = gybuffer[0] - gybuffer[1];
+	if ((rxbuffer[0] && rybuffer[0]) && (rxbuffer[1] && rybuffer[1]) && (rdx || rdy) &&
+		(gxbuffer[0] && gybuffer[0]) && (gxbuffer[1] && gybuffer[1]) && (gdx || gdy))
+		zoombuffer[0] = sqroot((rx - gx)*(rx - gx) + (ry - gy)*(ry - gy));
+	else
+		zoombuffer[0] = 0;
 
 }
 
@@ -385,28 +391,36 @@ void update_buffers(int x, int y, int xbuffer[], int ybuffer[]){
  * and output the gesture detected
  */
 Gesture scroll_detect(int xbuffer[],int ybuffer[]){
-	int i;
+	int i, dx, dy;
 	int total_dx = 0;
 	int total_dy = 0;
 
 	//loop through buffer and calculate the total
 	//deltas
 	for (i=1; i<GESTURE_CHECK_DURATION; i++){
-		total_dx += xbuffer[i] - xbuffer[i-1];
-		total_dy += ybuffer[i] - ybuffer[i-1];
+		dx = xbuffer[i] - xbuffer[i-1];
+		dy = ybuffer[i] - ybuffer[i-1];
 
-		if(total_dy > SCROLL_LARGE_THRESHOLD && (total_dx < SCROLL_SMALL_THRESHOLD && total_dx > SCROLL_SMALL_THRESHOLD*(-1) )){
-			return SCROLL_UP;
+		if( (xbuffer[i-1] && ybuffer[i-1]) && (xbuffer[i] && ybuffer[i]) && (dx || dy) ){ //ignore (0,0) and (dx=0 and dy=0)
+			total_dx += dx;
+			total_dy += dy;
+
+			//xil_printf("dx:%d, dy:%d %d, %d, %d\n", dx, dy, ybuffer[0], ybuffer[1], ybuffer[2]);
+
+			if(total_dy > SCROLL_LARGE_THRESHOLD && (total_dx < SCROLL_SMALL_THRESHOLD && total_dx > SCROLL_SMALL_THRESHOLD*(-1) )){
+				return SCROLL_UP;
+			}
+			else if(total_dy < SCROLL_LARGE_THRESHOLD*(-1) && (total_dx < SCROLL_SMALL_THRESHOLD && total_dx > SCROLL_SMALL_THRESHOLD*(-1) )){
+				return SCROLL_DOWN;
+			}
+			else if(total_dx < SCROLL_LARGE_THRESHOLD*(-1) && (total_dy < SCROLL_SMALL_THRESHOLD && total_dy > SCROLL_SMALL_THRESHOLD*(-1) )){ // && total_dy < SCROLL_Y_THRESHOLD
+				return SCROLL_LEFT;
+			}
+			else if(total_dx > SCROLL_LARGE_THRESHOLD && (total_dy < SCROLL_SMALL_THRESHOLD && total_dy > SCROLL_SMALL_THRESHOLD*(-1))){ // && total_dy < SCROLL_Y_THRESHOLD
+				return SCROLL_RIGHT;
+			}
 		}
-		else if(total_dy < SCROLL_LARGE_THRESHOLD*(-1) && (total_dx < SCROLL_SMALL_THRESHOLD && total_dx > SCROLL_SMALL_THRESHOLD*(-1) )){
-			return SCROLL_DOWN;
-		}
-		else if(total_dx < SCROLL_LARGE_THRESHOLD*(-1) && (total_dy < SCROLL_SMALL_THRESHOLD && total_dy > SCROLL_SMALL_THRESHOLD*(-1) )){ // && total_dy < SCROLL_Y_THRESHOLD
-			return SCROLL_LEFT;
-		}
-		else if(total_dx > SCROLL_LARGE_THRESHOLD && (total_dy < SCROLL_SMALL_THRESHOLD && total_dy > SCROLL_SMALL_THRESHOLD*(-1))){ // && total_dy < SCROLL_Y_THRESHOLD
-			return SCROLL_RIGHT;
-		}
+
 	}
 
 	//did not find a gesture
@@ -428,16 +442,12 @@ Gesture zoom_detect(double zoombuffer[]){
 			ratio = zoombuffer[0] / zoombuffer[i];
 
 		if(ratio > ZOOM_IN_RATIO){
-			xil_printf("Ratio:%f\n",ratio);
 			return ZOOM_IN;
 		}
 		else if(ratio < ZOOM_OUT_RATIO && ratio > 0){
 			return ZOOM_OUT;
 		}
 	}
-
-
-
 	return NONE;
 }
 
