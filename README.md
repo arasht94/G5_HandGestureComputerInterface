@@ -6,32 +6,29 @@ The code for this project is hosted on a Github repository. The figure below sho
 The directory tree of the repository:
 
 .  
-├── arduino  
-│   └── keyboard_demo  
-│       └── keyboard_demo.ino  
-├── docs  
-│   └── ECE532_Group5_Presentation.pdf  
-│   └── ECE532_Group5_HGCI_Documentation.pdf  
-│   └── Group5_HGCI.mp4  
-├── img_processing_ip  
-│   ├── ip_repo  
-│   └── managed_ip_project  
-├── README.md  
-├── src  
-│   ├── hdmi.sdk  
-│   │   ├── hdmi_wrapper_hw_platform_6  
-│   │   ├── standalone_bsp_1  
-│   │   ├── videodemo  
-│   │   │   └── src   
-│   │   │       ├── vdma  
-│   │   │       │   ├── vdma.c  
-│   │   │       │   └── vdma.h  
-│   │   │       ├── video_capture  
-│   │   │       │   ├── video_capture.c  
-│   │   │       │   └── video_capture.h  
-│   │   │       ├── video_demo.c  
-│   │   │       └── video_demo.h  
-│   ├── hdmi.xpr  
-│   ├── NexysVideo_Master.xdc  
-│   ├── repo  
+│── arduino  
+│&nbsp;&nbsp;&nbsp;└── keyboard_demo  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── keyboard_demo.ino  
+│── docs  
+│&nbsp;&nbsp;&nbsp;└── ECE532_Group5_Presentation.pdf  
+│&nbsp;&nbsp;&nbsp;└── ECE532_Group5_HGCI_Documentation.pdf  
+│&nbsp;&nbsp;&nbsp;└── Group5_HGCI.mp4  
+│── img_processing_ip  
+│&nbsp;&nbsp;&nbsp;│── ip_repo  
+│&nbsp;&nbsp;&nbsp;└── managed_ip_project  
+│── README.md  
+│── src  
+│&nbsp;&nbsp;&nbsp;│── hdmi.sdk  
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│── hdmi_wrapper_hw_platform_6  
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│── standalone_bsp_1  
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│── videodemo  
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── src  
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│── vdma  
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│── vdma.c  
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── vdma.h  
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│── video_demo.c  
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── video_demo.h  
+│&nbsp;&nbsp;&nbsp;│── hdmi.xpr  
+│&nbsp;&nbsp;&nbsp;│── NexysVideo_Master.xdc  
+│&nbsp;&nbsp;&nbsp;│── repo  
 └── tb  
