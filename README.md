@@ -5,7 +5,7 @@ The code for this project is hosted on a Github repository. The figure below sho
 
 The directory tree of the repository:
 
-.
+.  
 ├── arduino  
 │   └── keyboard_demo  
 │       └── keyboard_demo.ino  
