@@ -7,44 +7,31 @@ The directory tree of the repository:
 
 .  
 ├── arduino  
-│   └── keyboard_demo  
-│       └── keyboard_demo.ino  
+│   └── keyboard_demo  
+│       └── keyboard_demo.ino  
 ├── docs  
-│   └── ECE532_Group5_Presentation.pdf  
+│   └── ECE532_Group5_Presentation.pdf  
+│   └── ECE532_Group5_HGCI_Documentation.pdf  
+│   └── Group5_HGCI.mp4  
 ├── img_processing_ip  
-│   ├── ip_repo  
-│   └── managed_ip_project  
+│   ├── ip_repo  
+│   └── managed_ip_project  
 ├── README.md  
 ├── src  
-│   ├── hdmi.sdk  
-│   │   ├── hdmi_wrapper_hw_platform_6  
-│   │   ├── standalone_bsp_1  
-│   │   ├── videodemo  
-│   │   │   └── src  
-│   │   │       ├── display_ctrl  
-│   │   │       │   ├── display_ctrl.c  
-│   │   │       │   ├── display_ctrl.h  
-│   │   │       │   └── vga_modes.h  
-│   │   │       ├── dynclk  
-│   │   │       │   ├── dynclk.c  
-│   │   │       │   └── dynclk.h  
-│   │   │       ├── intc  
-│   │   │       │   ├── intc.c  
-│   │   │       │   └── intc.h  
-│   │   │       ├── lscript.ld  
-│   │   │       ├── README.txt  
-│   │   │       ├── timer_ps  
-│   │   │       │   ├── timer_ps.c  
-│   │   │       │   └── timer_ps.h  
-│   │   │       ├── vdma  
-│   │   │       │   ├── vdma.c  
-│   │   │       │   └── vdma.h  
-│   │   │       ├── video_capture  
-│   │   │       │   ├── video_capture.c  
-│   │   │       │   └── video_capture.h  
-│   │   │       ├── video_demo.c  
-│   │   │       └── video_demo.h  
-│   ├── hdmi.xpr  
-│   ├── NexysVideo_Master.xdc  
-│   ├── repo  
-└── tb_4  
+│   ├── hdmi.sdk  
+│   │   ├── hdmi_wrapper_hw_platform_6  
+│   │   ├── standalone_bsp_1  
+│   │   ├── videodemo  
+│   │   │   └── src   
+│   │   │       ├── vdma  
+│   │   │       │   ├── vdma.c  
+│   │   │       │   └── vdma.h  
+│   │   │       ├── video_capture  
+│   │   │       │   ├── video_capture.c  
+│   │   │       │   └── video_capture.h  
+│   │   │       ├── video_demo.c  
+│   │   │       └── video_demo.h  
+│   ├── hdmi.xpr  
+│   ├── NexysVideo_Master.xdc  
+│   ├── repo  
+└── tb  
